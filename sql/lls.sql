@@ -1,181 +1,197 @@
-/*
- Navicat Premium Data Transfer
+-- phpMyAdmin SQL Dump
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
+--
+-- 主机： localhost
+-- 生成日期： 2020-10-05 17:31:10
+-- 服务器版本： 8.0.20
+-- PHP 版本： 7.4.10
 
- Source Server         : MySQL
- Source Server Type    : MySQL
- Source Server Version : 80016
- Source Host           : localhost:3306
- Source Schema         : lls
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
- Target Server Type    : MySQL
- Target Server Version : 80016
- File Encoding         : 65001
 
- Date: 05/10/2020 08:21:36
-*/
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
+--
+-- 数据库： `lls`
+--
 
--- ----------------------------
--- Table structure for announcement
--- ----------------------------
-DROP TABLE IF EXISTS `announcement`;
-CREATE TABLE `announcement`  (
-  `AID` int(10) NOT NULL AUTO_INCREMENT,
-  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Time` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Admin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `isUper` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`AID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for confession
--- ----------------------------
-DROP TABLE IF EXISTS `confession`;
-CREATE TABLE `confession`  (
-  `LID` int(10) NOT NULL AUTO_INCREMENT,
-  `UID` int(10) NULL DEFAULT NULL,
-  `Hidden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `SubmitTime` datetime(0) NULL DEFAULT NULL,
-  `Likes` int(10) NULL DEFAULT NULL,
-  `Picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`LID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+--
+-- 表的结构 `announcement`
+--
 
--- ----------------------------
--- Table structure for confession_comment
--- ----------------------------
-DROP TABLE IF EXISTS `confession_comment`;
-CREATE TABLE `confession_comment`  (
-  `LCID` int(10) NOT NULL AUTO_INCREMENT,
-  `LID` int(10) NULL DEFAULT NULL,
-  `UID` int(10) NULL DEFAULT NULL,
-  `FatherLCID` int(10) NULL DEFAULT NULL,
-  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `SubmitTime` datetime(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`LCID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `announcement` (
+  `AID` int NOT NULL,
+  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Time` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Admin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `isUper` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Table structure for found
--- ----------------------------
-DROP TABLE IF EXISTS `found`;
-CREATE TABLE `found`  (
-  `FID` int(10) NOT NULL AUTO_INCREMENT,
-  `UID` int(10) NULL DEFAULT NULL,
-  `Hidden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `SubmitTime` datetime(0) NULL DEFAULT NULL,
-  `Likes` int(10) NULL DEFAULT NULL,
-  `Picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`FID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for found_comment
--- ----------------------------
-DROP TABLE IF EXISTS `found_comment`;
-CREATE TABLE `found_comment`  (
-  `FCID` int(10) NOT NULL AUTO_INCREMENT,
-  `FID` int(10) NULL DEFAULT NULL,
-  `UID` int(10) NULL DEFAULT NULL,
-  `FatherFCID` int(10) NULL DEFAULT NULL,
-  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `SubmitTime` datetime(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`FCID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+--
+-- 表的结构 `confession`
+--
 
--- ----------------------------
--- Table structure for post_report
--- ----------------------------
-DROP TABLE IF EXISTS `post_report`;
-CREATE TABLE `post_report`  (
-  `PRID` int(10) NOT NULL,
-  `Plate` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `ID` int(10) NULL DEFAULT NULL,
-  `Reason` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Time` datetime(0) NULL DEFAULT NULL,
-  `isOver` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Result` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`PRID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `confession` (
+  `LID` int NOT NULL,
+  `UID` int DEFAULT NULL,
+  `Hidden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `SubmitTime` datetime DEFAULT NULL,
+  `Likes` int DEFAULT NULL,
+  `Picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Table structure for secret
--- ----------------------------
-DROP TABLE IF EXISTS `secret`;
-CREATE TABLE `secret`  (
-  `LID` int(10) NOT NULL AUTO_INCREMENT,
-  `UID` int(10) NULL DEFAULT NULL,
-  `Hidden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `SubmitTime` datetime(0) NULL DEFAULT NULL,
-  `Likes` int(10) NULL DEFAULT NULL,
-  `Picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`LID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for secret_comment
--- ----------------------------
-DROP TABLE IF EXISTS `secret_comment`;
-CREATE TABLE `secret_comment`  (
-  `SCID` int(10) NOT NULL AUTO_INCREMENT,
-  `SID` int(10) NULL DEFAULT NULL,
-  `UID` int(10) NULL DEFAULT NULL,
-  `FatherSCID` int(10) NULL DEFAULT NULL,
-  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `SubmitTime` datetime(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`SCID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+--
+-- 表的结构 `confession_comment`
+--
 
--- ----------------------------
--- Table structure for transaction
--- ----------------------------
-DROP TABLE IF EXISTS `transaction`;
-CREATE TABLE `transaction`  (
-  `TID` int(10) NOT NULL AUTO_INCREMENT,
-  `UID` int(10) NULL DEFAULT NULL,
-  `Hidden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `SubmitTime` datetime(0) NULL DEFAULT NULL,
-  `Likes` int(10) NULL DEFAULT NULL,
-  `Picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`TID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+CREATE TABLE `confession_comment` (
+  `LCID` int NOT NULL,
+  `LID` int DEFAULT NULL,
+  `UID` int DEFAULT NULL,
+  `FatherLCID` int DEFAULT NULL,
+  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `SubmitTime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Table structure for transaction_comment
--- ----------------------------
-DROP TABLE IF EXISTS `transaction_comment`;
-CREATE TABLE `transaction_comment`  (
-  `TCID` int(10) NOT NULL AUTO_INCREMENT,
-  `TID` int(10) NULL DEFAULT NULL,
-  `UID` int(10) NULL DEFAULT NULL,
-  `FatherTCID` int(10) NULL DEFAULT NULL,
-  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `SubmitTime` datetime(0) NULL DEFAULT NULL,
-  PRIMARY KEY (`TCID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for user
--- ----------------------------
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE `user`  (
-  `UID` int(11) NOT NULL AUTO_INCREMENT,
+--
+-- 表的结构 `found`
+--
+
+CREATE TABLE `found` (
+  `FID` int NOT NULL,
+  `UID` int DEFAULT NULL,
+  `Hidden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `SubmitTime` datetime DEFAULT NULL,
+  `Likes` int DEFAULT NULL,
+  `Picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `found_comment`
+--
+
+CREATE TABLE `found_comment` (
+  `FCID` int NOT NULL,
+  `FID` int DEFAULT NULL,
+  `UID` int DEFAULT NULL,
+  `FatherFCID` int DEFAULT NULL,
+  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `SubmitTime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `post_report`
+--
+
+CREATE TABLE `post_report` (
+  `PRID` int NOT NULL,
+  `Plate` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `ID` int DEFAULT NULL,
+  `Reason` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Time` datetime DEFAULT NULL,
+  `isOver` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Result` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `secret`
+--
+
+CREATE TABLE `secret` (
+  `LID` int NOT NULL,
+  `UID` int DEFAULT NULL,
+  `Hidden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `SubmitTime` datetime DEFAULT NULL,
+  `Likes` int DEFAULT NULL,
+  `Picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `secret_comment`
+--
+
+CREATE TABLE `secret_comment` (
+  `SCID` int NOT NULL,
+  `SID` int DEFAULT NULL,
+  `UID` int DEFAULT NULL,
+  `FatherSCID` int DEFAULT NULL,
+  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `SubmitTime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `transaction`
+--
+
+CREATE TABLE `transaction` (
+  `TID` int NOT NULL,
+  `UID` int DEFAULT NULL,
+  `Hidden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `SubmitTime` datetime DEFAULT NULL,
+  `Likes` int DEFAULT NULL,
+  `Picture` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `transaction_comment`
+--
+
+CREATE TABLE `transaction_comment` (
+  `TCID` int NOT NULL,
+  `TID` int DEFAULT NULL,
+  `UID` int DEFAULT NULL,
+  `FatherTCID` int DEFAULT NULL,
+  `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `SubmitTime` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `user`
+--
+
+CREATE TABLE `user` (
+  `UID` int NOT NULL,
   `UserName` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Password` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
@@ -183,16 +199,37 @@ CREATE TABLE `user`  (
   `TokenID` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Token` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `isHiden` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Theme` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`UID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+  `Theme` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Table structure for user_messages
--- ----------------------------
-DROP TABLE IF EXISTS `user_messages`;
-CREATE TABLE `user_messages`  (
-  `UID` int(11) NOT NULL AUTO_INCREMENT,
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `usermessages`
+--
+
+CREATE TABLE `usermessages` (
+  `UID` int NOT NULL,
+  `Avatar` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Name` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `Sex` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
+  `Birthday` date NOT NULL,
+  `Motto` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Major` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `Location` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `URL` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `QQ` int NOT NULL,
+  `Wechat` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `user_messages`
+--
+
+CREATE TABLE `user_messages` (
+  `UID` int NOT NULL,
   `Avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Name` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Sex` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
@@ -201,32 +238,218 @@ CREATE TABLE `user_messages`  (
   `Major` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Location` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `URL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `QQ` int(11) NOT NULL,
-  `Wechat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`UID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+  `QQ` int NOT NULL,
+  `Wechat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
--- ----------------------------
--- Table structure for user_report
--- ----------------------------
-DROP TABLE IF EXISTS `user_report`;
-CREATE TABLE `user_report`  (
-  `URID` int(10) NOT NULL AUTO_INCREMENT,
-  `UID` int(10) NULL DEFAULT NULL,
-  `Reason` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Time` datetime(0) NULL DEFAULT NULL,
-  `isOver` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Result` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`URID`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+-- --------------------------------------------------------
 
--- ----------------------------
--- Table structure for web_message
--- ----------------------------
-DROP TABLE IF EXISTS `web_message`;
-CREATE TABLE `web_message`  (
-  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  `Content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+--
+-- 表的结构 `user_report`
+--
 
-SET FOREIGN_KEY_CHECKS = 1;
+CREATE TABLE `user_report` (
+  `URID` int NOT NULL,
+  `UID` int DEFAULT NULL,
+  `Reason` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Time` datetime DEFAULT NULL,
+  `isOver` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Result` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `web_message`
+--
+
+CREATE TABLE `web_message` (
+  `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- 转存表中的数据 `web_message`
+--
+
+INSERT INTO `web_message` (`Title`, `Content`) VALUES
+('网站标题', 'Life&Love&Secret'),
+('运营方', '大连民族大学ACM工作室'),
+('页脚', '&copy;2020 <a href=\'#\'> UtopiaXC </a> All Rights Reserved.'),
+('欢迎语句', '欢迎来到Life&Love&Secret'),
+('显示首页banner', '是');
+
+--
+-- 转储表的索引
+--
+
+--
+-- 表的索引 `announcement`
+--
+ALTER TABLE `announcement`
+  ADD PRIMARY KEY (`AID`) USING BTREE;
+
+--
+-- 表的索引 `confession`
+--
+ALTER TABLE `confession`
+  ADD PRIMARY KEY (`LID`) USING BTREE;
+
+--
+-- 表的索引 `confession_comment`
+--
+ALTER TABLE `confession_comment`
+  ADD PRIMARY KEY (`LCID`) USING BTREE;
+
+--
+-- 表的索引 `found`
+--
+ALTER TABLE `found`
+  ADD PRIMARY KEY (`FID`) USING BTREE;
+
+--
+-- 表的索引 `found_comment`
+--
+ALTER TABLE `found_comment`
+  ADD PRIMARY KEY (`FCID`) USING BTREE;
+
+--
+-- 表的索引 `post_report`
+--
+ALTER TABLE `post_report`
+  ADD PRIMARY KEY (`PRID`) USING BTREE;
+
+--
+-- 表的索引 `secret`
+--
+ALTER TABLE `secret`
+  ADD PRIMARY KEY (`LID`) USING BTREE;
+
+--
+-- 表的索引 `secret_comment`
+--
+ALTER TABLE `secret_comment`
+  ADD PRIMARY KEY (`SCID`) USING BTREE;
+
+--
+-- 表的索引 `transaction`
+--
+ALTER TABLE `transaction`
+  ADD PRIMARY KEY (`TID`) USING BTREE;
+
+--
+-- 表的索引 `transaction_comment`
+--
+ALTER TABLE `transaction_comment`
+  ADD PRIMARY KEY (`TCID`) USING BTREE;
+
+--
+-- 表的索引 `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`UID`) USING BTREE;
+
+--
+-- 表的索引 `usermessages`
+--
+ALTER TABLE `usermessages`
+  ADD PRIMARY KEY (`UID`);
+
+--
+-- 表的索引 `user_messages`
+--
+ALTER TABLE `user_messages`
+  ADD PRIMARY KEY (`UID`) USING BTREE;
+
+--
+-- 表的索引 `user_report`
+--
+ALTER TABLE `user_report`
+  ADD PRIMARY KEY (`URID`) USING BTREE;
+
+--
+-- 在导出的表使用AUTO_INCREMENT
+--
+
+--
+-- 使用表AUTO_INCREMENT `announcement`
+--
+ALTER TABLE `announcement`
+  MODIFY `AID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `confession`
+--
+ALTER TABLE `confession`
+  MODIFY `LID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `confession_comment`
+--
+ALTER TABLE `confession_comment`
+  MODIFY `LCID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `found`
+--
+ALTER TABLE `found`
+  MODIFY `FID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `found_comment`
+--
+ALTER TABLE `found_comment`
+  MODIFY `FCID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `secret`
+--
+ALTER TABLE `secret`
+  MODIFY `LID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `secret_comment`
+--
+ALTER TABLE `secret_comment`
+  MODIFY `SCID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `transaction`
+--
+ALTER TABLE `transaction`
+  MODIFY `TID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `transaction_comment`
+--
+ALTER TABLE `transaction_comment`
+  MODIFY `TCID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `user`
+--
+ALTER TABLE `user`
+  MODIFY `UID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `usermessages`
+--
+ALTER TABLE `usermessages`
+  MODIFY `UID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `user_messages`
+--
+ALTER TABLE `user_messages`
+  MODIFY `UID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `user_report`
+--
+ALTER TABLE `user_report`
+  MODIFY `URID` int NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
