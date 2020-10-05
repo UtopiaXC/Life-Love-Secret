@@ -3,10 +3,9 @@ require_once "api/standard_display_api.php";
 require_once "api/sql_api.php";
 $conn=getConn();
 if ($conn->connect_error){
-    header('Location: DatabaseErrorPage.html');
+    header('Location: ../error_pages/DatabaseErrorPage.html');
     exit;
 }
-
 
 ?>
 

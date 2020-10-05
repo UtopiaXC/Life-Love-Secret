@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="数据库文件">
-      <change afterPath="$PROJECT_DIR$/api/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/sql_api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_pages/404ErrorPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_pages/DatabaseErrorPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="添加错误页面">
+      <change beforePath="$PROJECT_DIR$/api/sql_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/sql_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
@@ -85,7 +80,7 @@
       <workItem from="1601785471448" duration="75000" />
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
-      <workItem from="1601871144145" duration="10940000" />
+      <workItem from="1601871144145" duration="11255000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -115,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601881944006</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加错误页面">
+      <created>1601884139841</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601884139841</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +126,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初次提交" />
     <MESSAGE value="数据库文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="数据库文件" />
+    <MESSAGE value="添加错误页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加错误页面" />
   </component>
   <component name="WindowStateProjectService">
     <state x="525" y="235" width="824" height="691" key="#CLI_Interpreters" timestamp="1601784844302">
@@ -187,10 +190,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="405" y="188" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601883860701" />
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601881978412">
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601884141091">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601881978412" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601884141091" />
     <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601881342427">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
