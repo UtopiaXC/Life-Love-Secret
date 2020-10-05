@@ -4,206 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="初次提交">
-      <change afterPath="$PROJECT_DIR$/.idea/Life&amp;Love&amp;Secret.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/PHPMailer/Exception.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/PHPMailer/PHPMailer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/PHPMailer/SMTP.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/email_api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/standard_api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/standart_display_api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/color.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/flatpickr.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/fontello-codes.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/fontello.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/jquery.mCustomScrollbar.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/responsive.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/thumbs-embedded.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/video-js.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/font/fontello.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/Favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ft-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/ad-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/banner-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/br9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/ch1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/ch2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/ch3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/ch4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/ch5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/ch6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/channel-banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl14.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl15.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl16.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl17.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl18.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl19.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl20.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl21.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl22.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl23.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl24.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cl9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/cp-logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/poster-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/pro9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/sn.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/th9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/user-img.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/user-img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-medium.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-medium2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vid-thumb9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/resources/vide9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/sv1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/sv2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/sv3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/sv4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/flatpickr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery.mCustomScrollbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/video.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Browse_Categories.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Browse_Channels.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/History_Page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Searched_Videos_Page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Single_Channel_About.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Single_Channel_Channels.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Single_Channel_Home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Single_Channel_Playlist.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Single_Channel_Products.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Single_Channel_Videos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Single_Video_Simplified_Page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Updates_From_Subs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Upload_Edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/Upload_Video.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/User_Account_Page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/single_video_fullwidth_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/single_video_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/参考/single_video_playlist.html" afterDir="false" />
-    </list>
+    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="初次提交" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -272,8 +73,16 @@
       <workItem from="1601785471448" duration="75000" />
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
-      <workItem from="1601871144145" duration="7884000" />
+      <workItem from="1601871144145" duration="8206000" />
     </task>
+    <task id="LOCAL-00001" summary="初次提交">
+      <created>1601881189140</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601881189140</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +153,14 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="405" y="188" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601880697588" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601881193653">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601881193653" />
+    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601881342427">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601881342427" />
     <state x="764" y="75" width="638" height="939" key="find.popup" timestamp="1601879478403">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
