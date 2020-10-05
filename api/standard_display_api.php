@@ -1,7 +1,6 @@
 <?php
 function showHeader($conn)
 {
-
     echo "<header>
         <div class='top_bar'>
             <div class='container'>
@@ -89,7 +88,7 @@ function showHeader($conn)
                         else{
                             echo "
                             <div class='user-ac-img'>
-                                <img class='avatar' src='../images/resources/user-img.jpg' alt=''>
+                                <img class='avatar' src='../sources/avatar/user-unlogin.png' alt='User Avatar'>
                             </div>
                             <div class='account-menu'>
                                 <h4>当前未登录</h4>

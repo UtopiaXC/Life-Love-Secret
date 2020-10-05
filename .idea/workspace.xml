@@ -23,10 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="完善资源结构">
+      <change afterPath="$PROJECT_DIR$/sources/avatar/user-unlogin.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/standard_display_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_display_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,19 +67,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\UtopiaXC\PhpstormProjects\Life&amp;Love&amp;Secret\sources\avatar" />
+      <recent name="$PROJECT_DIR$/error_pages" />
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/参考文档" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sources/banners" />
       <recent name="$PROJECT_DIR$/sources/logo" />
       <recent name="$PROJECT_DIR$/error_pages" />
       <recent name="$PROJECT_DIR$/SQL" />
       <recent name="$PROJECT_DIR$/PHPMailer" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/error_pages" />
-      <recent name="$PROJECT_DIR$/api" />
-      <recent name="$PROJECT_DIR$/参考文档" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/封存" />
     </key>
   </component>
   <component name="RunManager">
@@ -103,7 +103,7 @@
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
       <workItem from="1601871144145" duration="16114000" />
-      <workItem from="1601900865960" duration="2464000" />
+      <workItem from="1601900865960" duration="4762000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -161,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601902365503</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="完善资源结构">
+      <created>1601903470568</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1601903470568</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,10 +279,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="200" height="584" key="SqlResolveConfigurable/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885911303" />
-    <state x="667" y="357" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601902368185">
+    <state x="667" y="357" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601903471847">
       <screen x="0" y="0" width="2467" height="1440" />
     </state>
-    <state x="667" y="357" key="Vcs.Push.Dialog.v2/0.0.2467.1440@0.0.2467.1440" timestamp="1601902368185" />
+    <state x="667" y="357" key="Vcs.Push.Dialog.v2/0.0.2467.1440@0.0.2467.1440" timestamp="1601903471847" />
     <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601887618095" />
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601885967832">
       <screen x="0" y="27" width="1920" height="1053" />

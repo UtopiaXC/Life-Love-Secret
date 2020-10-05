@@ -420,7 +420,7 @@ header .container {
     align-items: center;
     margin-top: -26px;
     position: relative;
-    top: 13px;
+    top: 30px;
 }
 
 .controls-lv li {
@@ -468,9 +468,9 @@ header .container {
 
 .user-log:before {
     content: '\e832';
-    font-family: 'fontello';
+    font-family: "fontello";
     color: #2c2b2b;
-    font-size: 8px;
+    font-size: 2px;
     position: absolute;
     top: 50%;
     right: 0;
@@ -5409,6 +5409,6 @@ header.hp_1 .side_links li.user_contrl {
 }
 
 .avatar {
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
 }
