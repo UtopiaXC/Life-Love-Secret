@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="数据库文件" />
+    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="数据库文件">
+      <change afterPath="$PROJECT_DIR$/api/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/sql_api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error_pages/404ErrorPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error_pages/DatabaseErrorPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,20 +44,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/error_pages" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/error_pages" />
       <recent name="$PROJECT_DIR$/SQL" />
       <recent name="$PROJECT_DIR$/PHPMailer" />
       <recent name="$PROJECT_DIR$/images/resources" />
       <recent name="$PROJECT_DIR$/.." />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/error_pages" />
       <recent name="$PROJECT_DIR$/api" />
       <recent name="$PROJECT_DIR$/参考文档" />
       <recent name="$PROJECT_DIR$" />
@@ -74,7 +85,7 @@
       <workItem from="1601785471448" duration="75000" />
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
-      <workItem from="1601871144145" duration="8536000" />
+      <workItem from="1601871144145" duration="10940000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -90,7 +101,21 @@
       <option name="project" value="LOCAL" />
       <updated>1601881586814</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="数据库文件">
+      <created>1601881776384</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601881776384</updated>
+    </task>
+    <task id="LOCAL-00004" summary="数据库文件">
+      <created>1601881944005</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601881944006</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,18 +179,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="617" y="248" width="604" height="618" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601878676208" />
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1601879420042">
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1601882807127">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601879420042" />
-    <state x="405" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1601880697588">
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601882807127" />
+    <state x="405" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1601883860701">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="405" y="188" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601880697588" />
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601881589453">
+    <state x="405" y="188" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601883860701" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601881978412">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601881589453" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601881978412" />
     <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601881342427">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
