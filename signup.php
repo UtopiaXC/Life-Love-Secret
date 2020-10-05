@@ -1,17 +1,23 @@
 <?php
 require_once "api/standard_display_api.php";
 require_once "api/sql_api.php";
-$conn=getConn();
-if ($conn->connect_error){
+$conn = getConn();
+if ($conn->connect_error) {
     header('Location: ../error_pages/DatabaseErrorPage.html');
     exit;
 }
-
+$result = $conn->query("SELECT * FROM web_message");
+$Title = "";
+while ($row = $result->fetch_assoc()) {
+    if ($row['Title'] == "网站标题") {
+        $Title = $row['Content'];
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>Life&Love&Secret - 注册</title>
+    <title><?php echo $Title?> - 注册</title>
     <?php showDefaultHead(); ?>
 </head>
 

@@ -6,13 +6,19 @@ if ($conn->connect_error) {
     header('Location: ../error_pages/DatabaseErrorPage.html');
     exit;
 }
-
+$result = $conn->query("SELECT * FROM web_message");
+$Title = "";
+while ($row = $result->fetch_assoc()) {
+    if ($row['Title'] == "网站标题") {
+        $Title = $row['Content'];
+    }
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title>Life&Love&Secret - 主页</title>
+    <title><?php echo $Title?> - 主页</title>
     <?php showDefaultHead(); ?>
 </head>
 <body>

@@ -1,13 +1,6 @@
 <?php
 function showHeader($conn)
 {
-    $result = $conn->query("SELECT * FROM web_message");
-    $Title = "";
-    while ($row = $result->fetch_assoc()) {
-        if ($row['Title'] == "网站标题") {
-            $Title = $row['Content'];
-        }
-    }
 
     echo "<header>
         <div class='top_bar'>
@@ -16,9 +9,6 @@ function showHeader($conn)
                     <div class='menu_logo'>
                         <a href='#' title='' class='menu'>
     <i class='icon-menu'></i>
-                        </a>
-                        <a href='../index.php' title='' class='logo'>
-                            <h1>$Title</h1>
                         </a>
                     </div><!--menu_logo end-->
                     <div class='search_form'>
