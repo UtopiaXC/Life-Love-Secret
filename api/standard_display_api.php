@@ -37,7 +37,7 @@ function showHeader($conn)
                         </li>
                         <li class='user-log'>";
 
-                        if ($_COOKIE['TokenID']) {
+                        if (@$_COOKIE['TokenID']) {
                             echo "
                             <div class='user-ac-img'>
                                 <img class='avatar' src='../images/resources/user-img.jpg' alt=''>
@@ -164,7 +164,7 @@ function showMenu($conn)
             $Service = $row['Content'];
         }
     }
-    if ($_COOKIE['TokenID']) {
+    if (@$_COOKIE['TokenID']) {
         echo "
         <div class='side_menu'>
         <div class='sd_menu'>
