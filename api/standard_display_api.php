@@ -1,7 +1,14 @@
 <?php
-
-function showHeader()
+function showHeader($conn)
 {
+    $result=$conn->query("SELECT * FROM web_message");
+    $Title="";
+    while($row=$result->fetch_assoc()){
+        if ($row['Title']=="网站标题"){
+            $Title=$row['Content'];
+        }
+    }
+
     echo "<header>
         <div class='top_bar'>
             <div class='container'>
@@ -11,7 +18,7 @@ function showHeader()
     <i class='icon-menu'></i>
                         </a>
                         <a href='../index.php' title='' class='logo'>
-                            <h1>Life&Love&Secret</h1>
+                            <h1>$Title</h1>
                         </a>
                     </div><!--menu_logo end-->
                     <div class='search_form'>
@@ -112,8 +119,15 @@ function showHeader()
     </header><!--header end-->";
 }
 
-function showMenu()
+function showMenu($conn)
 {
+    $result=$conn->query("SELECT * FROM web_message");
+    $Service="";
+    while($row=$result->fetch_assoc()){
+        if ($row['Title']=="运营方"){
+            $Service=$row['Content'];
+        }
+    }
     echo "<div class='side_menu'>
         <div class='sd_menu'>
             <h3>我的</h3>
@@ -166,10 +180,9 @@ function showMenu()
                 <li><a href='#'>社区规则</a></li>
                 <li><a href='#'>隐私权</a></li>
                 <li><a href='#'>Github</a></li>
-                <li><a href='#'>OJ</a></li>
                 <li><a href='#'>FAQ</a></li>
             </ul>
-            <span>大连民族大学ACM工作室</span>
+            <span>$Service</span>
         </div><!--sd_menu end-->
         <div class='sd_menu bb-0'>
             <ul class='social_links'>
@@ -194,15 +207,24 @@ function showMenu()
     </div><!--side_menu end-->";
 }
 
-function showFooter()
+function showFooter($conn)
 {
+    $result=$conn->query("SELECT * FROM web_message");
+    $Service="";
+    $footer="";
+    while($row=$result->fetch_assoc()){
+        if ($row['Title']=="运营方"){
+            $Service=$row['Content'];
+        }
+        if ($row['Title']=="页脚"){
+            $footer=$row['Content'];
+        }
+    }
     echo "<footer>
         <section class='more_items_sec text-center'>
             <div class='container'>
-                <p style='color: #7f7f7f'>Powered By <a href='#'>Life&Love&Secret</a> | <a href='#'>大连民族大学ACM工作室</a>
-                    <br>
-                    &copy;2020 <a href='#'> UtopiaXC </a> All Rights Reserved.
-                </p>
+                <p style='color: #7f7f7f'>Powered By <a href='#'>Life&Love&Secret</a> | <a href='#'>$Service</a>
+                    <br>$footer</p>
             </div>
         </section><!--more_items_sec end-->
     </footer>";
@@ -212,7 +234,7 @@ function showDefaultHead()
 {
     echo "<meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='icon' href='../images/Favicon.png'>
+    <link rel='icon' href='../sources/logo/balloons.png'>
     <link rel='stylesheet' type='text/css' href='../css/animate.css'>
     <link rel='stylesheet' type='text/css' href='../css/bootstrap.min.css'>
     <link rel='stylesheet' type='text/css' href='../css/flatpickr.min.css'>

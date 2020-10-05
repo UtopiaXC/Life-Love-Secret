@@ -18,8 +18,8 @@ if ($conn->connect_error){
 <?php showDefaultScript();?>
 <div class="wrapper hp_1">
 
-    <?php showHeader(); ?>
-    <?php showMenu(); ?>
+    <?php showHeader($conn); ?>
+    <?php showMenu($conn); ?>
     <section class="form_popup">
 
         <div class="login_form" id="login_form">
@@ -55,7 +55,7 @@ if ($conn->connect_error){
         </div><!--login end--->
 
     </section><!--form_popup end-->
-    <?php showFooter();?>
+    <?php showFooter($conn);?>
 </div><!--wrapper end-->
 
 

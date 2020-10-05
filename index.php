@@ -1,8 +1,8 @@
 <?php
 require_once "api/standard_display_api.php";
 require_once "api/sql_api.php";
-$conn=getConn();
-if ($conn->connect_error){
+$conn = getConn();
+if ($conn->connect_error) {
     header('Location: ../error_pages/DatabaseErrorPage.html');
     exit;
 }
@@ -17,17 +17,39 @@ if ($conn->connect_error){
 </head>
 <body>
 <div class="wrapper hp_1">
-    <?php showHeader(); ?>
-    <?php showMenu(); ?>
+    <?php showHeader($conn); ?>
+    <?php showMenu($conn); ?>
 
-    <section class="banner-section">
-        <div class="container">
-            <div class="banner-text">
-                <h2>欢迎来到Life&Love&Secret</h2>
-                <a href="#" title="">查看置顶公告</a>
+
+    <?php
+    $result = $conn->query("SELECT * FROM web_message");
+    $ShowBanner = "";
+    while ($row = $result->fetch_assoc()) {
+        if ($row['Title'] == "显示首页banner") {
+            $ShowBanner = $row['Content'];
+        }
+    }
+    if ($ShowBanner=="是"){
+        $result = $conn->query("SELECT * FROM web_message");
+        $Welcome = "";
+        while ($row = $result->fetch_assoc()) {
+            if ($row['Title'] == "欢迎语句") {
+                $Welcome = $row['Content'];
+            }
+        }
+        echo "<section class='banner-section'>
+        <div class='container'>
+            <div class='banner-text'>
+                <h2>$Welcome;
+                </h2>
+                <a href='#' title=''>查看置顶公告</a>
             </div><!--banner-text end-->
         </div>
-    </section><!--banner-section end-->
+    </section><!--banner-section end-->";
+    }
+    ?>
+
+    
 
     <section class="vds-main">
         <div class="vidz-row">
@@ -225,7 +247,7 @@ if ($conn->connect_error){
         <div class="vidz-row pop_channels">
             <div class="container">
                 <div class="vidz_sec">
-                    <h3>活跃用户</h3>
+                    <h3>随意链接</h3>
                     <div class="vidz_list">
                         <div class="row">
                             <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
@@ -313,10 +335,10 @@ if ($conn->connect_error){
         </div><!--vidz-row end-->
     </section><!--vds-main end-->
 
-    <?php showFooter();?>
+    <?php showFooter($conn); ?>
 </div><!--wrapper end-->
 
 
-<?php showDefaultScript();?>
+<?php showDefaultScript(); ?>
 </body>
 </html>
