@@ -1,5 +1,5 @@
 <?php
-require_once "api/standart_display_api.php"
+require_once "api/standard_display_api.php"
 
 
 ?>
@@ -15,7 +15,6 @@ require_once "api/standart_display_api.php"
 
     <?php showHeader(); ?>
     <?php showMenu(); ?>
-
 
     <section class="form_popup">
 
@@ -55,7 +54,6 @@ require_once "api/standart_display_api.php"
         </div><!--login end--->
 
     </section><!--form_popup end-->
-
 
     <?php showFooter(); ?>
 

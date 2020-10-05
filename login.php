@@ -1,5 +1,5 @@
 <?php
-require_once "api/standart_display_api.php"
+require_once "api/standard_display_api.php"
 
 
 ?>
