@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="初次提交" />
+    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="数据库文件" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,13 +34,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/PHPMailer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="http.proxy" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SQL" />
       <recent name="$PROJECT_DIR$/PHPMailer" />
       <recent name="$PROJECT_DIR$/images/resources" />
       <recent name="$PROJECT_DIR$/.." />
@@ -73,7 +74,7 @@
       <workItem from="1601785471448" duration="75000" />
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
-      <workItem from="1601871144145" duration="8206000" />
+      <workItem from="1601871144145" duration="8536000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -82,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601881189140</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="数据库文件">
+      <created>1601881586814</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601881586814</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,7 +98,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="初次提交" />
+    <MESSAGE value="数据库文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据库文件" />
   </component>
   <component name="WindowStateProjectService">
     <state x="525" y="235" width="824" height="691" key="#CLI_Interpreters" timestamp="1601784844302">
@@ -153,10 +162,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="405" y="188" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601880697588" />
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601881193653">
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601881589453">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601881193653" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601881589453" />
     <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601881342427">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
