@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="添加数据库连接">
-      <change afterPath="$PROJECT_DIR$/sources/banners/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sources/logo/balloons.png" afterDir="false" />
+    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="完善调用结构，添加资源目录">
+      <change afterPath="$PROJECT_DIR$/find_password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/standard_display_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_display_api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +31,15 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
   <component name="ProjectId" id="1iOfkRIayoI7OjvbNGBuxYVcUoA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -85,7 +84,7 @@
       <workItem from="1601785471448" duration="75000" />
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
-      <workItem from="1601871144145" duration="14212000" />
+      <workItem from="1601871144145" duration="16114000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -129,18 +128,27 @@
       <option name="project" value="LOCAL" />
       <updated>1601884611693</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="完善调用结构，添加资源目录">
+      <created>1601887616853</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601887616853</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="初次提交" />
     <MESSAGE value="数据库文件" />
     <MESSAGE value="添加错误页面" />
     <MESSAGE value="添加数据库连接" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加数据库连接" />
+    <MESSAGE value="完善调用结构，添加资源目录" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善调用结构，添加资源目录" />
   </component>
   <component name="WindowStateProjectService">
     <state x="525" y="235" width="824" height="691" key="#CLI_Interpreters" timestamp="1601784844302">
@@ -207,10 +215,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="617" y="248" width="604" height="618" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601878676208" />
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1601882807127">
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1601890129620">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601882807127" />
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601890129620" />
     <state x="405" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1601883860701">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -219,10 +227,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="200" height="584" key="SqlResolveConfigurable/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885911303" />
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601884612687">
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601887618095">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601884612687" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601887618095" />
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601885967832">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

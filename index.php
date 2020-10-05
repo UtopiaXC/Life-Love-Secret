@@ -40,8 +40,7 @@ if ($conn->connect_error) {
         echo "<section class='banner-section'>
         <div class='container'>
             <div class='banner-text'>
-                <h2>$Welcome;
-                </h2>
+                <h2>$Welcome</h2>
                 <a href='#' title=''>查看置顶公告</a>
             </div><!--banner-text end-->
         </div>

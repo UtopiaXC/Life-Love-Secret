@@ -1,11 +1,11 @@
 <?php
 function showHeader($conn)
 {
-    $result=$conn->query("SELECT * FROM web_message");
-    $Title="";
-    while($row=$result->fetch_assoc()){
-        if ($row['Title']=="网站标题"){
-            $Title=$row['Content'];
+    $result = $conn->query("SELECT * FROM web_message");
+    $Title = "";
+    while ($row = $result->fetch_assoc()) {
+        if ($row['Title'] == "网站标题") {
+            $Title = $row['Content'];
         }
     }
 
@@ -35,7 +35,10 @@ function showHeader($conn)
                         <li>
                             <a href='#' title=''><i class='icon-notification'></i></a>
                         </li>
-                        <li class='user-log'>
+                        <li class='user-log'>";
+
+                        if ($_COOKIE['TokenID']) {
+                            echo "
                             <div class='user-ac-img'>
                                 <img class='avatar' src='../images/resources/user-img.jpg' alt=''>
                             </div>
@@ -91,7 +94,40 @@ function showHeader($conn)
                                     </label>
                                     <div class='clearfix'></div>
                                 </div><!--restricted-more end-->
+                            </div>";
+                        }
+                        else{
+                            echo "
+                            <div class='user-ac-img'>
+                                <img class='avatar' src='../images/resources/user-img.jpg' alt=''>
                             </div>
+                            <div class='account-menu'>
+                                <h4>当前未登录</h4>
+                                <div class='sd_menu'>
+                                    <ul class='mm_menu'>
+                                        <li>
+												<span>
+													<i class='icon-user'></i>
+												</span>
+                                            <a href='../login.php' title=''>登录</a>
+                                        </li>
+                                        <li>
+												<span>
+													<i class='icon-flag'></i>
+												</span>
+                                            <a href='../signup.php' title=''>注册</a>
+                                        </li>
+                                        <li>
+												<span>
+													<i class='icon-cancel'></i>
+												</span>
+                                            <a href='../find_password.php' title=''>找回密码</a>
+                                        </li>
+                                    </ul>
+                                </div><!--sd_menu end-->
+                            </div>";
+                        }
+                        echo "
                         </li>
                     </ul><!--controls-lv end-->
                     <div class='clearfix'></div>
@@ -121,14 +157,16 @@ function showHeader($conn)
 
 function showMenu($conn)
 {
-    $result=$conn->query("SELECT * FROM web_message");
-    $Service="";
-    while($row=$result->fetch_assoc()){
-        if ($row['Title']=="运营方"){
-            $Service=$row['Content'];
+    $result = $conn->query("SELECT * FROM web_message");
+    $Service = "";
+    while ($row = $result->fetch_assoc()) {
+        if ($row['Title'] == "运营方") {
+            $Service = $row['Content'];
         }
     }
-    echo "<div class='side_menu'>
+    if ($_COOKIE['TokenID']) {
+        echo "
+        <div class='side_menu'>
         <div class='sd_menu'>
             <h3>我的</h3>
             <ul class='mm_menu'>
@@ -174,6 +212,33 @@ function showMenu($conn)
                 </li>
             </ul>
         </div><!--sd_menu end-->
+        ";
+    }
+    echo "
+        <div class='side_menu'>
+        <div class='sd_menu'>
+        <h3>账户</h3>
+            <ul class='mm_menu'>
+                <li>
+						<span>
+							<i class='icon-user'></i>
+						</span>
+                    <a href='../login.php' title=''>登录</a>
+    </li>
+                <li>
+						<span>
+							<i class='icon-flag'></i>
+						</span>
+                    <a href='../signup.php' title=''>注册</a>
+                </li>
+                <li>
+						<span>
+							<i class='icon-cancel'></i>
+						</span>
+                    <a href='../find_password.php' title=''>找回密码</a>
+                </li>
+            </ul>
+        </div>
         <div class='sd_menu m_linkz'>
             <ul class='mm_menu'>
                 <li><a href='#'>关于</a></li>
@@ -209,15 +274,15 @@ function showMenu($conn)
 
 function showFooter($conn)
 {
-    $result=$conn->query("SELECT * FROM web_message");
-    $Service="";
-    $footer="";
-    while($row=$result->fetch_assoc()){
-        if ($row['Title']=="运营方"){
-            $Service=$row['Content'];
+    $result = $conn->query("SELECT * FROM web_message");
+    $Service = "";
+    $footer = "";
+    while ($row = $result->fetch_assoc()) {
+        if ($row['Title'] == "运营方") {
+            $Service = $row['Content'];
         }
-        if ($row['Title']=="页脚"){
-            $footer=$row['Content'];
+        if ($row['Title'] == "页脚") {
+            $footer = $row['Content'];
         }
     }
     echo "<footer>
