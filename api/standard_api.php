@@ -1,6 +1,8 @@
 <?php
 require_once "email_api.php";
 require_once "Response.php";
+require_once "sql_api.php";
+$conn=getConn();
 
 //API返回格式
 header('Content-Type:text/json;charset=utf-8');
@@ -13,7 +15,10 @@ header('Content-Type:text/json;charset=utf-8');
 //
 //Response::json(200, "API successfully called", $arr);
 if ($_POST['function']=="register"){
-
-    $arr=["isSucceed"=>"成功"];
+    $stmt=$conn->prepare("SELECT UID FROM user WHERE UserName=? OR Email=?");
+    $stmt->bind_param($_POST['username'],$_POST['email']);
+    $stmt->execute();
+    $stmt->bind_result($isHas);
+    $arr=["isSucceed"=>"$isHas"];
     Response::json(200, "API successfully called", $arr);
 }

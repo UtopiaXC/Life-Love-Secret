@@ -131,7 +131,6 @@ while ($row = $result->fetch_assoc()) {
                                 },function (){window.location="login.php"});
                             else
                                 swal("注册失败", result.data.isSucceed, "error");
-
                         },
                         error: function () {
                             swal("抱歉！", "服务器异常", "error");
