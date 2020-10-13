@@ -33,7 +33,7 @@ while ($row = $result->fetch_assoc()) {
                 <span>登录您的账户</span>
             </div><!--hd-lg end-->
             <div class="user-account-pr">
-                <form>
+                <div class="form-div">
                     <div class="input-sec">
                         <label style="display: none" for="username"></label>
                         <input type="text" id="username" name="username" placeholder="用户名">
@@ -52,7 +52,7 @@ while ($row = $result->fetch_assoc()) {
                     <div class="input-sec mb-0">
                         <button type="submit">登录</button>
                     </div><!--input-sec end-->
-                </form>
+                </div>
                 <a href="#" title="" class="fg_btn">忘记密码</a>
             </div><!--user-account end--->
             <div class="fr-ps">

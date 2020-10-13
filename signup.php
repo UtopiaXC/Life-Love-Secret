@@ -82,10 +82,23 @@ while ($row = $result->fetch_assoc()) {
         const password = $("#password").val();
         const password_twice = $("#confirm-password").val();
         if (username === "" || email === "" || password === "" || password_twice === "") {
-            swal("警告", "您有未填写的内容", "warning");
+            swal("警告", "您有未填写的内容！", "warning");
             return false;
         }
-
+        var pattern = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+        if (!pattern.test(email)){
+            swal("警告", "您的邮箱格式不正确！", "warning");
+            return false;
+        }
+        pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,26}$/;
+        if (!pattern.test(password)){
+            swal("警告", "您的密码不符合要求！\n您的密码需要在8～26位之间，且必须包含至少各一个大写字母、小写字母和数字", "warning");
+            return false;
+        }
+        if (password !== password_twice) {
+            swal("警告", "您输入的两次密码不一致！", "warning");
+            return false;
+        }
         swal({
                 title: "确认您的信息",
                 text: "用户名：" + username + "\n邮箱：" + email,
@@ -101,7 +114,7 @@ while ($row = $result->fetch_assoc()) {
                     $.ajax({
                         type: "POST",
                         url: "api/standard_api.php",
-                        dataType:"json",
+                        dataType: "json",
                         data: {
                             "function": "register",
                             "username": username,
@@ -110,9 +123,14 @@ while ($row = $result->fetch_assoc()) {
                         },
                         success: function (result) {
                             console.log(result)
-                            //var response = JSON.parse(response);
-                            if(result.data.isSucceed==="成功")
-                                swal("注册完成", "您的帐号已注册！请前往注册邮箱激活账户\n（如果未找到请查看邮箱垃圾桶）", "success");
+                            if (result.data.isSucceed === "成功")
+                                swal({
+                                    title: "注册完成",
+                                    text: "您的帐号已注册！请前往注册邮箱激活账户\n（如果未找到请查看邮箱垃圾桶）",
+                                    type: "success",
+                                },function (){window.location="login.php"});
+                            else
+                                swal("注册失败", result.data.isSucceed, "error");
 
                         },
                         error: function () {
