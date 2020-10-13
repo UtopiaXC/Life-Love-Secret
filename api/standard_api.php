@@ -12,3 +12,7 @@ header('Content-Type:text/json;charset=utf-8');
 //];
 //
 //Response::json(200, "API successfully called", $arr);
+if ($_POST['function']=="register"){
+    $arr=["isSucceed"=>"成功"];
+    Response::json(200, "API successfully called", $arr);
+}

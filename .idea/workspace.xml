@@ -22,11 +22,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="完善资源结构">
-      <change afterPath="$PROJECT_DIR$/sources/avatar/user-unlogin.png" afterDir="false" />
+    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="完善调用结构，添加资源目录">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/sweetalert.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/sweetalert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Life&amp;Love&amp;Secret.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Life&amp;Love&amp;Secret.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/Response.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/Response.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/standard_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/standard_display_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_display_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,15 +48,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4" />
   <component name="ProjectId" id="1iOfkRIayoI7OjvbNGBuxYVcUoA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -58,8 +67,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sources/banners" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -67,19 +78,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\UtopiaXC\PhpstormProjects\Life&amp;Love&amp;Secret\sources\avatar" />
-      <recent name="$PROJECT_DIR$/error_pages" />
-      <recent name="$PROJECT_DIR$/api" />
-      <recent name="$PROJECT_DIR$/参考文档" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sources/banners" />
       <recent name="$PROJECT_DIR$/sources/logo" />
       <recent name="$PROJECT_DIR$/error_pages" />
       <recent name="$PROJECT_DIR$/SQL" />
       <recent name="$PROJECT_DIR$/PHPMailer" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/error_pages" />
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/参考文档" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/封存" />
     </key>
   </component>
   <component name="RunManager">
@@ -103,7 +114,7 @@
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
       <workItem from="1601871144145" duration="16114000" />
-      <workItem from="1601900865960" duration="4762000" />
+      <workItem from="1602584022661" duration="6968000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -154,21 +165,7 @@
       <option name="project" value="LOCAL" />
       <updated>1601887616853</updated>
     </task>
-    <task id="LOCAL-00008" summary="完善资源结构">
-      <created>1601902365503</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1601902365503</updated>
-    </task>
-    <task id="LOCAL-00009" summary="完善资源结构">
-      <created>1601903470568</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1601903470568</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,18 +189,16 @@
     <MESSAGE value="添加错误页面" />
     <MESSAGE value="添加数据库连接" />
     <MESSAGE value="完善调用结构，添加资源目录" />
-    <MESSAGE value="完善资源结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善资源结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善调用结构，添加资源目录" />
   </component>
   <component name="WindowStateProjectService">
     <state x="525" y="235" width="824" height="691" key="#CLI_Interpreters" timestamp="1601784844302">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="525" y="235" width="824" height="691" key="#CLI_Interpreters/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601784844302" />
-    <state x="727" y="150" width="706" height="891" key="#PHP" timestamp="1601900937766">
-      <screen x="0" y="0" width="2467" height="1440" />
+    <state x="566" y="137" width="706" height="891" key="#PHP" timestamp="1601879065975">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="727" y="150" key="#PHP/0.0.2467.1440@0.0.2467.1440" timestamp="1601900937766" />
     <state x="566" y="137" width="706" height="891" key="#PHP/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601879065975" />
     <state x="194" y="403" width="1449" height="308" key="#SQL_Dialects" timestamp="1601885004489">
       <screen x="0" y="27" width="1920" height="1053" />
@@ -213,20 +208,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="276" y="417" width="1285" height="279" key="#SQL_Resolution_Scopes/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885911314" />
-    <state x="491" y="252" width="1393" height="1026" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601902055956">
-      <screen x="0" y="0" width="2467" height="1440" />
+    <state x="382" y="211" width="1084" height="722" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601884990806">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="491" y="252" width="1393" height="1026" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2467.1440@0.0.2467.1440" timestamp="1601902055956" />
     <state x="382" y="211" width="1084" height="722" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601884990806" />
     <state x="604" y="346" width="629" height="421" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1601879299321">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="604" y="346" width="629" height="421" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601879299321" />
-    <state x="844" y="373" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601902330741">
-      <screen x="0" y="0" width="2467" height="1440" />
+    <state x="657" y="300" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602589032150">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="844" y="373" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2467.1440@0.0.2467.1440" timestamp="1601902330741" />
-    <state x="657" y="300" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601790761734" />
+    <state x="657" y="300" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602589032150" />
     <state x="720" y="338" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601794362259">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -239,26 +232,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="649" y="180" width="539" height="753" key="Github.UntrackedFilesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601880809891" />
-    <state width="1342" height="266" key="GridCell.Tab.0.bottom" timestamp="1601901656462">
-      <screen x="0" y="0" width="2467" height="1440" />
+    <state width="1794" height="272" key="GridCell.Tab.0.bottom" timestamp="1602585182648">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1342" height="266" key="GridCell.Tab.0.bottom/0.0.2467.1440@0.0.2467.1440" timestamp="1601901656462" />
-    <state width="1794" height="272" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601871403255" />
-    <state width="1342" height="266" key="GridCell.Tab.0.center" timestamp="1601901656462">
-      <screen x="0" y="0" width="2467" height="1440" />
+    <state width="1794" height="272" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602585182648" />
+    <state width="1794" height="272" key="GridCell.Tab.0.center" timestamp="1602585182648">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1342" height="266" key="GridCell.Tab.0.center/0.0.2467.1440@0.0.2467.1440" timestamp="1601901656462" />
-    <state width="1794" height="272" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601871403255" />
-    <state width="1342" height="266" key="GridCell.Tab.0.left" timestamp="1601901656462">
-      <screen x="0" y="0" width="2467" height="1440" />
+    <state width="1794" height="272" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602585182648" />
+    <state width="1794" height="272" key="GridCell.Tab.0.left" timestamp="1602585182648">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1342" height="266" key="GridCell.Tab.0.left/0.0.2467.1440@0.0.2467.1440" timestamp="1601901656462" />
-    <state width="1794" height="272" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601871403255" />
-    <state width="1342" height="266" key="GridCell.Tab.0.right" timestamp="1601901656462">
-      <screen x="0" y="0" width="2467" height="1440" />
+    <state width="1794" height="272" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602585182648" />
+    <state width="1794" height="272" key="GridCell.Tab.0.right" timestamp="1602585182648">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1342" height="266" key="GridCell.Tab.0.right/0.0.2467.1440@0.0.2467.1440" timestamp="1601901656462" />
-    <state width="1794" height="272" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601871403255" />
+    <state width="1794" height="272" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602585182648" />
     <state width="273" height="606" key="HiddenNamespacesPopup" timestamp="1601885975766">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -279,19 +268,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="200" height="584" key="SqlResolveConfigurable/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885911303" />
-    <state x="667" y="357" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601903471847">
-      <screen x="0" y="0" width="2467" height="1440" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1601887618095">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="667" y="357" key="Vcs.Push.Dialog.v2/0.0.2467.1440@0.0.2467.1440" timestamp="1601903471847" />
     <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601887618095" />
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601885967832">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885967832" />
-    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601881342427">
+    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602584059409">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601881342427" />
+    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602584059409" />
     <state x="764" y="75" width="638" height="939" key="find.popup" timestamp="1601879478403">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

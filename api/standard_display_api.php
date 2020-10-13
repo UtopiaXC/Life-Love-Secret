@@ -297,7 +297,9 @@ function showDefaultHead()
     <link rel='stylesheet' type='text/css' href='../css/thumbs-embedded.css'>
     <link rel='stylesheet' type='text/css' href='../css/style.css'>
     <link rel='stylesheet' type='text/css' href='../css/responsive.css'>
-    <link rel='stylesheet' type='text/css' href='../css/color.css'>";
+    <link rel='stylesheet' type='text/css' href='../css/color.css'>
+    <link href='../css/sweetalert.min.css' rel='stylesheet'>
+    <script src='../js/sweetalert.js'></script>";
 }
 
 function showDefaultScript()

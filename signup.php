@@ -17,8 +17,10 @@ while ($row = $result->fetch_assoc()) {
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title><?php echo $Title?> - 注册</title>
+    <title><?php echo $Title ?> - 注册</title>
     <?php showDefaultHead(); ?>
+
+
 </head>
 
 <body>
@@ -34,7 +36,7 @@ while ($row = $result->fetch_assoc()) {
                 <span>注册新账户</span>
             </div><!--hd-lg end-->
             <div class="user-account-pr">
-                <form>
+                <div class="form-div">
                     <div class="input-sec mgb25">
                         <label style="display: none" for="username"></label>
                         <input type="text" id="username" name="username" placeholder="用户名">
@@ -52,11 +54,11 @@ while ($row = $result->fetch_assoc()) {
                         <input type="password" id="confirm-password" name="confirm-password" placeholder="重复密码">
                     </div>
                     <div class="input-sec mb-0">
-                        <button type="submit">注册</button>
+                        <button onclick="submitRegister()">注册</button>
                     </div><!--input-sec end-->
-                </form>
-                <div class="form-text">
-                    <p>当您注册帐号时，我们默认您已同意 <a href="#" title="">社区规则</a> 与 <a href="#" title="">隐私协议</a></p>
+                    <div class="form-text">
+                        <p>当您注册帐号时，我们默认您已同意 <a href="#" title="">社区规则</a> 与 <a href="#" title="">隐私协议</a></p>
+                    </div>
                 </div>
             </div><!--user-account end--->
             <div class="fr-ps">
@@ -70,6 +72,58 @@ while ($row = $result->fetch_assoc()) {
 
 </div><!--wrapper end-->
 
-<?php showDefaultScript();?>
+<?php showDefaultScript(); ?>
+
 </body>
+<script>
+    function submitRegister() {
+        const username = $("#username").val();
+        const email = $("#email").val();
+        const password = $("#password").val();
+        const password_twice = $("#confirm-password").val();
+        if (username === "" || email === "" || password === "" || password_twice === "") {
+            swal("警告", "您有未填写的内容", "warning");
+            return false;
+        }
+
+        swal({
+                title: "确认您的信息",
+                text: "用户名：" + username + "\n邮箱：" + email,
+                type: "info",
+                confirmButtonText: "提交注册",
+                cancelButtonText: "取消",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true,
+            },
+            function () {
+                setTimeout(function () {
+                    $.ajax({
+                        type: "POST",
+                        url: "api/standard_api.php",
+                        dataType:"json",
+                        data: {
+                            "function": "register",
+                            "username": username,
+                            "email": email,
+                            "password": password
+                        },
+                        success: function (result) {
+                            console.log(result)
+                            //var response = JSON.parse(response);
+                            if(result.data.isSucceed==="成功")
+                                swal("注册完成", "您的帐号已注册！请前往注册邮箱激活账户\n（如果未找到请查看邮箱垃圾桶）", "success");
+
+                        },
+                        error: function () {
+                            swal("抱歉！", "服务器异常", "error");
+                        }
+                    });
+                });
+            })
+
+    }
+</script>
+
+
 </html>

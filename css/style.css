@@ -2958,15 +2958,15 @@ strong {
     left: 15px;
 }
 
-.user-account-pr form {
+.user-account-pr .form-div {
     margin-top: 40px;
     margin-bottom: 7px;
 }
 
-.user-account-pr form input[type="text"],
-.user-account-pr form input[type="password"],
-.user-account-pr form input[type="email"],
-.user-account-pr form button {
+.user-account-pr .form-div input[type="text"],
+.user-account-pr .form-div  input[type="password"],
+.user-account-pr .form-div  input[type="email"],
+.user-account-pr .form-div  button {
     color: #383838;
     height: 38px;
     padding-left: 10px;
@@ -2977,17 +2977,17 @@ strong {
     width: 100%;
 }
 
-.user-account-pr form + h4 {
+.user-account-pr .form-div  + h4 {
     font-size: 14px;
     line-height: 22px;
 }
 
-.user-account-pr form + h4 a {
+.user-account-pr .form-div  + h4 a {
     display: inline-block;
     color: #feb32d;
 }
 
-.user-account-pr form button {
+.user-account-pr .form-div  button {
     background: #DC6721;
     margin-bottom: 18px;
     padding: 0;
