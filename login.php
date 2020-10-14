@@ -36,18 +36,11 @@ while ($row = $result->fetch_assoc()) {
                 <div class="form-div">
                     <div class="input-sec">
                         <label style="display: none" for="username"></label>
-                        <input type="text" id="username" name="username" placeholder="用户名">
+                        <input type="text" id="username" name="username" placeholder="用户名或邮箱">
                     </div>
                     <div class="input-sec">
                         <label style="display: none" for="password"></label>
                         <input type="Password" id="password" name="password" placeholder="密码">
-                    </div>
-                    <div class="chekbox-lg">
-                        <label>
-                            <input type="checkbox" name="remember" value="rem">
-                            <b class="checkmark"> </b>
-                            <span>Keep Login</span>
-                        </label>
                     </div>
                     <div class="input-sec mb-0">
                         <button type="submit">登录</button>

@@ -52,3 +52,35 @@ function sendEmail($Host, $Secure, $Port,
     return $status;
 }
 
+function verifiedEmail($Title,$code){
+    return "
+    <tr><td style='background-color:#fff'><div class='wui-FileReadList paraStyle' style=''><div class='text'><div class='txt'><div class='mailMainArea' style='font-size: 14px; font-family: Verdana, 宋体, Helvetica, sans-serif; line-height: 1.66; padding: 8px 10px; margin: 0px; width: 700px;'><div>
+    <table cellpadding='0' align='center' style='overflow:hidden;background:#fff;margin:0 auto;text-align:left;position:relative;font-size:14px; font-family:'lucida Grande',Verdana;line-height:1.5;box-shadow:0 0 3px #ccc;border:1px solid #ccc;border-radius:5px;border-collapse:collapse;'>
+        <tbody>
+        <tr>
+            <th valign='middle' style='height:38px;color:#fff; font-size:14px;line-height:38px; font-weight:bold;text-align:left;padding:10px 24px 6px; border-bottom:1px solid #467ec3;background:#518bcb;border-radius:5px 5px 0 0;'>
+        $Title</th>
+        </tr>
+        <tr>
+            <td>
+                <div style='padding:20px 35px 40px;'>
+                    <h2 style='font-weight:bold;margin-bottom:5px;font-size:14px;'>欢迎来到$Title</h2>
+                    <p style='margin-top:20px'>
+        请点击 <a target='_blank' href='$code' _act='check_domail'>$code</a> 来激活您的账户！
+                    </p>
+                    <p style='margin-top:20px'>
+        本验证地址有效期为十分钟。
+                    </p>
+                    <p style='margin-left:2em;'></p>
+                    <p style='text-indent:0;text-align:right;'>$Title</p>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div></div></div></div></div></td></tr>
+    
+    
+    
+    ";
+}

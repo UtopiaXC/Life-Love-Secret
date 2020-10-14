@@ -8,9 +8,13 @@ if ($conn->connect_error) {
 }
 $result = $conn->query("SELECT * FROM web_message");
 $Title = "";
+$useEmail="";
 while ($row = $result->fetch_assoc()) {
     if ($row['Title'] == "网站标题") {
         $Title = $row['Content'];
+    }
+    if ($row['Title']=="使用邮箱"){
+        $useEmail=$row['Content'];
     }
 }
 ?>
@@ -126,7 +130,17 @@ while ($row = $result->fetch_assoc()) {
                             if (result.data.isSucceed === "成功")
                                 swal({
                                     title: "注册完成",
-                                    text: "您的帐号已注册！请前往注册邮箱激活账户\n（如果未找到请查看邮箱垃圾桶）",
+                                    <?php
+                                    if ($useEmail=="是"){
+                                        echo '
+                                        text: "您的帐号已注册！请前往注册邮箱激活账户\n（如果未找到请查看邮箱垃圾桶）",
+                                        ';
+                                    }else
+                                        echo '
+                                        text: "您的帐号已注册！请前往登录",
+                                        ';
+
+                                    ?>
                                     type: "success",
                                 },function (){window.location="login.php"});
                             else

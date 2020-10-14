@@ -23,8 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="添加注册表单验证与异步同步">
+      <change afterPath="$PROJECT_DIR$/api/register_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/email_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/email_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/standard_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +107,7 @@
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
       <workItem from="1601871144145" duration="16114000" />
-      <workItem from="1602584022661" duration="9192000" />
+      <workItem from="1602584022661" duration="22895000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -169,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602593741099</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="添加注册表单验证与异步同步">
+      <created>1602594908679</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602594908679</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +212,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="525" y="235" width="824" height="691" key="#CLI_Interpreters/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601784844302" />
+    <state x="553" y="233" width="732" height="647" key="#Inspections" timestamp="1602660334746">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="553" y="233" width="732" height="647" key="#Inspections/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602660334746" />
     <state x="566" y="137" width="706" height="891" key="#PHP" timestamp="1601879065975">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -254,18 +268,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="1794" height="272" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602585182648" />
-    <state width="273" height="606" key="HiddenNamespacesPopup" timestamp="1601885975766">
+    <state width="273" height="606" key="HiddenNamespacesPopup" timestamp="1602660392897">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="273" height="606" key="HiddenNamespacesPopup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885975766" />
+    <state width="273" height="606" key="HiddenNamespacesPopup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602660392897" />
     <state x="617" y="248" width="604" height="618" key="NewPhpClassDialog" timestamp="1601878676208">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="617" y="248" width="604" height="618" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601878676208" />
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1601890129620">
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1602664992418">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601890129620" />
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602664992418" />
     <state x="405" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1601883860701">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -274,18 +288,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="200" height="584" key="SqlResolveConfigurable/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885911303" />
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602593742380">
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602594910019">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602593742380" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602594910019" />
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601885967832">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885967832" />
-    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602584059409">
+    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602655554568">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602584059409" />
+    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602655554568" />
     <state x="764" y="75" width="638" height="939" key="find.popup" timestamp="1601879478403">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -294,5 +308,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="588" y="251" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601789091844" />
+    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602666695119">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="587" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602666695119" />
   </component>
 </project>
