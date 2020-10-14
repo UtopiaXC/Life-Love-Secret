@@ -51,7 +51,7 @@ function showHeader($conn)
 												<span>
 													<i class='icon-logout'></i>
 												</span>
-                                            <a href='#' title=''>退出登录</a>
+                                            <a onclick='logout();' title=''>退出登录</a>
                                         </li>
                                     </ul>
                                 </div><!--sd_menu end-->
@@ -153,7 +153,7 @@ function showMenu($conn)
             $Service = $row['Content'];
         }
     }
-    if (@$_COOKIE['TokenID']) {
+    if (@$_COOKIE['TokenID'])
         echo "
         <div class='side_menu'>
         <div class='sd_menu'>
@@ -201,8 +201,39 @@ function showMenu($conn)
                 </li>
             </ul>
         </div><!--sd_menu end-->
+        <div class='sd_menu m_linkz'>
+            <ul class='mm_menu'>
+                <li><a href='#'>关于</a></li>
+                <li><a href='#'>社区规则</a></li>
+                <li><a href='#'>隐私权</a></li>
+                <li><a href='#'>Github</a></li>
+                <li><a href='#'>FAQ</a></li>
+            </ul>
+            <span>$Service</span>
+        </div><!--sd_menu end-->
+        <div class='sd_menu bb-0'>
+            <ul class='social_links'>
+                <li>
+                    <a href='#' title=''>
+                        <i class='icon-facebook-official'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href='#' title=''>
+                        <i class='icon-twitter'></i>
+                    </a>
+                </li>
+                <li>
+                    <a href='#' title=''>
+                        <i class='icon-instagram'></i>
+                    </a>
+                </li>
+            </ul><!--social_links end-->
+        </div><!--sd_menu end-->
+        <div class='dd_menu'></div>
+    </div><!--side_menu end-->
         ";
-    }
+    else
     echo "
         <div class='side_menu'>
         <div class='sd_menu'>

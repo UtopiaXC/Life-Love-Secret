@@ -27,12 +27,12 @@ while ($row = $result->fetch_assoc()) {
     <?php showHeader($conn); ?>
     <?php showMenu($conn); ?>
     <section class="form_popup">
-
         <div class="login_form" id="login_form">
             <div class="hd-lg">
                 <span>登录您的账户</span>
             </div><!--hd-lg end-->
             <div class="user-account-pr">
+                <form method="post" onsubmit="return false;">
                 <div class="form-div">
                     <div class="input-sec">
                         <label style="display: none" for="username"></label>
@@ -43,9 +43,10 @@ while ($row = $result->fetch_assoc()) {
                         <input type="Password" id="password" name="password" placeholder="密码">
                     </div>
                     <div class="input-sec mb-0">
-                        <button type="submit">登录</button>
+                        <button type="submit" onclick="submitLogin()">登录</button>
                     </div><!--input-sec end-->
                 </div>
+                </form>
                 <a href="#" title="" class="fg_btn">忘记密码</a>
             </div><!--user-account end--->
             <div class="fr-ps">
@@ -60,4 +61,43 @@ while ($row = $result->fetch_assoc()) {
 
 <?php showDefaultScript();?>
 </body>
+<script>
+    function submitLogin() {
+        var username = $('#username').val();
+        var password = $('#password').val();
+        if (username === "" || password === "") {
+            swal({
+                title: "警告",
+                text: "你需要填写用户名或邮箱与密码",
+                type: "warning"
+            });
+            return;
+        }
+        $.ajax({
+            type: "POST",
+            url:"api/standard_api.php",
+            dataType:"json",
+            data:{
+                "function":"login",
+                "username":username,
+                "password":password
+            },
+            success:function (result){
+                if (result.data.isSucceed==="成功"){
+                    window.location="index.php";
+                }
+                else{
+                    swal("错误！","账户或密码错误！","error");
+                }
+            },
+            error: function () {
+                swal("抱歉！", "服务器异常", "error");
+            }
+        });
+
+
+    }
+</script>
+
+
 </html>

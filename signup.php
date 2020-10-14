@@ -126,7 +126,6 @@ while ($row = $result->fetch_assoc()) {
                             "password": password
                         },
                         success: function (result) {
-                            console.log(result)
                             if (result.data.isSucceed === "成功")
                                 swal({
                                     title: "注册完成",

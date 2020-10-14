@@ -346,4 +346,24 @@ while ($row = $result->fetch_assoc()) {
 
 <?php showDefaultScript(); ?>
 </body>
+<script>
+    function logout(){
+        $.ajax({
+            type: "POST",
+            url: "api/standard_api.php",
+            dataType: "json",
+            data: {
+                "function": "logout"
+            },
+            success:function (result){
+                document.cookie = "TokenID" + "=" + "" + "; " + "-1";
+                document.cookie = "Token" + "=" + "" + "; " + "-1";
+                window.location="index.php";
+            }
+        });
+
+    }
+
+
+</script>
 </html>

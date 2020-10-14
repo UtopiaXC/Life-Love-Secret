@@ -22,11 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="添加注册表单验证与异步同步">
-      <change afterPath="$PROJECT_DIR$/api/register_api.php" afterDir="false" />
+    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="完成注册认证系统">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/email_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/email_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/standard_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/standard_display_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_display_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
@@ -107,7 +107,7 @@
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
       <workItem from="1601871144145" duration="16114000" />
-      <workItem from="1602584022661" duration="22895000" />
+      <workItem from="1602584022661" duration="28623000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -179,7 +179,28 @@
       <option name="project" value="LOCAL" />
       <updated>1602594908679</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完成注册认证系统">
+      <created>1602675132172</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602675132172</updated>
+    </task>
+    <task id="LOCAL-00012" summary="完成注册认证系统">
+      <created>1602675190837</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602675190837</updated>
+    </task>
+    <task id="LOCAL-00013" summary="完成注册认证系统">
+      <created>1602675321618</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1602675321618</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +226,8 @@
     <MESSAGE value="完善调用结构，添加资源目录" />
     <MESSAGE value="添加注册结构" />
     <MESSAGE value="添加注册表单验证与异步同步" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加注册表单验证与异步同步" />
+    <MESSAGE value="完成注册认证系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成注册认证系统" />
   </component>
   <component name="WindowStateProjectService">
     <state x="525" y="235" width="824" height="691" key="#CLI_Interpreters" timestamp="1601784844302">
@@ -216,10 +238,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="553" y="233" width="732" height="647" key="#Inspections/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602660334746" />
-    <state x="566" y="137" width="706" height="891" key="#PHP" timestamp="1601879065975">
+    <state x="566" y="137" width="706" height="891" key="#PHP" timestamp="1602678699972">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="566" y="137" width="706" height="891" key="#PHP/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601879065975" />
+    <state x="566" y="137" width="706" height="891" key="#PHP/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602678699972" />
     <state x="194" y="403" width="1449" height="308" key="#SQL_Dialects" timestamp="1601885004489">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -240,10 +262,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="657" y="300" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602589032150" />
-    <state x="720" y="338" width="424" height="491" key="FileChooserDialogImpl" timestamp="1601794362259">
+    <state x="720" y="338" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602678696493">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="720" y="338" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601794362259" />
+    <state x="720" y="338" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602678696493" />
     <state x="749" y="448" width="349" height="217" key="Github.ShareDialog" timestamp="1601880800288">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -288,10 +310,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="200" height="584" key="SqlResolveConfigurable/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885911303" />
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602594910019">
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602675322848">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602594910019" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602675322848" />
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601885967832">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

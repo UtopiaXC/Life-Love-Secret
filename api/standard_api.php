@@ -145,3 +145,37 @@ if ($_POST['function']=="resendRegisterEmail"){
     Response::json(200, "API successfully called", $arr);
     exit(0);
 }
+if ($_POST['function']=="login"){
+    $stmt=$conn->prepare("SELECT Password FROM user WHERE UserName=? OR Email=?");
+    $stmt->bind_param("ss",$_POST['username'],$_POST['username']);
+    $stmt->execute();
+    $stmt->store_result();
+    $stmt->bind_result($password);
+    if ($stmt->num_rows()!=1){
+        $arr=["isSucceed"=>"账户不存在"];
+        Response::json(200, "API successfully called", $arr);
+        exit(0);
+    }
+    $stmt->fetch();
+    if (md5("#*#*4636".md5($_POST['password'])."114514*#*#")!=$password){
+        $arr=["isSucceed"=>"密码错误"];
+        Response::json(200, "API successfully called", $arr);
+        exit(0);
+    }
+
+    $TokenID=md5(md5($_POST['username']).microtime(true));
+    $Token=md5(md5($_POST['password']).microtime(true));
+    setcookie("TokenID",$TokenID,time()+10*365*24*60*60,"/");
+    setcookie("Token",$Token,time()+10*365*24*60*60,"/");
+    $conn->query("UPDATE user SET TokenID='$TokenID',Token='$Token' WHERE UserName='".$_POST['username']."' OR Email='".$_POST['username']."'");
+    $arr=["isSucceed"=>"成功"];
+    Response::json(200, "API successfully called", $arr);
+    exit(0);
+}
+if ($_POST['function']=="logout"){
+    //echo "UPDATE user SET TokenID=null,Token=null WHERE TokenID='".$_COOKIE['TokenID']."'";
+    $conn->query("UPDATE user SET TokenID=null,Token=null WHERE TokenID='".$_COOKIE['TokenID']."'");
+    $arr=["isSucceed"=>"成功"];
+    Response::json(200, "API successfully called", $arr);
+    exit(0);
+}
