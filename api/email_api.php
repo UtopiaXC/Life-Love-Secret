@@ -1,4 +1,5 @@
-<?php
+<?php /** @noinspection ALL */
+
 use PHPMailer\PHPMailer\PHPMailer;
 
 require_once("PHPMailer/PHPMailer.php");
