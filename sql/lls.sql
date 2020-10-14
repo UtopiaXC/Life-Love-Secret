@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： localhost
--- 生成日期： 2020-10-05 17:31:10
+-- 生成日期： 2020-10-14 21:07:38
 -- 服务器版本： 8.0.20
 -- PHP 版本： 7.4.10
 
@@ -195,12 +195,21 @@ CREATE TABLE `user` (
   `UserName` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Password` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `VerifiedCode` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Timeout` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `isVerified` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `TokenID` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Token` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `TokenID` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Token` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `isHiden` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `Theme` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- 转存表中的数据 `user`
+--
+
+INSERT INTO `user` (`UID`, `UserName`, `Email`, `Password`, `VerifiedCode`, `Timeout`, `isVerified`, `TokenID`, `Token`, `isHiden`, `Theme`) VALUES
+(11, 'UtopiaXC', 'dys1025@sina.com', '59178ff1a38fa82b3e0825a75208c567', '9d0d7d52769d5822a92725b1e1303a25', '1602668984', '是', NULL, NULL, '否', '默认');
 
 -- --------------------------------------------------------
 
@@ -264,6 +273,7 @@ CREATE TABLE `user_report` (
 --
 
 CREATE TABLE `web_message` (
+  `ID` int NOT NULL,
   `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `Content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
@@ -272,12 +282,20 @@ CREATE TABLE `web_message` (
 -- 转存表中的数据 `web_message`
 --
 
-INSERT INTO `web_message` (`Title`, `Content`) VALUES
-('网站标题', 'Life&Love&Secret'),
-('运营方', '大连民族大学ACM工作室'),
-('页脚', '&copy;2020 <a href=\'#\'> UtopiaXC </a> All Rights Reserved.'),
-('欢迎语句', '欢迎来到Life&Love&Secret'),
-('显示首页banner', '是');
+INSERT INTO `web_message` (`ID`, `Title`, `Content`) VALUES
+(1, '网站标题', 'Life&Love&Secret'),
+(2, '运营方', '大连民族大学ACM工作室'),
+(3, '页脚', '&copy;2020 <a href=\'#\'> UtopiaXC </a> All Rights Reserved.'),
+(4, '欢迎语句', '欢迎来到Life&Love&Secret'),
+(5, '显示首页banner', '是'),
+(6, '使用邮箱', '是'),
+(7, '发件信箱', 'utopiaxc@utopiaxc.com'),
+(8, '发件服务器', 'mail.utopiaxc.com'),
+(9, '发件端口', '25'),
+(10, '安全协议', '不使用'),
+(11, '发件人名', 'UtopiaXC'),
+(12, '发件密码', 'Dys299792458'),
+(13, '域名', 'http://127.0.0.1:1080/');
 
 --
 -- 转储表的索引
@@ -368,6 +386,12 @@ ALTER TABLE `user_report`
   ADD PRIMARY KEY (`URID`) USING BTREE;
 
 --
+-- 表的索引 `web_message`
+--
+ALTER TABLE `web_message`
+  ADD PRIMARY KEY (`ID`);
+
+--
 -- 在导出的表使用AUTO_INCREMENT
 --
 
@@ -429,7 +453,7 @@ ALTER TABLE `transaction_comment`
 -- 使用表AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-  MODIFY `UID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `UID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- 使用表AUTO_INCREMENT `usermessages`
@@ -448,6 +472,12 @@ ALTER TABLE `user_messages`
 --
 ALTER TABLE `user_report`
   MODIFY `URID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- 使用表AUTO_INCREMENT `web_message`
+--
+ALTER TABLE `web_message`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
