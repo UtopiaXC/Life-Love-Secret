@@ -59,7 +59,7 @@ function verifiedEmail($Title,$code){
     <table cellpadding='0' align='center' style='overflow:hidden;background:#fff;margin:0 auto;text-align:left;position:relative;font-size:14px; font-family:'lucida Grande',Verdana;line-height:1.5;box-shadow:0 0 3px #ccc;border:1px solid #ccc;border-radius:5px;border-collapse:collapse;'>
         <tbody>
         <tr>
-            <th valign='middle' style='height:38px;color:#fff; font-size:14px;line-height:38px; font-weight:bold;text-align:left;padding:10px 24px 6px; border-bottom:1px solid #467ec3;background:#518bcb;border-radius:5px 5px 0 0;'>
+            <th valign='middle' style='height:38px;color:#fff; font-size:14px;line-height:38px; font-weight:bold;text-align:left;padding:10px 24px 6px; border-bottom:1px solid #842ec4;background:#874ac6;border-radius:5px 5px 0 0;'>
         $Title</th>
         </tr>
         <tr>
