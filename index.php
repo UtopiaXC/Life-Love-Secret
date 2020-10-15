@@ -20,6 +20,13 @@ while ($row = $result->fetch_assoc()) {
 <head>
     <title><?php echo $Title?> - 主页</title>
     <?php showDefaultHead(); ?>
+    <style>
+        body {
+            background: #f2f2f2;
+            color: #333;
+        }
+    </style>
+
 </head>
 <body>
 <div class="wrapper hp_1">

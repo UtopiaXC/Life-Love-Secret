@@ -61,7 +61,7 @@ function showHeader($conn)
 												<span>
 													<i class='icon-light'></i>
 												</span>
-                                            <a href='#' title=''>黑暗模式</a>
+                                            <a href='#' title=''>夜间（开发中）</a>
                                             <label class='switch'>
                                                 <input type='checkbox'>
                                                 <b class='slider round'></b>

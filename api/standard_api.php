@@ -179,3 +179,58 @@ if ($_POST['function']=="logout"){
     Response::json(200, "API successfully called", $arr);
     exit(0);
 }
+if ($_POST['function']=="find_password"){
+    $result = $conn->query("SELECT * FROM web_message");
+    $Host = "";
+    $Secure="";
+    $Port="";
+    $ShowName="";
+    $sender="";
+    $senderPassword="";
+    $local="";
+    $Title="";
+    while ($row = $result->fetch_assoc()) {
+        if ($row['Title'] == "发件信箱") {
+            $sender = $row['Content'];
+        }
+        if ($row['Title'] == "发件服务器") {
+            $Host = $row['Content'];
+        }
+        if ($row['Title'] == "发件端口") {
+            $Port = $row['Content'];
+        }
+        if ($row['Title'] == "安全协议") {
+            $Secure = $row['Content'];
+        }
+        if ($row['Title'] == "发件人名") {
+            $ShowName = $row['Content'];
+        }
+        if ($row['Title'] == "发件密码") {
+            $senderPassword = $row['Content'];
+        }
+        if ($row['Title'] == "域名") {
+            $local = $row['Content'];
+        }
+        if ($row['Title'] == "网站标题") {
+            $Title = $row['Content'];
+        }
+    }
+    if ($Secure=="不使用")
+        $Secure=false;
+    $VerifiledCode=md5($_POST['email'].microtime(true));
+    sendEmail($Host,$Secure,$Port,$ShowName,$sender,$senderPassword,$_POST['email'],$Title."密码找回验证码",findPasswordEmail($Title,$local."api/find_password_api.php?code=".$VerifiledCode));
+    $conn->query("UPDATE user SET VerifiedCode='$VerifiledCode',Timeout='".(time()+600)."' WHERE Email='".$_POST['email']."'");
+    $arr=["isSucceed"=>"成功"];
+    Response::json(200, "API successfully called", $arr);
+    exit(0);
+}
+if ($_POST['function']=="submit_find_password"){
+    $stmt = $conn->prepare("UPDATE user SET Password=? WHERE VerifiedCode=?");
+    $password = md5("#*#*4636" . md5($_POST['password']) . "114514*#*#");
+    $stmt->bind_param("ss", $password, $_POST['code']);
+    $stmt->execute();
+    $conn->query("UPDATE user SET VerifiedCode=null,TokenID=null,Token=null WHERE VerifiedCode='".$_POST['code']."'");
+    $arr = ["isSucceed" => "成功"];
+    Response::json(200, "API successfully called", $arr);
+    exit(0);
+}

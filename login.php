@@ -47,7 +47,7 @@ while ($row = $result->fetch_assoc()) {
                     </div><!--input-sec end-->
                 </div>
                 </form>
-                <a href="#" title="" class="fg_btn">忘记密码</a>
+                <a href="find_password.php" title="" class="fg_btn">忘记密码</a>
             </div><!--user-account end--->
             <div class="fr-ps">
                 <h1>没有帐号？ <a href="signup.php" title="" class="show_signup">前往注册</a></h1>
@@ -57,7 +57,6 @@ while ($row = $result->fetch_assoc()) {
     </section><!--form_popup end-->
     <?php showFooter($conn);?>
 </div><!--wrapper end-->
-
 
 <?php showDefaultScript();?>
 </body>

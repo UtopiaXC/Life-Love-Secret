@@ -22,13 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="完成注册认证系统">
+    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="数据库更新">
+      <change afterPath="$PROJECT_DIR$/api/find_password_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/email_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/email_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/register_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/register_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/standard_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/standard_display_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_display_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/find_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/find_password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,25 +68,26 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sources/banners" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sources/banners" />
-      <recent name="$PROJECT_DIR$/sources/logo" />
-      <recent name="$PROJECT_DIR$/error_pages" />
-      <recent name="$PROJECT_DIR$/SQL" />
-      <recent name="$PROJECT_DIR$/PHPMailer" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/error_pages" />
       <recent name="$PROJECT_DIR$/api" />
       <recent name="$PROJECT_DIR$/参考文档" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/封存" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sql" />
+      <recent name="$PROJECT_DIR$/sources/banners" />
+      <recent name="$PROJECT_DIR$/sources/logo" />
+      <recent name="$PROJECT_DIR$/error_pages" />
+      <recent name="$PROJECT_DIR$/SQL" />
     </key>
   </component>
   <component name="RunManager">
@@ -107,7 +111,7 @@
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
       <workItem from="1601871144145" duration="16114000" />
-      <workItem from="1602584022661" duration="28623000" />
+      <workItem from="1602584022661" duration="35482000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -200,7 +204,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602675321618</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="完成登录框架">
+      <created>1602680824018</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1602680824018</updated>
+    </task>
+    <task id="LOCAL-00015" summary="数据库更新">
+      <created>1602680896516</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1602680896516</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +245,9 @@
     <MESSAGE value="添加注册结构" />
     <MESSAGE value="添加注册表单验证与异步同步" />
     <MESSAGE value="完成注册认证系统" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成注册认证系统" />
+    <MESSAGE value="完成登录框架" />
+    <MESSAGE value="数据库更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据库更新" />
   </component>
   <component name="WindowStateProjectService">
     <state x="525" y="235" width="824" height="691" key="#CLI_Interpreters" timestamp="1601784844302">
@@ -298,10 +318,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="617" y="248" width="604" height="618" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601878676208" />
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1602664992418">
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1602729384285">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602664992418" />
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602729384285" />
     <state x="405" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1601883860701">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -310,26 +330,26 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="200" height="584" key="SqlResolveConfigurable/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885911303" />
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602675322848">
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602680898041">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602675322848" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602680898041" />
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601885967832">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885967832" />
-    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602655554568">
+    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602727535585">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602655554568" />
+    <state x="704" y="463" width="440" height="187" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602727535585" />
     <state x="764" y="75" width="638" height="939" key="find.popup" timestamp="1601879478403">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="764" y="75" width="638" height="939" key="find.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601879478403" />
-    <state x="588" y="251" key="run.anything.popup" timestamp="1601789091844">
+    <state x="588" y="251" width="672" height="680" key="run.anything.popup" timestamp="1602731424420">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="588" y="251" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601789091844" />
+    <state x="588" y="251" width="672" height="680" key="run.anything.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602731424420" />
     <state x="587" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1602666695119">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

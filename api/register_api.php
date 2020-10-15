@@ -9,6 +9,7 @@ $stmt->execute();
 $stmt->store_result();
 $stmt->bind_result($Email,$UserName,$isVerified,$Timeout);
 $stmt->fetch();
+
 ?>
 <html lang="zh-CN">
 <head>
@@ -79,6 +80,7 @@ else if ($Timeout<time())
     ';
 else{
     $conn->query("UPDATE user SET isVerified='是' WHERE VerifiedCode='".$_GET['code']."'");
+    $conn->query("UPDATE user SET VerifiedCode=null,TokenID=null,Token=null WHERE VerifiedCode='".$_POST['code']."'");
     echo "
     <script>
 swal({
