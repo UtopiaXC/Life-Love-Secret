@@ -11,7 +11,7 @@ function showHeader($conn)
                         </a>
                     </div><!--menu_logo end-->
                     <div class='search_form'>
-                        <form>
+                        <form method='get' action='../search.php'>
                             <label for='search' style='display: none'></label>
                             <input type='text' id='search' name='search' placeholder='搜索内容'>
                             <button type='submit'><i class='icon-search'></i></button>
@@ -39,13 +39,13 @@ function showHeader($conn)
 												<span>
 													<i class='icon-user'></i>
 												</span>
-                                            <a href='#' title=''>个人中心</a>
+                                            <a href='../center.php' title=''>个人中心</a>
                                         </li>
                                         <li>
 												<span>
 													<i class='icon-settings'></i>
 												</span>
-                                            <a href='#' title=''>账户设置</a>
+                                            <a href='../account.php' title=''>账户设置</a>
                                         </li>
                                         <li>
 												<span>
@@ -71,7 +71,7 @@ function showHeader($conn)
 												<span>
 													<i class='icon-feedback'></i>
 												</span>
-                                            <a href='#' title=''>反馈</a>
+                                            <a href='../feedback.php' title=''>反馈</a>
                                         </li>
                                     </ul>
                                 </div><!--sd_menu end-->
@@ -129,12 +129,12 @@ function showHeader($conn)
                     <nav>
                         <ul>
                             <li><a href='/' title=''>主页</a></li>
-                            <li><a href='../参考/Browse_Categories.html' title=''>表白墙</a></li>
-                            <li><a href='../参考/Browse_Channels.html' title=''>树洞</a></li>
-                            <li><a href='#' title=''>失物招领</a></li>
-                            <li><a href='#' title=''>校内交易</a></li>
-                            <li><a href='../参考/Single_Channel_Home.html' title=''>公告</a></li>
-                            <li><a href='#' title=''>个人中心</a></li>
+                            <li><a href='../confessions.php' title=''>表白墙</a></li>
+                            <li><a href='../secrets.php' title=''>树洞</a></li>
+                            <li><a href='../founds.php' title=''>失物招领</a></li>
+                            <li><a href='../tranactions.php' title=''>校内交易</a></li>
+                            <li><a href='../announcements.php' title=''>公告</a></li>
+                            <li><a href='../center.php' title=''>个人中心</a></li>
                         </ul>
                     </nav><!--navigation end-->
                     <div class='clearfix'></div>
@@ -163,19 +163,19 @@ function showMenu($conn)
 						<span>
 							<i class='icon-watch_later'></i>
 						</span>
-                    <a href='#' title=''>时间线</a>
+                    <a href='../center.php?action=timeline' title=''>时间线</a>
     </li>
                 <li>
 						<span>
 							<i class='icon-like'></i>
 						</span>
-                    <a href='#' title=''>已赞</a>
+                    <a href='../center.php?action=recommend' title=''>已赞</a>
                 </li>
                 <li>
 						<span>
 							<i class='icon-play_list'></i>
 						</span>
-                    <a href='#' title=''>关注列表</a>
+                    <a href='../center.php?action=subscription' title=''>关注列表</a>
                 </li>
             </ul>
         </div><!--sd_menu end-->
@@ -185,50 +185,31 @@ function showMenu($conn)
 						<span>
 							<i class='icon-settings'></i>
 						</span>
-                    <a href='#' title=''>账户设置</a>
+                    <a href='../account.php' title=''>账户设置</a>
                 </li>
                 <li>
 						<span>
 							<i class='icon-flag'></i>
 						</span>
-                    <a href='#' title=''>消息中心</a>
+                    <a href='../messages.php' title=''>消息中心</a>
                 </li>
                 <li>
 						<span>
 							<i class='icon-logout'></i>
 						</span>
-                    <a href='#' title=''>注销登录</a>
+                    <a onclick='logout();' title=''>注销登录</a>
                 </li>
             </ul>
         </div><!--sd_menu end-->
         <div class='sd_menu m_linkz'>
             <ul class='mm_menu'>
-                <li><a href='#'>关于</a></li>
-                <li><a href='#'>社区规则</a></li>
-                <li><a href='#'>隐私权</a></li>
-                <li><a href='#'>Github</a></li>
-                <li><a href='#'>FAQ</a></li>
+                <li><a href='../about.php'>关于</a></li>
+                <li><a href='../rules.php'>社区规则</a></li>
+                <li><a href='../privacy.php'>隐私权</a></li>
+                <li><a target='_blank' href='https://www.github.com/UtopiaXC/Life-Love-Secret/'>Github</a></li>
+                <li><a href='../faq.php'>FAQ</a></li>
             </ul>
             <span>$Service</span>
-        </div><!--sd_menu end-->
-        <div class='sd_menu bb-0'>
-            <ul class='social_links'>
-                <li>
-                    <a href='#' title=''>
-                        <i class='icon-facebook-official'></i>
-                    </a>
-                </li>
-                <li>
-                    <a href='#' title=''>
-                        <i class='icon-twitter'></i>
-                    </a>
-                </li>
-                <li>
-                    <a href='#' title=''>
-                        <i class='icon-instagram'></i>
-                    </a>
-                </li>
-            </ul><!--social_links end-->
         </div><!--sd_menu end-->
         <div class='dd_menu'></div>
     </div><!--side_menu end-->
@@ -261,32 +242,13 @@ function showMenu($conn)
         </div>
         <div class='sd_menu m_linkz'>
             <ul class='mm_menu'>
-                <li><a href='#'>关于</a></li>
-                <li><a href='#'>社区规则</a></li>
-                <li><a href='#'>隐私权</a></li>
-                <li><a href='#'>Github</a></li>
-                <li><a href='#'>FAQ</a></li>
+                <li><a href='../about.php'>关于</a></li>
+                <li><a href='../rules.php'>社区规则</a></li>
+                <li><a href='../privacy.php'>隐私权</a></li>
+                <li><a target='_blank' href='https://www.github.com/UtopiaXC/Life-Love-Secret/'>Github</a></li>
+                <li><a href='../faq.php'>FAQ</a></li>
             </ul>
             <span>$Service</span>
-        </div><!--sd_menu end-->
-        <div class='sd_menu bb-0'>
-            <ul class='social_links'>
-                <li>
-                    <a href='#' title=''>
-                        <i class='icon-facebook-official'></i>
-                    </a>
-                </li>
-                <li>
-                    <a href='#' title=''>
-                        <i class='icon-twitter'></i>
-                    </a>
-                </li>
-                <li>
-                    <a href='#' title=''>
-                        <i class='icon-instagram'></i>
-                    </a>
-                </li>
-            </ul><!--social_links end-->
         </div><!--sd_menu end-->
         <div class='dd_menu'></div>
     </div><!--side_menu end-->";

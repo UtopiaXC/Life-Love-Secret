@@ -22,16 +22,39 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="数据库更新">
-      <change afterPath="$PROJECT_DIR$/api/find_password_api.php" afterDir="false" />
+    <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="添加找回密码&#10;=">
+      <change afterPath="$PROJECT_DIR$/about.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/announcements.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/center.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/confessions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/faq.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feedback.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/founds.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/messages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/privacy.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rules.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/search.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secrets.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tranactions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/email_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/email_api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/register_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/register_api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/standard_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/standard_display_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_display_api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/find_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/find_password.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Browse_Categories.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Browse_Channels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Searched_Videos_Page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Single_Channel_About.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Single_Channel_Channels.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Single_Channel_Home.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Single_Channel_Playlist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Single_Channel_Products.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Single_Channel_Videos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Single_Video_Simplified_Page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/Updates_From_Subs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/signup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/single_video_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/single_video_playlist.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +89,6 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/sql" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -111,7 +133,7 @@
       <workItem from="1601786589340" duration="9419000" />
       <workItem from="1601870668023" duration="456000" />
       <workItem from="1601871144145" duration="16114000" />
-      <workItem from="1602584022661" duration="35482000" />
+      <workItem from="1602584022661" duration="38213000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -218,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602680896516</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="添加找回密码&#10;=">
+      <created>1602735352221</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1602735352221</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +276,8 @@
     <MESSAGE value="完成注册认证系统" />
     <MESSAGE value="完成登录框架" />
     <MESSAGE value="数据库更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="数据库更新" />
+    <MESSAGE value="添加找回密码&#10;=" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加找回密码&#10;=" />
   </component>
   <component name="WindowStateProjectService">
     <state x="525" y="235" width="824" height="691" key="#CLI_Interpreters" timestamp="1601784844302">
@@ -278,10 +308,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="604" y="346" width="629" height="421" key="#com.intellij.fileTypes.FileTypeChooser/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601879299321" />
-    <state x="657" y="300" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602589032150">
+    <state x="657" y="300" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602737693063">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="657" y="300" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602589032150" />
+    <state x="657" y="300" width="524" height="514" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602737693063" />
     <state x="720" y="338" width="424" height="491" key="FileChooserDialogImpl" timestamp="1602678696493">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -318,22 +348,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="617" y="248" width="604" height="618" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601878676208" />
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1602729384285">
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1602737742095">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602729384285" />
-    <state x="405" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1601883860701">
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602737742095" />
+    <state x="405" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1602737138600">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="405" y="188" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601883860701" />
+    <state x="405" y="188" width="1037" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602737138600" />
     <state width="200" height="584" key="SqlResolveConfigurable" timestamp="1601885911303">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="200" height="584" key="SqlResolveConfigurable/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885911303" />
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602680898041">
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602735353619">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602680898041" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602735353619" />
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601885967832">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
