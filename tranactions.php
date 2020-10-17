@@ -15,10 +15,12 @@ while ($row = $result->fetch_assoc()) {
 }
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title><?php echo $Title?> - 主页</title>
+    <title><?php echo $Title ?> - 主页</title>
     <?php showDefaultHead(); ?>
     <style>
         body {
@@ -100,7 +102,7 @@ while ($row = $result->fetch_assoc()) {
 <?php showDefaultScript(); ?>
 </body>
 <script>
-    function logout(){
+    function logout() {
         $.ajax({
             type: "POST",
             url: "api/standard_api.php",
@@ -108,10 +110,10 @@ while ($row = $result->fetch_assoc()) {
             data: {
                 "function": "logout"
             },
-            success:function (result){
+            success: function (result) {
                 document.cookie = "TokenID" + "=" + "" + "; " + "-1";
                 document.cookie = "Token" + "=" + "" + "; " + "-1";
-                window.location="index.php";
+                window.location = "index.php";
             }
         });
 

@@ -1140,15 +1140,6 @@ svg:hover path {
 
 }
 
-.pr_links:before {
-    content: '';
-    width: 156px;
-    height: 2px;
-    position: absolute;
-    bottom: -25px;
-    right: 12px;
-}
-
 .pr_links li button i {
     margin-right: 12px;
 }

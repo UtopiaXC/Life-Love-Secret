@@ -78,7 +78,7 @@ while ($row = $result->fetch_assoc()) {
                                                 </a>
                                             </div><!--vid_thumbnail end-->
                                             <div class="video_info">
-                                                <h3><a href="#" title="">测试留言</a></h3>
+                                                <h3><a href="confession.php" title="">测试留言</a></h3>
                                                 <h4><a href="#" title="">UtopiaXC</a> </i></span></h4>
                                                 <span>1 点赞<small class="posted_dt">2020-10-1</small></span>
                                             </div>
