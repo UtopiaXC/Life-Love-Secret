@@ -266,7 +266,7 @@ while ($row = $result->fetch_assoc()) {
                                 <div class="videoo">
                                     <div class="vid_thumbainl">
                                         <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="images/resources/user-img.jpg" alt="">
+                                            <img src="sources/avatar/user-img.jpg" alt="">
                                         </a>
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
@@ -279,7 +279,7 @@ while ($row = $result->fetch_assoc()) {
                                 <div class="videoo">
                                     <div class="vid_thumbainl">
                                         <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="images/resources/user-img.jpg" alt="">
+                                            <img src="sources/avatar/user-img.jpg" alt="">
                                         </a>
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
@@ -292,7 +292,7 @@ while ($row = $result->fetch_assoc()) {
                                 <div class="videoo">
                                     <div class="vid_thumbainl">
                                         <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="images/resources/user-img.jpg" alt="">
+                                            <img src="sources/avatar/user-img.jpg" alt="">
                                         </a>
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
@@ -305,7 +305,7 @@ while ($row = $result->fetch_assoc()) {
                                 <div class="videoo">
                                     <div class="vid_thumbainl">
                                         <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="images/resources/user-img.jpg" alt="">
+                                            <img src="sources/avatar/user-img.jpg" alt="">
                                         </a>
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
@@ -318,7 +318,7 @@ while ($row = $result->fetch_assoc()) {
                                 <div class="videoo">
                                     <div class="vid_thumbainl">
                                         <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="images/resources/user-img.jpg" alt="">
+                                            <img src="sources/avatar/user-img.jpg" alt="">
                                         </a>
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
@@ -331,7 +331,7 @@ while ($row = $result->fetch_assoc()) {
                                 <div class="videoo">
                                     <div class="vid_thumbainl">
                                         <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="images/resources/user-img.jpg" alt="">
+                                            <img src="sources/avatar/user-img.jpg" alt="">
                                         </a>
                                     </div><!--vid_thumbnail end-->
                                     <div class="video_info">
