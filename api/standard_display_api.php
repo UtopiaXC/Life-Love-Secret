@@ -270,7 +270,7 @@ function showFooter($conn)
     echo "<footer>
         <section class='more_items_sec text-center'>
             <div class='container'>
-                <p style='color: #7f7f7f'>Powered By <a href='#'>Life&Love&Secret</a> | <a href='#'>$Service</a>
+                <p style='color: #7f7f7f'>Powered By <a target='_blank' href='https://github.com/UtopiaXC/Life-Love-Secret'>Life&Love&Secret</a> | $Service
                     <br>$footer</p>
             </div>
         </section><!--more_items_sec end-->

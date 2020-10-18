@@ -57,4 +57,32 @@
 
 })(window.jQuery);
 
+function logout(){
+    swal({
+            title: "确定退出？",
+            text: "您将注销您的帐号登录",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "确定！",
+            cancelButtonText:"取消",
+            closeOnConfirm: false
+        },
+        function(){
+            $.ajax({
+                type: "POST",
+                url: "api/standard_api.php",
+                dataType: "json",
+                data: {
+                    "function": "logout"
+                },
+                success:function (result){
+                    document.cookie = "TokenID" + "=" + "" + "; " + "-1";
+                    document.cookie = "Token" + "=" + "" + "; " + "-1";
+                    window.location="index.php";
+                }
+            });
+        });
+}
+
 

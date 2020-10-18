@@ -116,7 +116,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3>树洞</h3>
-                    <a href="#" title="" class="view-btn">查看全部</a>
+                    <a href="secrets.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
@@ -164,7 +164,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3>失物招领</h3>
-                    <a href="#" title="" class="view-btn">查看全部</a>
+                    <a href="founds.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
@@ -212,7 +212,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3>校内交易</h3>
-                    <a href="#" title="" class="view-btn">查看全部</a>
+                    <a href="tranactions.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
@@ -349,28 +349,6 @@ while ($row = $result->fetch_assoc()) {
 
     <?php showFooter($conn); ?>
 </div><!--wrapper end-->
-
-
 <?php showDefaultScript(); ?>
 </body>
-<script>
-    function logout(){
-        $.ajax({
-            type: "POST",
-            url: "api/standard_api.php",
-            dataType: "json",
-            data: {
-                "function": "logout"
-            },
-            success:function (result){
-                document.cookie = "TokenID" + "=" + "" + "; " + "-1";
-                document.cookie = "Token" + "=" + "" + "; " + "-1";
-                window.location="index.php";
-            }
-        });
-
-    }
-
-
-</script>
 </html>

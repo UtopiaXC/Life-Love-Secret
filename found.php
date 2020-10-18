@@ -18,7 +18,7 @@ while ($row = $result->fetch_assoc()) {
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title><?php echo $Title?> - 表白</title>
+    <title><?php echo $Title?> - 失物招领</title>
     <?php showDefaultHead(); ?>
     <style>
         body {

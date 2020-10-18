@@ -23,7 +23,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="完善项目结构">
+      <change afterPath="$PROJECT_DIR$/found.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/secret.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tranaction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/announcements.php" beforeDir="false" afterPath="$PROJECT_DIR$/announcements.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/standard_display_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_display_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confession.php" beforeDir="false" afterPath="$PROJECT_DIR$/confession.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/confessions.php" beforeDir="false" afterPath="$PROJECT_DIR$/confessions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/founds.php" beforeDir="false" afterPath="$PROJECT_DIR$/founds.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secrets.php" beforeDir="false" afterPath="$PROJECT_DIR$/secrets.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tranactions.php" beforeDir="false" afterPath="$PROJECT_DIR$/tranactions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/参考/single_video_fullwidth_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/参考/single_video_fullwidth_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +116,7 @@
       <workItem from="1601870668023" duration="456000" />
       <workItem from="1601871144145" duration="16114000" />
       <workItem from="1602584022661" duration="39328000" />
-      <workItem from="1602920680244" duration="4777000" />
+      <workItem from="1602920680244" duration="8438000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -245,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602928835855</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="完善项目结构">
+      <created>1602990376172</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1602990376172</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,22 +344,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="649" y="180" width="539" height="753" key="Github.UntrackedFilesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601880809891" />
-    <state width="1794" height="272" key="GridCell.Tab.0.bottom" timestamp="1602921368191">
+    <state width="1794" height="272" key="GridCell.Tab.0.bottom" timestamp="1602990585583">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1794" height="272" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602921368191" />
-    <state width="1794" height="272" key="GridCell.Tab.0.center" timestamp="1602921368191">
+    <state width="1794" height="272" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602990585583" />
+    <state width="1794" height="272" key="GridCell.Tab.0.center" timestamp="1602990585583">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1794" height="272" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602921368191" />
-    <state width="1794" height="272" key="GridCell.Tab.0.left" timestamp="1602921368191">
+    <state width="1794" height="272" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602990585583" />
+    <state width="1794" height="272" key="GridCell.Tab.0.left" timestamp="1602990585582">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1794" height="272" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602921368191" />
-    <state width="1794" height="272" key="GridCell.Tab.0.right" timestamp="1602921368191">
+    <state width="1794" height="272" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602990585582" />
+    <state width="1794" height="272" key="GridCell.Tab.0.right" timestamp="1602990585583">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1794" height="272" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602921368191" />
+    <state width="1794" height="272" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602990585583" />
     <state width="273" height="606" key="HiddenNamespacesPopup" timestamp="1602660392897">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -348,10 +368,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="617" y="248" width="604" height="618" key="NewPhpClassDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601878676208" />
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1602921692187">
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog" timestamp="1602993464071">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602921692187" />
+    <state x="720" y="474" width="398" height="166" key="NewPhpFileDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602993464071" />
     <state x="405" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1602737138600">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -360,10 +380,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state width="200" height="584" key="SqlResolveConfigurable/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601885911303" />
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602928837092">
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2" timestamp="1602990377131">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602928837092" />
+    <state x="519" y="288" width="800" height="538" key="Vcs.Push.Dialog.v2/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1602990377131" />
     <state x="721" y="184" width="395" height="745" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601885967832">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
