@@ -132,7 +132,7 @@ function showHeader($conn)
                             <li><a href='../confessions.php' title=''>表白墙</a></li>
                             <li><a href='../secrets.php' title=''>树洞</a></li>
                             <li><a href='../founds.php' title=''>失物招领</a></li>
-                            <li><a href='../tranactions.php' title=''>校内交易</a></li>
+                            <li><a href='../transactions.php' title=''>校内交易</a></li>
                             <li><a href='../announcements.php' title=''>公告</a></li>
                             <li><a href='../center.php' title=''>个人中心</a></li>
                         </ul>

@@ -212,7 +212,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3>校内交易</h3>
-                    <a href="tranactions.php" title="" class="view-btn">查看全部</a>
+                    <a href="transactions.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
                         <div class="row">
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">

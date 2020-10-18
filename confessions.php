@@ -42,7 +42,7 @@ while ($row = $result->fetch_assoc()) {
                 </div><!--vcp_inf end-->
                 <ul class="chan_cantrz">
                     <li>
-                        <a href="#" title="" class="subscribe">添加新留言</a>
+                        <a href="add_new.php?type=confession" title="" class="subscribe">添加新留言</a>
                     </li>
                 </ul><!--chan_cantrz end-->
                 <div class="search_form">

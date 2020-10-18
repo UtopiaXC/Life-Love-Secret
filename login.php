@@ -85,8 +85,14 @@ while ($row = $result->fetch_assoc()) {
                 if (result.data.isSucceed==="成功"){
                     window.location="index.php";
                 }
-                else{
-                    swal("错误！","账户或密码错误！","error");
+                else if (result.data.isSucceed==="账户不存在"){
+                    swal("错误！","账户不存在！","error");
+                }
+                else if (result.data.isSucceed==="密码错误"){
+                    swal("错误！","密码错误！","error");
+                }
+                else if (result.data.isSucceed==="账户未激活"){
+                    swal("错误！","您的账户未激活！请前往邮箱认证您的账户","error");
                 }
             },
             error: function () {

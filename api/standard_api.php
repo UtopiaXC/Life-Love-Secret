@@ -46,7 +46,7 @@ if ($_POST['function']=="register"){
         }
     }
     if ($useEmail=="否"){
-        $stmt = $conn->prepare("INSERT INTO user(UserName, Email, Password,isVerified, isHiden, Theme)VALUES(?,?,?,'是','否','默认')");
+        $stmt = $conn->prepare("INSERT INTO user(UserName, Email, Password,isVerified, isHiden, Theme,UserGroup)VALUES(?,?,?,'是','否','默认','user')");
         $stmt->bind_param("ssss", $_POST['username'], $_POST['email'], md5("#*#*4636" . md5($_POST['password']) . "114514*#*#"));
         $stmt->execute();
         $arr = ["isSucceed" => "成功"];
@@ -146,11 +146,11 @@ if ($_POST['function']=="resendRegisterEmail"){
     exit(0);
 }
 if ($_POST['function']=="login"){
-    $stmt=$conn->prepare("SELECT Password FROM user WHERE UserName=? OR Email=?");
+    $stmt=$conn->prepare("SELECT Password,isVerified FROM user WHERE UserName=? OR Email=?");
     $stmt->bind_param("ss",$_POST['username'],$_POST['username']);
     $stmt->execute();
     $stmt->store_result();
-    $stmt->bind_result($password);
+    $stmt->bind_result($password,$isVerifild);
     if ($stmt->num_rows()!=1){
         $arr=["isSucceed"=>"账户不存在"];
         Response::json(200, "API successfully called", $arr);
@@ -162,7 +162,11 @@ if ($_POST['function']=="login"){
         Response::json(200, "API successfully called", $arr);
         exit(0);
     }
-
+    if ($isVerifild=="否"){
+        $arr=["isSucceed"=>"账户未激活"];
+        Response::json(200, "API successfully called", $arr);
+        exit(0);
+    }
     $TokenID=md5(md5($_POST['username']).microtime(true));
     $Token=md5(md5($_POST['password']).microtime(true));
     setcookie("TokenID",$TokenID,time()+10*365*24*60*60,"/");
