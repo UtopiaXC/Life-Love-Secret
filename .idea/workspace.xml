@@ -23,16 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c73a51d3-65bc-4485-a938-049781ea9a4e" name="Default Changelist" comment="完善项目结构">
-      <change afterPath="$PROJECT_DIR$/add_new.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_new.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_new.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/standard_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/standard_display_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/standard_display_api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/confessions.php" beforeDir="false" afterPath="$PROJECT_DIR$/confessions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tranaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/transaction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tranactions.php" beforeDir="false" afterPath="$PROJECT_DIR$/transactions.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +107,8 @@
       <workItem from="1602584022661" duration="39328000" />
       <workItem from="1602920680244" duration="12598000" />
       <workItem from="1603010141833" duration="10142000" />
+      <workItem from="1603023075095" duration="941000" />
+      <workItem from="1603087274674" duration="4186000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1601881189140</created>
@@ -348,22 +343,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="649" y="180" width="539" height="753" key="Github.UntrackedFilesDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1601880809891" />
-    <state width="1794" height="271" key="GridCell.Tab.0.bottom" timestamp="1603010143875">
+    <state width="1794" height="271" key="GridCell.Tab.0.bottom" timestamp="1603089560566">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1794" height="271" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1603010143875" />
-    <state width="1794" height="271" key="GridCell.Tab.0.center" timestamp="1603010143875">
+    <state width="1794" height="271" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1603089560566" />
+    <state width="1794" height="271" key="GridCell.Tab.0.center" timestamp="1603089560566">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1794" height="271" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1603010143875" />
-    <state width="1794" height="271" key="GridCell.Tab.0.left" timestamp="1603010143875">
+    <state width="1794" height="271" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1603089560566" />
+    <state width="1794" height="271" key="GridCell.Tab.0.left" timestamp="1603089560566">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1794" height="271" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1603010143875" />
-    <state width="1794" height="271" key="GridCell.Tab.0.right" timestamp="1603010143875">
+    <state width="1794" height="271" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1603089560566" />
+    <state width="1794" height="271" key="GridCell.Tab.0.right" timestamp="1603089560566">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1794" height="271" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1603010143875" />
+    <state width="1794" height="271" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1603089560566" />
     <state width="273" height="606" key="HiddenNamespacesPopup" timestamp="1602660392897">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
