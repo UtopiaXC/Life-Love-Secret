@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： localhost
--- 生成日期： 2020-10-14 21:07:38
+-- 生成日期： 2020-10-21 12:41:14
 -- 服务器版本： 8.0.20
 -- PHP 版本： 7.4.10
 
@@ -201,15 +201,28 @@ CREATE TABLE `user` (
   `TokenID` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `Token` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `isHiden` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Theme` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+  `Theme` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `UserGroup` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- 转存表中的数据 `user`
 --
 
-INSERT INTO `user` (`UID`, `UserName`, `Email`, `Password`, `VerifiedCode`, `Timeout`, `isVerified`, `TokenID`, `Token`, `isHiden`, `Theme`) VALUES
-(11, 'UtopiaXC', 'dys1025@sina.com', '59178ff1a38fa82b3e0825a75208c567', '9d0d7d52769d5822a92725b1e1303a25', '1602668984', '是', NULL, NULL, '否', '默认');
+INSERT INTO `user` (`UID`, `UserName`, `Email`, `Password`, `VerifiedCode`, `Timeout`, `isVerified`, `TokenID`, `Token`, `isHiden`, `Theme`, `UserGroup`) VALUES
+(13, 'UtopiaXC', 'dys1025@sina.com', '59178ff1a38fa82b3e0825a75208c567', '5465fc650276b852095141f622813b72', '1603007988', '是', '616c5b12387faa1a3cd5ab2c2c1eeb69', '918424e00437703ea9707860d20d93cb', '否', '默认', 'admin');
+
+--
+-- 触发器 `user`
+--
+DELIMITER $$
+CREATE TRIGGER `AddUser` AFTER INSERT ON `user` FOR EACH ROW BEGIN
+
+INSERT INTO usermessages (UID,Avatar,Name,Sex)VALUES(new.UID,"DefaultAvatar",new.UserName,"未知");
+
+END
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -222,14 +235,22 @@ CREATE TABLE `usermessages` (
   `Avatar` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
   `Name` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
   `Sex` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
-  `Birthday` date NOT NULL,
-  `Motto` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Major` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Location` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `URL` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `QQ` int NOT NULL,
-  `Wechat` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
+  `Birthday` date DEFAULT NULL,
+  `Motto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Major` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Location` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `URL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `QQ` int DEFAULT NULL,
+  `Wechat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- 转存表中的数据 `usermessages`
+--
+
+INSERT INTO `usermessages` (`UID`, `Avatar`, `Name`, `Sex`, `Birthday`, `Motto`, `Major`, `Location`, `URL`, `QQ`, `Wechat`) VALUES
+(13, 'DefaultAvatar', 'UtopiaXC', '未知', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(14, 'DefaultAvatar', 'juejue', '未知', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -284,8 +305,8 @@ CREATE TABLE `web_message` (
 
 INSERT INTO `web_message` (`ID`, `Title`, `Content`) VALUES
 (1, '网站标题', 'Life&Love&Secret'),
-(2, '运营方', '大连民族大学ACM工作室'),
-(3, '页脚', '&copy;2020 <a href=\'#\'> UtopiaXC </a> All Rights Reserved.'),
+(2, '运营方', '<a target=\'_blank\' href=\'https://oj.dlnu-acm.com\'>大连民族大学ACM工作室</a>'),
+(3, '页脚', '&copy;2020 <a href=\'https://www.utopiaxc.cn\'> UtopiaXC </a> All Rights Reserved.'),
 (4, '欢迎语句', '欢迎来到Life&Love&Secret'),
 (5, '显示首页banner', '是'),
 (6, '使用邮箱', '是'),
@@ -453,13 +474,13 @@ ALTER TABLE `transaction_comment`
 -- 使用表AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
-  MODIFY `UID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `UID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用表AUTO_INCREMENT `usermessages`
 --
 ALTER TABLE `usermessages`
-  MODIFY `UID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `UID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- 使用表AUTO_INCREMENT `user_messages`
