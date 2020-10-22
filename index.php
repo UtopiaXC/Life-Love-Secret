@@ -18,7 +18,7 @@ while ($row = $result->fetch_assoc()) {
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title><?php echo $Title?> - 主页</title>
+    <title><?php echo $Title ?> - 主页</title>
     <?php showDefaultHead(); ?>
     <style>
         body {
@@ -42,7 +42,7 @@ while ($row = $result->fetch_assoc()) {
             $ShowBanner = $row['Content'];
         }
     }
-    if ($ShowBanner=="是"){
+    if ($ShowBanner == "是") {
         $result = $conn->query("SELECT * FROM web_message");
         $Welcome = "";
         while ($row = $result->fetch_assoc()) {
@@ -62,7 +62,6 @@ while ($row = $result->fetch_assoc()) {
     ?>
 
 
-
     <section class="vds-main">
         <div class="vidz-row">
             <div class="container">
@@ -71,34 +70,8 @@ while ($row = $result->fetch_assoc()) {
                     <a href="confessions.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
                         <div class="row" id="confessions">
-                            {{message}}
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
+
+
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
                                 <div class="videoo">
                                     <div class="video_info">
@@ -352,25 +325,34 @@ while ($row = $result->fetch_assoc()) {
 </div><!--wrapper end-->
 <?php showDefaultScript(); ?>
 </body>
+<script type="x-template" id="card">
+    <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
+        <div class="videoo">
+            <div class="video_info">
+                <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
+                <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
+                <span>100赞<small class="posted_dt">2020-10-2</small></span>
+            </div>
+        </div><!--videoo end-->
+    </div>
+</script>
 <script>
     $.ajax({
-        type:"get",
-        url:"api/standard_api.php",
-        dataType:"json",
-        data:{
-            "function":"main_page"
+        type: "get",
+        url: "api/standard_api.php",
+        dataType: "json",
+        data: {
+            "function": "main_page"
         },
-        success:function (result){
-            console.log(result.data.confession.c1.Content)
-            if (result.data.confession.confession_count===1)
-                alert(result.data.confession.c1.Content)
-            export default{
-                
-            }
-        },
-        error:function (result){
+        success: function (result) {
+            console.log(result.data.confession)
 
         }
     });
+
+    function addConfession(){
+        var div=$("#confessions").createElement("div");
+        div.setAttribute(0)
+    }
 </script>
 </html>
