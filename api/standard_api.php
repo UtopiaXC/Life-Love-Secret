@@ -298,7 +298,7 @@ if ($_GET['function']=="main_page"){
     $transactions+=$rows;
 
     $users=[];
-    $result=$conn->query("SELECT user.UserName,user_messages.Avatar,user.UID FROM user,user_messages WHERE user.UID=user_messages.UID AND NOT user.isHiden='是' ORDER BY RAND() LIMIT 6");
+    $result=$conn->query("SELECT user.UserName,user_messages.Avatar,user.UID FROM user,user_messages WHERE user.UID=user_messages.UID AND user.isHiden='否' ORDER BY RAND() LIMIT 6");
     $user_count=$result->num_rows;
     $users+=["user_count" => $user_count];
     $rows=[];
@@ -310,5 +310,28 @@ if ($_GET['function']=="main_page"){
 
     $arr=["confession"=>$confessions]+["secret"=>$secrets]+["found"=>$founds]+["transaction"=>$transactions]+["user"=>$users];
     Response::json(200, "API successfully called", $arr);
+    exit(0);
+}
+if ($_GET['function']=="get_user_message"){
+    if (@!$_COOKIE['Token']){
+        $arr = ["登录状态" => "未登录"];
+        Response::json(200, "API successfully called", $arr);
+        exit(0);
+    }
+    $result=$conn->query("SELECT * FROM user WHERE Token='".$_COOKIE['Token']."'");
+    $row=$result->fetch_assoc();
+    $arr=["登录状态"=>"正常","隐匿模式"=>$row['isHiden'],"账户等级"=>$row['UserGroup']];
+}
+if ($_GET['function']=="confessions_page"){
+    $result=$conn->query("SELECT confession.Title,user.UserName,user.UID,confession.Likes,confession.SubmitTime,confession.LID FROM confession,user WHERE confession.UID=user.UID ORDER BY LID DESC LIMIT 40");
+    $confessions=[];
+    $confessions_count=$result->num_rows;
+    $confessions+=["confessions_count" => $confessions_count];
+    $rows=[];
+    while($row=$result->fetch_assoc()){
+        array_push($rows,$row);
+    }
+    $confessions+=$rows;
+    Response::json(200, "API successfully called", $confessions);
     exit(0);
 }

@@ -66,24 +66,7 @@ while ($row = $result->fetch_assoc()) {
                             <br><br>
                             <div class="clearfix"></div>
                             <div class="vidz_list">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-6 full_wdth">
-                                        <div class="videoo">
-                                            <div class="vid_thumbainl">
-                                                <a href="#" title="">
-                                                    <span class="vid-time">10:21</span>
-                                                    <span class="watch_later">
-														<i class="icon-watch_later_fill"></i>
-													</span>
-                                                </a>
-                                            </div><!--vid_thumbnail end-->
-                                            <div class="video_info">
-                                                <h3><a href="confession.php" title="">测试留言</a></h3>
-                                                <h4><a href="#" title="">UtopiaXC</a> </i></span></h4>
-                                                <span>1 点赞<small class="posted_dt">2020-10-1</small></span>
-                                            </div>
-                                        </div><!--videoo end-->
-                                    </div>
+                                <div class="row" id="confessions">
                                 </div>
                             </div><!--vidz_list end-->
                         </div><!--vidz_videos end-->
@@ -99,4 +82,38 @@ while ($row = $result->fetch_assoc()) {
 
 <?php showDefaultScript(); ?>
 </body>
+<script>
+    var page=1;
+    $.ajax({
+        url:"api/standard_api.php",
+        method:"get",
+        dataType:"json",
+        data:{
+            "function":"confessions_page",
+            "page":page++
+        },
+        success:function (result){
+            for (i=0;i<result.data.confessions_count;i++){
+                addConfessions(result.data[i].Title,
+                    result.data[i].LID,
+                    result.data[i].UserName,
+                    result.data[i].UID,
+                    result.data[i].Likes,
+                    result.data[i].SubmitTime)
+            }
+        }
+    })
+    function addConfessions(Title,LID,username,UID,likes,time){
+        var div=document.getElementById("confessions");
+        div.innerHTML+='<div class="col-lg-3 col-md-3 col-sm-6 col-6 full_wdth">' +
+            '               <div class="videoo">' +
+            '                   <div class="video_info">' +
+            '                       <h3><a href="confession.php" title="">'+Title+'</a></h3>' +
+            '                       <h4><a href="#" title="">'+username+'</a> </i></span></h4>' +
+            '                       <span>'+likes+' 点赞<small class="posted_dt">'+time+'</small></span>' +
+            '                   </div>\n' +
+            '               </div><!--videoo end-->' +
+            '           </div>';
+    }
+</script>
 </html>

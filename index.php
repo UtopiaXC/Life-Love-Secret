@@ -69,7 +69,7 @@ while ($row = $result->fetch_assoc()) {
                     <h3><a href="confessions.php" id="text_confessions">表白墙</a></h3>
                     <a href="confessions.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
-                        <div class="row" id="confessions">
+                        <div class="row" id="confession">
                         </div>
                     </div><!--vidz_list end-->
                 </div><!--vidz_videos end-->
@@ -138,7 +138,7 @@ while ($row = $result->fetch_assoc()) {
         },
         success: function (result) {
             for (i=0;i<result.data.confession.confession_count;i++){
-                addConfession("confessions",result.data.confession[i].LID,
+                addConfession("confession",result.data.confession[i].LID,
                     result.data.confession[i].Title,
                     result.data.confession[i].UserName,
                     result.data.confession[i].UID,
@@ -146,7 +146,7 @@ while ($row = $result->fetch_assoc()) {
                     result.data.confession[i].SubmitTime);
             }
             if (result.data.confession.confession_count===0){
-                showNone("confessions");
+                showNone("confession");
             }
             for (i=0;i<result.data.secret.secret_count;i++){
                 addConfession("secret",result.data.secret[i].LID,
@@ -190,15 +190,15 @@ while ($row = $result->fetch_assoc()) {
     });
     function addConfession(element,link,title,username,userlink,likes,time){
         var div=document.getElementById(element);
-        div.innerHTML+='    <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">\n' +
-            '        <div class="videoo">\n' +
-            '            <div class="video_info">\n' +
-            '                <h3><a href="'+element+'.php?LID='+link+'" title="">'+title+'</a></h3>\n' +
-            '                <h4><a href="center.php?UID='+userlink+'" title="">'+username+'</a></h4>\n' +
-            '                <span>'+likes+'赞<small class="posted_dt">'+time+'</small></span>\n' +
-            '            </div>\n' +
-            '        </div><!--videoo end-->\n' +
-            '    </div>';
+        div.innerHTML+=`    <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
+        <div class="videoo">
+            <div class="video_info">
+                <h3><a href="${element}.php?LID=${link}" title="">${title}</a></h3>
+                <h4><a href="center.php?UID=${userlink}" title="">${username}</a></h4>
+                <span>${likes}赞<small class="posted_dt">${time}</small></span>
+            </div>
+        </div><!--videoo end-->
+    </div>`;
     }
     function showNone(element){
         var line=document.getElementById("text_"+element);
@@ -206,18 +206,18 @@ while ($row = $result->fetch_assoc()) {
     }
     function addUser(username,Avatar,UID){
         var div=document.getElementById("users");
-        div.innerHTML=' <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">\n' +
-            '               <div class="videoo">\n' +
-            '                   <div class="vid_thumbainl">\n' +
-            '                       <a href="center.php?UID='+UID+'">\n' +
-            '                           <img src="'+Avatar+'" alt="">\n' +
-            '                       </a>\n' +
-            '                   </div><!--vid_thumbnail end-->\n' +
-                '               <div class="video_info">\n' +
-                '                   <h3><a href="center.php?UID='+UID+'">'+username+'</a></h3>\n' +
-                '               </div>\n' +
-            '               </div><!--videoo end-->\n' +
-            '           </div>\n';
+        div.innerHTML=' <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">' +
+            '               <div class="videoo">' +
+            '                   <div class="vid_thumbainl">' +
+            '                       <a href="center.php?UID='+UID+'">' +
+            '                           <img src="'+Avatar+'" alt="">' +
+            '                       </a>' +
+            '                   </div><!--vid_thumbnail end-->' +
+                '               <div class="video_info">' +
+                '                   <h3><a href="center.php?UID='+UID+'">'+username+'</a></h3>' +
+                '               </div>' +
+            '               </div><!--videoo end-->' +
+            '           </div>';
     }
 </script>
 </html>
