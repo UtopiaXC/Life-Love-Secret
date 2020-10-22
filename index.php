@@ -70,7 +70,8 @@ while ($row = $result->fetch_assoc()) {
                     <h3>表白墙</h3>
                     <a href="confessions.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
-                        <div class="row">
+                        <div class="row" id="confessions">
+                            {{message}}
                             <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
                                 <div class="videoo">
                                     <div class="video_info">
@@ -351,4 +352,25 @@ while ($row = $result->fetch_assoc()) {
 </div><!--wrapper end-->
 <?php showDefaultScript(); ?>
 </body>
+<script>
+    $.ajax({
+        type:"get",
+        url:"api/standard_api.php",
+        dataType:"json",
+        data:{
+            "function":"main_page"
+        },
+        success:function (result){
+            console.log(result.data.confession.c1.Content)
+            if (result.data.confession.confession_count===1)
+                alert(result.data.confession.c1.Content)
+            export default{
+                
+            }
+        },
+        error:function (result){
+
+        }
+    });
+</script>
 </html>

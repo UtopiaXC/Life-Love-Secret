@@ -292,7 +292,8 @@ function showDefaultHead()
     <link rel='stylesheet' type='text/css' href='../css/responsive.css'>
     <link rel='stylesheet' type='text/css' href='../css/color.css'>
     <link href='../css/sweetalert.min.css' rel='stylesheet'>
-    <script src='../js/sweetalert.js'></script>";
+    <script src='../js/sweetalert.js'></script>
+    <script src='../js/vue.js'></script>";
 }
 
 function showDefaultScript()

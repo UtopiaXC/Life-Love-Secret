@@ -238,3 +238,28 @@ if ($_POST['function']=="submit_find_password"){
     Response::json(200, "API successfully called", $arr);
     exit(0);
 }
+if ($_GET['function']=="main_page"){
+    $arr=[];
+
+    $confessions=[];
+    $result=$conn->query("SELECT * FROM confession ORDER BY LID DESC LIMIT 4");
+    $confession_count=$result->num_rows;
+    $confessions+=["confession_count" => $confession_count];
+    $i=1;
+    while($row=$result->fetch_assoc()){
+        $confessions+=["c".$i++=>$row];
+    }
+
+    $secrets=[];
+    $result=$conn->query("SELECT * FROM secret ORDER BY LID DESC LIMIT 4");
+    $secret_count=$result->num_rows;
+    $secrets+=["secret_count" => $secret_count];
+    $i=1;
+    while($row=$result->fetch_assoc()){
+        $secrets+=["s".$i++=>$row];
+    }
+
+    $arr=["confession"=>$confessions]+["secret"=>$secrets];
+    Response::json(200, "API successfully called", $arr);
+    exit(0);
+}

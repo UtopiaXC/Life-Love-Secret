@@ -166,7 +166,7 @@ while ($row = $result->fetch_assoc()) {
             </form>
         </div>
     </section><!--vid-title-sec-->
-
+    <br><br>
     <?php showFooter($conn); ?>
 </div><!--wrapper end-->
 <script>
