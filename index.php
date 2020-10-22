@@ -66,21 +66,10 @@ while ($row = $result->fetch_assoc()) {
         <div class="vidz-row">
             <div class="container">
                 <div class="vidz_sec">
-                    <h3>表白墙</h3>
+                    <h3><a href="confessions.php" id="text_confessions">表白墙</a></h3>
                     <a href="confessions.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
                         <div class="row" id="confessions">
-
-
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
                         </div>
                     </div><!--vidz_list end-->
                 </div><!--vidz_videos end-->
@@ -89,46 +78,10 @@ while ($row = $result->fetch_assoc()) {
         <div class="vidz-row">
             <div class="container">
                 <div class="vidz_sec">
-                    <h3>树洞</h3>
+                    <h3><a href="secrets.php" id="text_secret">树洞</a></h3>
                     <a href="secrets.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
+                        <div class="row" id="secret">
                         </div>
                     </div><!--vidz_list end-->
                 </div><!--vidz_videos end-->
@@ -137,46 +90,10 @@ while ($row = $result->fetch_assoc()) {
         <div class="vidz-row">
             <div class="container">
                 <div class="vidz_sec">
-                    <h3>失物招领</h3>
+                    <h3><a href="founds.php" id="text_found">失物招领</a></h3>
                     <a href="founds.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
+                        <div class="row" id="found">
                         </div>
                     </div><!--vidz_list end-->
                 </div><!--vidz_videos end-->
@@ -185,46 +102,10 @@ while ($row = $result->fetch_assoc()) {
         <div class="vidz-row">
             <div class="container">
                 <div class="vidz_sec">
-                    <h3>校内交易</h3>
+                    <h3><a href="transactions.php" id="text_transaction">校内交易</a></h3>
                     <a href="transactions.php" title="" class="view-btn">查看全部</a>
                     <div class="vidz_list">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="video_info">
-                                        <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                                        <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                                        <span>100赞<small class="posted_dt">2020-10-2</small></span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
+                        <div class="row" id="transaction">
                         </div>
                     </div><!--vidz_list end-->
                 </div><!--vidz_videos end-->
@@ -235,85 +116,7 @@ while ($row = $result->fetch_assoc()) {
                 <div class="vidz_sec">
                     <h3>随意链接</h3>
                     <div class="vidz_list">
-                        <div class="row">
-                            <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="vid_thumbainl">
-                                        <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="sources/avatar/user-img.jpg" alt="">
-                                        </a>
-                                    </div><!--vid_thumbnail end-->
-                                    <div class="video_info">
-                                        <h3><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h3>
-                                        <span>100关注</span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="vid_thumbainl">
-                                        <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="sources/avatar/user-img.jpg" alt="">
-                                        </a>
-                                    </div><!--vid_thumbnail end-->
-                                    <div class="video_info">
-                                        <h3><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h3>
-                                        <span>100关注</span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="vid_thumbainl">
-                                        <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="sources/avatar/user-img.jpg" alt="">
-                                        </a>
-                                    </div><!--vid_thumbnail end-->
-                                    <div class="video_info">
-                                        <h3><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h3>
-                                        <span>100关注</span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="vid_thumbainl">
-                                        <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="sources/avatar/user-img.jpg" alt="">
-                                        </a>
-                                    </div><!--vid_thumbnail end-->
-                                    <div class="video_info">
-                                        <h3><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h3>
-                                        <span>100关注</span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="vid_thumbainl">
-                                        <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="sources/avatar/user-img.jpg" alt="">
-                                        </a>
-                                    </div><!--vid_thumbnail end-->
-                                    <div class="video_info">
-                                        <h3><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h3>
-                                        <span>100关注</span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
-                            <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">
-                                <div class="videoo">
-                                    <div class="vid_thumbainl">
-                                        <a href="参考/Single_Channel_Home.html" title="">
-                                            <img src="sources/avatar/user-img.jpg" alt="">
-                                        </a>
-                                    </div><!--vid_thumbnail end-->
-                                    <div class="video_info">
-                                        <h3><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h3>
-                                        <span>100关注</span>
-                                    </div>
-                                </div><!--videoo end-->
-                            </div>
+                        <div class="row" id="users">
                         </div>
                     </div><!--vidz_list end-->
                 </div><!--vidz_videos end-->
@@ -325,17 +128,6 @@ while ($row = $result->fetch_assoc()) {
 </div><!--wrapper end-->
 <?php showDefaultScript(); ?>
 </body>
-<script type="x-template" id="card">
-    <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
-        <div class="videoo">
-            <div class="video_info">
-                <h3><a href="参考/single_video_page.html" title="">测试标题</a></h3>
-                <h4><a href="参考/Single_Channel_Home.html" title="">测试用户</a></h4>
-                <span>100赞<small class="posted_dt">2020-10-2</small></span>
-            </div>
-        </div><!--videoo end-->
-    </div>
-</script>
 <script>
     $.ajax({
         type: "get",
@@ -345,14 +137,87 @@ while ($row = $result->fetch_assoc()) {
             "function": "main_page"
         },
         success: function (result) {
-            console.log(result.data.confession)
-
+            for (i=0;i<result.data.confession.confession_count;i++){
+                addConfession("confessions",result.data.confession[i].LID,
+                    result.data.confession[i].Title,
+                    result.data.confession[i].UserName,
+                    result.data.confession[i].UID,
+                    result.data.confession[i].Likes,
+                    result.data.confession[i].SubmitTime);
+            }
+            if (result.data.confession.confession_count===0){
+                showNone("confessions");
+            }
+            for (i=0;i<result.data.secret.secret_count;i++){
+                addConfession("secret",result.data.secret[i].LID,
+                    result.data.secret[i].Title,
+                    result.data.secret[i].UserName,
+                    result.data.secret[i].UID,
+                    result.data.secret[i].Likes,
+                    result.data.secret[i].SubmitTime);
+            }
+            if (result.data.secret.secret_count===0){
+                showNone("secret");
+            }
+            for (i=0;i<result.data.found.found_count;i++){
+                addConfession("found",result.data.found[i].FID,
+                    result.data.found[i].Title,
+                    result.data.found[i].UserName,
+                    result.data.found[i].UID,
+                    result.data.found[i].Likes,
+                    result.data.found[i].SubmitTime);
+            }
+            if (result.data.found.found_count===0){
+                showNone("found");
+            }
+            for (i=0;i<result.data.transaction.transaction_count;i++){
+                addConfession("transaction",result.data.transaction[i].LID,
+                    result.data.transaction[i].Title,
+                    result.data.transaction[i].UserName,
+                    result.data.transaction[i].UID,
+                    result.data.transaction[i].Likes,
+                    result.data.transaction[i].SubmitTime);
+            }
+            if (result.data.transaction.transaction_count===0){
+                showNone("transaction");
+            }
+            for (i=0;i<result.data.user.user_count;i++){
+                addUser(result.data.user[i].UserName,
+                    result.data.user[i].Avatar,
+                    result.data.user[i].UID);
+            }
         }
     });
-
-    function addConfession(){
-        var div=$("#confessions").createElement("div");
-        div.setAttribute(0)
+    function addConfession(element,link,title,username,userlink,likes,time){
+        var div=document.getElementById(element);
+        div.innerHTML+='    <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">\n' +
+            '        <div class="videoo">\n' +
+            '            <div class="video_info">\n' +
+            '                <h3><a href="'+element+'.php?LID='+link+'" title="">'+title+'</a></h3>\n' +
+            '                <h4><a href="center.php?UID='+userlink+'" title="">'+username+'</a></h4>\n' +
+            '                <span>'+likes+'赞<small class="posted_dt">'+time+'</small></span>\n' +
+            '            </div>\n' +
+            '        </div><!--videoo end-->\n' +
+            '    </div>';
+    }
+    function showNone(element){
+        var line=document.getElementById("text_"+element);
+        line.innerText+='（当前板块无留言！）';
+    }
+    function addUser(username,Avatar,UID){
+        var div=document.getElementById("users");
+        div.innerHTML=' <div class="col-lg-2 col-md-4 col-sm-4 col-6 full_wdth">\n' +
+            '               <div class="videoo">\n' +
+            '                   <div class="vid_thumbainl">\n' +
+            '                       <a href="center.php?UID='+UID+'">\n' +
+            '                           <img src="'+Avatar+'" alt="">\n' +
+            '                       </a>\n' +
+            '                   </div><!--vid_thumbnail end-->\n' +
+                '               <div class="video_info">\n' +
+                '                   <h3><a href="center.php?UID='+UID+'">'+username+'</a></h3>\n' +
+                '               </div>\n' +
+            '               </div><!--videoo end-->\n' +
+            '           </div>\n';
     }
 </script>
 </html>

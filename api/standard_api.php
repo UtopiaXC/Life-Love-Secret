@@ -242,24 +242,73 @@ if ($_GET['function']=="main_page"){
     $arr=[];
 
     $confessions=[];
-    $result=$conn->query("SELECT * FROM confession ORDER BY LID DESC LIMIT 4");
+    $result=$conn->query("SELECT confession.LID,confession.Title,confession.Content,
+       confession.Hidden,confession.Likes,confession.SubmitTime,user.UserName,user.UID FROM confession,user WHERE user.UID=confession.UID ORDER BY LID DESC LIMIT 4");
     $confession_count=$result->num_rows;
     $confessions+=["confession_count" => $confession_count];
+    $rows=[];
     $i=1;
     while($row=$result->fetch_assoc()){
-        $confessions+=["c".$i++=>$row];
+        if ($row['Hidden']=="是")
+            $row['UserName']="匿名";
+        array_push($rows,$row);
     }
+    $confessions+=$rows;
 
     $secrets=[];
-    $result=$conn->query("SELECT * FROM secret ORDER BY LID DESC LIMIT 4");
+    $result=$conn->query("SELECT secret.LID,secret.Title,secret.Content,
+       secret.Hidden,secret.Likes,secret.SubmitTime,user.UserName,user.UID FROM secret,user WHERE user.UID=secret.UID ORDER BY LID DESC LIMIT 4");
     $secret_count=$result->num_rows;
     $secrets+=["secret_count" => $secret_count];
+    $rows=[];
     $i=1;
     while($row=$result->fetch_assoc()){
-        $secrets+=["s".$i++=>$row];
+        if ($row['Hidden']=="是")
+            $row['UserName']="匿名";
+        array_push($rows,$row);
     }
+    $secrets+=$rows;
 
-    $arr=["confession"=>$confessions]+["secret"=>$secrets];
+    $founds=[];
+    $result=$conn->query("SELECT found.FID,found.Title,found.Content,
+       found.Hidden,found.Likes,found.SubmitTime,user.UserName,user.UID FROM found,user WHERE user.UID=found.UID ORDER BY FID DESC LIMIT 4");
+    $found_count=$result->num_rows;
+    $founds+=["found_count" => $found_count];
+    $rows=[];
+    $i=1;
+    while($row=$result->fetch_assoc()){
+        if ($row['Hidden']=="是")
+            $row['UserName']="匿名";
+        array_push($rows,$row);
+    }
+    $founds+=$rows;
+
+    $transactions=[];
+    $result=$conn->query("SELECT transaction.TID,transaction.Title,transaction.Content,
+       transaction.Hidden,transaction.Likes,transaction.SubmitTime,user.UserName,user.UID FROM transaction,user WHERE user.UID=transaction.UID ORDER BY TID DESC LIMIT 4");
+    $transaction_count=$result->num_rows;
+    $transactions+=["transaction_count" => $transaction_count];
+    $rows=[];
+    $i=1;
+    while($row=$result->fetch_assoc()){
+        if ($row['Hidden']=="是")
+            $row['UserName']="匿名";
+        array_push($rows,$row);
+    }
+    $transactions+=$rows;
+
+    $users=[];
+    $result=$conn->query("SELECT user.UserName,user_messages.Avatar,user.UID FROM user,user_messages WHERE user.UID=user_messages.UID AND NOT user.isHiden='是' ORDER BY RAND() LIMIT 6");
+    $user_count=$result->num_rows;
+    $users+=["user_count" => $user_count];
+    $rows=[];
+    $i=1;
+    while($row=$result->fetch_assoc()){
+        array_push($rows,$row);
+    }
+    $users+=$rows;
+
+    $arr=["confession"=>$confessions]+["secret"=>$secrets]+["found"=>$founds]+["transaction"=>$transactions]+["user"=>$users];
     Response::json(200, "API successfully called", $arr);
     exit(0);
 }
