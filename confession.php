@@ -18,7 +18,7 @@ while ($row = $result->fetch_assoc()) {
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title><?php echo $Title?> - 表白</title>
+    <title><?php echo $Title ?> - 表白</title>
     <?php showDefaultHead(); ?>
     <style>
         body {
@@ -40,14 +40,14 @@ while ($row = $result->fetch_assoc()) {
                     <div class="mn-vid-sc single_video">
                         <div class="vid-1">
                             <div class="vid-info">
-                                <h3>测试标题</h3>
+                                <h3 id="confession_title"></h3>
                                 <div class="info-pr">
                                     <ul class="pr_links">
                                         <li>
                                             <button data-toggle="tooltip" data-placement="top" title="I like this">
                                                 <i class="icon-thumbs_up_fill"></i>
                                             </button>
-                                            <span> 1</span>
+                                            <span id="confession_likes"></span>
                                         </li>
                                     </ul>
                                     <div class="clearfix"></div>
@@ -58,8 +58,8 @@ while ($row = $result->fetch_assoc()) {
                             <div class="info-pr-sec">
                                 <div class="vcp_inf cr">
                                     <div class="vc_info pr">
-                                        <h4><a href="#" title="">UtopiaXC</a></h4>
-                                        <span>2020.10.2</span>
+                                        <h4 id="confession_user"></h4>
+                                        <span id="confession_time"></span>
                                     </div>
                                 </div><!--vcp_inf end-->
                                 <ul class="chan_cantrz">
@@ -77,14 +77,14 @@ while ($row = $result->fetch_assoc()) {
                         <div class="amazon">
                             <div class="abt-amz">
                                 <div class="amz-hd">
-                                    <h2>这是一条测试内容</h2>
+                                    <h2 id="confession_content"></h2>
                                 </div><!--amz-hd end-->
                                 <div class="clearfix"></div>
                             </div><!--abt-amz end-->
                         </div><!--amazon end-->
                         <div class="cmt-bx">
                             <ul class="cmt-pr">
-                                <li><span>3</span> 评论</li>
+                                <li><span id="confession_comments_count"></span> 评论</li>
                                 <li>
                                     <span><i class="icon-sort_by"></i><a href="#" title="">排序</a></span>
                                 </li>
@@ -127,42 +127,8 @@ while ($row = $result->fetch_assoc()) {
                             <h2 class="sm-vidz">其他内容</h2>
                             <div class="clearfix"></div>
                         </div><!--vidz-prt end-->
-                        <div class="videoo-list-ab">
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
+                        <div class="videoo-list-ab" id="side_confessions">
+
                         </div><!--videoo-list-ab end-->
                     </div><!--side-bar end-->
                 </div>
@@ -177,4 +143,55 @@ while ($row = $result->fetch_assoc()) {
 
 <?php showDefaultScript(); ?>
 </body>
+<script>
+    $.ajax({
+        url: "api/standard_api.php",
+        method: "post",
+        dataType: "json",
+        data: {
+            "function": "confession_page",
+            "LID":<?php echo $_GET['LID'] ?>
+        },
+        success: function (result) {
+            if (result.data.confession.isHas === "否") {
+                window.location = "error_pages/404ErrorPage.html"
+            }
+            document.getElementById("confession_title").innerText = result.data.confession.Title;
+            document.getElementById("confession_user").innerText = result.data.confession.UserName;
+            document.getElementById("confession_content").innerText = result.data.confession.Content;
+            document.getElementById("confession_likes").innerText = result.data.confession.Likes;
+            document.getElementById("confession_comments_count").innerText = result.data.comments.comments_count;
+            document.getElementById("confession_time").innerText = result.data.confession.SubmitTime;
+            for (i = 0; i < result.data.confessions.confession_count; i++) {
+                addConfession(
+                    result.data.confessions[i].LID,
+                    result.data.confessions[i].Title,
+                    result.data.confessions[i].UserName,
+                    result.data.confessions[i].UID,
+                    result.data.confessions[i].Likes,
+                    result.data.confessions[i].SubmitTime);
+            }
+
+        }
+    })
+
+    function addConfession(link, title, username, userlink, likes, time) {
+        var div = document.getElementById("side_confessions");
+        div.innerHTML += `
+        <div class="videoo">
+            <div class="video_info">
+                <h3><a href="confession.php?LID=${link}" title="">${title}</a></h3>
+                <h4><a href="center.php?UID=${userlink}" title="">${username}</a></h4>
+                <span>${likes}赞<small class="posted_dt">${time}</small></span>
+            </div>
+        </div><!--videoo end-->`
+
+
+            ;}
+
+
+
+    function addComments(){
+    }
+</script>
 </html>

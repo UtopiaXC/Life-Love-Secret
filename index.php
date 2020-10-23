@@ -130,7 +130,7 @@ while ($row = $result->fetch_assoc()) {
 </body>
 <script>
     $.ajax({
-        type: "get",
+        type: "post",
         url: "api/standard_api.php",
         dataType: "json",
         data: {

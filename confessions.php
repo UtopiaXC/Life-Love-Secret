@@ -86,7 +86,7 @@ while ($row = $result->fetch_assoc()) {
     var page=1;
     $.ajax({
         url:"api/standard_api.php",
-        method:"get",
+        method:"post",
         dataType:"json",
         data:{
             "function":"confessions_page",
@@ -108,8 +108,8 @@ while ($row = $result->fetch_assoc()) {
         div.innerHTML+='<div class="col-lg-3 col-md-3 col-sm-6 col-6 full_wdth">' +
             '               <div class="videoo">' +
             '                   <div class="video_info">' +
-            '                       <h3><a href="confession.php" title="">'+Title+'</a></h3>' +
-            '                       <h4><a href="#" title="">'+username+'</a> </i></span></h4>' +
+            '                       <h3><a href="confession.php?LID='+LID+'" title="">'+Title+'</a></h3>' +
+            '                       <h4><a href="center.php?UID='+UID+'" title="">'+username+'</a> </i></span></h4>' +
             '                       <span>'+likes+' 点赞<small class="posted_dt">'+time+'</small></span>' +
             '                   </div>\n' +
             '               </div><!--videoo end-->' +
