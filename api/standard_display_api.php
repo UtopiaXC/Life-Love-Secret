@@ -29,7 +29,7 @@ function showHeader($conn)
                         if (@$_COOKIE['TokenID']) {
                             echo "
                             <div class='user-ac-img'>
-                                <img class='avatar' src='../sources/avatar/user-img.jpg' alt=''>
+                                <img class='avatar' src='../sources/avatar/user-img.png' alt=''>
                             </div>
                             <div class='account-menu'>
                                 <h4>UtopiaXC <span class='usr-status'>管理员</span></h4>

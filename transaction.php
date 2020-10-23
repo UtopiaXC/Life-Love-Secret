@@ -98,7 +98,7 @@ while ($row = $result->fetch_assoc()) {
                                 <li>
                                     <div class="vcp_inf">
                                         <div class="vc_hd">
-                                            <img src="/sources/avatar/user-img.jpg" alt="">
+                                            <img src="/sources/avatar/user-img.png" alt="">
                                         </div>
                                         <div class="coments">
                                             <div class="pinned-comment">

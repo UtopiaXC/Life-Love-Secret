@@ -57,6 +57,9 @@ while ($row = $result->fetch_assoc()) {
                         <div class="abt-mk">
                             <div class="info-pr-sec">
                                 <div class="vcp_inf cr">
+                                    <div class="vc_hd">
+                                        <img src="sources/avatar/user-img.png" alt="" id="confession_user_avatar">
+                                    </div>
                                     <div class="vc_info pr">
                                         <h4 id="confession_user"></h4>
                                         <span id="confession_time"></span>
@@ -98,7 +101,7 @@ while ($row = $result->fetch_assoc()) {
                                 <li>
                                     <div class="vcp_inf">
                                         <div class="vc_hd">
-                                            <img src="/sources/avatar/user-img.jpg" alt="">
+                                            <img src="/sources/avatar/user-img.png" alt="">
                                         </div>
                                         <div class="coments">
                                             <div class="pinned-comment">
@@ -157,11 +160,15 @@ while ($row = $result->fetch_assoc()) {
                 window.location = "error_pages/404ErrorPage.html"
             }
             document.getElementById("confession_title").innerText = result.data.confession.Title;
-            document.getElementById("confession_user").innerText = result.data.confession.UserName;
+            if (result.data.confession.UID !== null)
+                document.getElementById("confession_user").innerHTML = '<a href="center.php?UID=' + result.data.confession.UID + '">' + result.data.confession.UserName + '</a>';
+            else
+                document.getElementById("confession_user").innerHTML = result.data.confession.UserName;
             document.getElementById("confession_content").innerText = result.data.confession.Content;
             document.getElementById("confession_likes").innerText = result.data.confession.Likes;
             document.getElementById("confession_comments_count").innerText = result.data.comments.comments_count;
             document.getElementById("confession_time").innerText = result.data.confession.SubmitTime;
+            document.getElementById("confession_user_avatar").setAttribute("src",result.data.confession.Avatar)
             for (i = 0; i < result.data.confessions.confession_count; i++) {
                 addConfession(
                     result.data.confessions[i].LID,
@@ -185,13 +192,11 @@ while ($row = $result->fetch_assoc()) {
                 <span>${likes}赞<small class="posted_dt">${time}</small></span>
             </div>
         </div><!--videoo end-->`
-
-
-            ;}
-
-
+    ;}
 
     function addComments(){
+
+
     }
 </script>
 </html>

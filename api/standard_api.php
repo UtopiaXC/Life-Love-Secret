@@ -291,8 +291,10 @@ if ($_POST['function'] == "main_page") {
     $rows = [];
     $i = 1;
     while ($row = $result->fetch_assoc()) {
-        if ($row['Hidden'] == "是")
+        if ($row['Hidden'] == "是") {
             $row['UserName'] = "匿名";
+            $row['UID']=null;
+        }
         array_push($rows, $row);
     }
     $transactions += $rows;
@@ -337,10 +339,15 @@ if ($_POST['function'] == "confessions_page") {
 }
 if ($_POST['function'] == "confession_page") {
     $arr = [];
-    $result = $conn->query("SELECT confession.Title,user.UserName,confession.Content,user.UID,confession.Likes,confession.SubmitTime,confession.LID FROM confession,user WHERE confession.UID=user.UID AND confession.LID=" . $_POST['LID']);
+    $result = $conn->query("SELECT user_messages.Avatar,confession.Hidden,confession.Title,user.UserName,confession.Content,user.UID,confession.Likes,confession.SubmitTime,confession.LID FROM confession,user,user_messages WHERE user_messages.UID=user.UID AND confession.UID=user.UID AND confession.LID=" . $_POST['LID']);
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         $row['isHas'] = "是";
+        if ($row['Hidden'] == "是") {
+            $row['UserName'] = "匿名";
+            $row['UID']=null;
+            $row['Avatar']="/sources/avatar/user-hidden.png";
+        }
         $arr = ["confession" => $row];
     } else {
         $row['isHas'] = "否";
@@ -354,15 +361,17 @@ if ($_POST['function'] == "confession_page") {
     $rows = [];
     $i = 1;
     while ($row = $result->fetch_assoc()) {
-        if ($row['Hidden'] == "是")
+        if ($row['Hidden'] == "是") {
             $row['UserName'] = "匿名";
+            $row['UID']=null;
+        }
         array_push($rows, $row);
     }
     $confessions += $rows;
     $arr += ["confessions" => $confessions];
 
     $comments = [];
-    $result = $conn->query("SELECT user.isHiden,user.UID,user.UserName,user_messages.Avatar,confession_comment.SubmitTime,confession_comment.Content FROM user,confession_comment,user_messages WHERE user.UID=user_messages.UID AND user.UID=confession_comment.UID AND confession_comment.LID=" . $_POST['LID'] . " ORDER BY LCID DESC");
+    $result = $conn->query("SELECT confession_comment.Likes,user.isHiden,user.UID,user.UserName,user_messages.Avatar,confession_comment.SubmitTime,confession_comment.Content FROM user,confession_comment,user_messages WHERE user.UID=user_messages.UID AND user.UID=confession_comment.UID AND confession_comment.LID=" . $_POST['LID'] . " ORDER BY LCID DESC");
     $comments_count = $result->num_rows;
     $comments += ["comments_count" => $comments_count];
     $rows = [];
