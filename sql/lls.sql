@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： localhost
--- 生成日期： 2020-10-21 12:41:14
+-- 生成日期： 2020-11-20 17:45:55
 -- 服务器版本： 8.0.20
--- PHP 版本： 7.4.10
+-- PHP 版本： 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,6 +54,14 @@ CREATE TABLE `confession` (
   `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
+--
+-- 转存表中的数据 `confession`
+--
+
+INSERT INTO `confession` (`LID`, `UID`, `Hidden`, `Title`, `Content`, `SubmitTime`, `Likes`, `Picture`, `isClosed`) VALUES
+(1, 13, '是', '测试标题01', '测试内容01', '2020-10-22 20:46:00', 0, NULL, '否'),
+(2, 13, '否', '测试标题02', '测试内容02', '2020-10-22 20:46:00', 0, NULL, '否');
+
 -- --------------------------------------------------------
 
 --
@@ -66,8 +74,16 @@ CREATE TABLE `confession_comment` (
   `UID` int DEFAULT NULL,
   `FatherLCID` int DEFAULT NULL,
   `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `SubmitTime` datetime DEFAULT NULL
+  `SubmitTime` datetime DEFAULT NULL,
+  `Likes` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- 转存表中的数据 `confession_comment`
+--
+
+INSERT INTO `confession_comment` (`LCID`, `LID`, `UID`, `FatherLCID`, `Content`, `SubmitTime`, `Likes`) VALUES
+(1, 1, 13, NULL, '测试评论', '2020-10-23 11:21:31', 0);
 
 -- --------------------------------------------------------
 
@@ -218,39 +234,11 @@ INSERT INTO `user` (`UID`, `UserName`, `Email`, `Password`, `VerifiedCode`, `Tim
 DELIMITER $$
 CREATE TRIGGER `AddUser` AFTER INSERT ON `user` FOR EACH ROW BEGIN
 
-INSERT INTO usermessages (UID,Avatar,Name,Sex)VALUES(new.UID,"DefaultAvatar",new.UserName,"未知");
+INSERT INTO user_messages (UID,Avatar,Name,Sex)VALUES(new.UID,"/sources/avatar/user-img.jpg",new.UserName,"未知");
 
 END
 $$
 DELIMITER ;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `usermessages`
---
-
-CREATE TABLE `usermessages` (
-  `UID` int NOT NULL,
-  `Avatar` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Name` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
-  `Sex` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
-  `Birthday` date DEFAULT NULL,
-  `Motto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Major` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Location` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `URL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `QQ` int DEFAULT NULL,
-  `Wechat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- 转存表中的数据 `usermessages`
---
-
-INSERT INTO `usermessages` (`UID`, `Avatar`, `Name`, `Sex`, `Birthday`, `Motto`, `Major`, `Location`, `URL`, `QQ`, `Wechat`) VALUES
-(13, 'DefaultAvatar', 'UtopiaXC', '未知', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(14, 'DefaultAvatar', 'juejue', '未知', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -261,16 +249,23 @@ INSERT INTO `usermessages` (`UID`, `Avatar`, `Name`, `Sex`, `Birthday`, `Motto`,
 CREATE TABLE `user_messages` (
   `UID` int NOT NULL,
   `Avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Name` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Sex` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Birthday` date NOT NULL,
-  `Motto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Major` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `Location` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `URL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `QQ` int NOT NULL,
-  `Wechat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+  `Name` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Sex` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Birthday` date DEFAULT NULL,
+  `Motto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Major` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Location` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `URL` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `QQ` int DEFAULT NULL,
+  `Wechat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+
+--
+-- 转存表中的数据 `user_messages`
+--
+
+INSERT INTO `user_messages` (`UID`, `Avatar`, `Name`, `Sex`, `Birthday`, `Motto`, `Major`, `Location`, `URL`, `QQ`, `Wechat`) VALUES
+(13, 'sources/avatar/user-img.png', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -389,12 +384,6 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`UID`) USING BTREE;
 
 --
--- 表的索引 `usermessages`
---
-ALTER TABLE `usermessages`
-  ADD PRIMARY KEY (`UID`);
-
---
 -- 表的索引 `user_messages`
 --
 ALTER TABLE `user_messages`
@@ -426,13 +415,13 @@ ALTER TABLE `announcement`
 -- 使用表AUTO_INCREMENT `confession`
 --
 ALTER TABLE `confession`
-  MODIFY `LID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `LID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- 使用表AUTO_INCREMENT `confession_comment`
 --
 ALTER TABLE `confession_comment`
-  MODIFY `LCID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `LCID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- 使用表AUTO_INCREMENT `found`
@@ -477,16 +466,10 @@ ALTER TABLE `user`
   MODIFY `UID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- 使用表AUTO_INCREMENT `usermessages`
---
-ALTER TABLE `usermessages`
-  MODIFY `UID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
 -- 使用表AUTO_INCREMENT `user_messages`
 --
 ALTER TABLE `user_messages`
-  MODIFY `UID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `UID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- 使用表AUTO_INCREMENT `user_report`
