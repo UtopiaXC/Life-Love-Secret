@@ -68,9 +68,11 @@ while ($row = $result->fetch_assoc()) {
                                         <option value="confession" <?php if ($_GET['type'] == "confession") echo "selected=selected" ?>>
                                             表白
                                         </option>
-                                        <option value=secret"" <?php if ($_GET['type'] == "secret") echo "selected=selected" ?>>树洞
+                                        <option value=secret"" <?php if ($_GET['type'] == "secret") echo "selected=selected" ?>>
+                                            树洞
                                         </option>
-                                        <option value="found" <?php if ($_GET['type'] == "found") echo "selected=selected" ?>>失物招领
+                                        <option value="found" <?php if ($_GET['type'] == "found") echo "selected=selected" ?>>
+                                            失物招领
                                         </option>
                                         <option value="transaction" <?php if ($_GET['type'] == "transaction") echo "selected=selected" ?>>
                                             校内交易
@@ -119,11 +121,7 @@ while ($row = $result->fetch_assoc()) {
                                 <input type="text" id="pic-link" placeholder="请输入一个图片链接">
                             </div>
                         </div>
-
-                                <a href="javascript:uploadPic();" class="a-upload">
-                                    <input type="file" name="" id="">
-                                </a>
-                                <button class="btn-default" type="button" onclick="uploadPic();">上传</button>
+                        <button id="upload" class="btn-default" type="button">上传</button>
                     </div>
                 </div><!--abt-tags--->
                 <div class="category">
@@ -140,31 +138,52 @@ while ($row = $result->fetch_assoc()) {
     <br><br>
     <?php showFooter($conn); ?>
 </div><!--wrapper end-->
+<?php showDefaultScript(); ?>
 <script>
-    function uploadPic(){
-        var img=document.getElementById("img_uploader");
-        alert(img.name)
+    var uploadButton=$('#upload');
+    uploadButton.after('<input type="file" id="load_xls" accept="image/jpeg,image/png" name="file" style="display:none" onchange ="uploadFile()">');
+    uploadButton.click(function () {
+        document.getElementById("load_xls").click();
+    });
+
+    function uploadFile() {
+        var picture = new FormData();
+        picture.append('file', $('#load_xls')[0].files[0]);
+
+
+
+        $.ajax({
+            url: "",
+            type: "POST",
+            data: picture,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                console.log(data);
+            },
+            error: function (data) {
+                console.log(data)
+            }
+        });
     }
 
 
     function add_new() {
-        var title=$("#title").val();
-        var content=$("#content").val();
-        var anonymous=$("#anonymous").val();
-        var type=$("#type").val();
-        var contact=$("#contact").val();
-        var contact_details=$("#contact-details").val();
-        var pic_link=$("#pic-link").val();
+        var title = $("#title").val();
+        var content = $("#content").val();
+        var anonymous = $("#anonymous").val();
+        var type = $("#type").val();
+        var contact = $("#contact").val();
+        var contact_details = $("#contact-details").val();
+        var pic_link = $("#pic-link").val();
 
-        if (title===""||content===""){
-            swal("警告","您有带星的必填项未填写","warning");
+        if (title === "" || content === "") {
+            swal("警告", "您有带星的必填项未填写", "warning");
             return false;
         }
     }
 
 
-
 </script>
-<?php showDefaultScript(); ?>
 </body>
 </html>
