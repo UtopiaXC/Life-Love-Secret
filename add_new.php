@@ -87,16 +87,16 @@ while ($row = $result->fetch_assoc()) {
                                 <div class="form_field">
                                     <label for="contact" style="display: none"></label>
                                     <select id="contact">
-                                        <option value="none">不添加</option>
-                                        <option value="telephone">电话</option>
-                                        <option value="qq">QQ</option>
-                                        <option value="wechat">微信</option>
-                                        <option value="email">邮箱</option>
-                                        <option value="site">个人网站</option>
-                                        <option value="github">GitHub</option>
-                                        <option value="twitter">Twitter</option>
-                                        <option value="telegram">Telegram</option>
-                                        <option value="instagram">Instagram</option>
+                                        <option value="不添加">不添加</option>
+                                        <option value="电话">电话</option>
+                                        <option value="QQ">QQ</option>
+                                        <option value="微信">微信</option>
+                                        <option value="邮箱">邮箱</option>
+                                        <option value="个人网站">个人网站</option>
+                                        <option value="GitHub">GitHub</option>
+                                        <option value="Twitter">Twitter</option>
+                                        <option value="Telegram">Telegram</option>
+                                        <option value="Instagram">Instagram</option>
                                     </select>
                                 </div>
                             </div><!--option end-->
@@ -115,7 +115,7 @@ while ($row = $result->fetch_assoc()) {
                 <div class="abt-tags">
                     <div class="row">
                         <div class="col-lg-9 col-md-9 col-sm-8 col-12">
-                            <h2 class="title-hd">添加图片链接（仅支持一张，多图请拼接）</h2>
+                            <h2 class="title-hd">添加图片链接（仅支持一张，多图请拼接。建议使用外链。）</h2>
                             <div class="form_field pr">
                                 <label for="pic-link" style="display: none"></label>
                                 <input type="text" id="pic-link" placeholder="请输入一个图片链接">
@@ -140,31 +140,64 @@ while ($row = $result->fetch_assoc()) {
 </div><!--wrapper end-->
 <?php showDefaultScript(); ?>
 <script>
-    var uploadButton=$('#upload');
+    var uploadButton = $('#upload');
     uploadButton.after('<input type="file" id="load_xls" accept="image/jpeg,image/png" name="file" style="display:none" onchange ="uploadFile()">');
     uploadButton.click(function () {
         document.getElementById("load_xls").click();
+
     });
 
     function uploadFile() {
         var picture = new FormData();
-        picture.append('file', $('#load_xls')[0].files[0]);
+        var filePic = $('#load_xls')[0].files[0];
+        picture.append('file', filePic);
+        picture.append('function', 'uploadPic');
+        if (!/\.(jpg|jpeg|png|JPG|PNG)$/.test(filePic.name)) {
+            swal("警告", "您选择的图片格式错误！必须是JPG或PNG图片", "warning");
+            return false;
+        }
+        if (filePic.size > 10 * 1024 * 1024) {
+            swal("警告", "您选择的图片过大！图片大小不能超过10MB！", "warning");
+            return false;
+        }
 
-
-
-        $.ajax({
-            url: "",
-            type: "POST",
-            data: picture,
-            contentType: false,
-            processData: false,
-            success: function (data) {
-                console.log(data);
+        swal({
+                title: "确认您要上传的图片",
+                text: "图片名：" + filePic.name + "\n大小：" + (filePic.size / 1024 / 1024).toFixed(2) + "KB\n提醒：您的图片上传后将被重命名",
+                type: "info",
+                confirmButtonText: "上传",
+                cancelButtonText: "取消",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true,
             },
-            error: function (data) {
-                console.log(data)
-            }
-        });
+            function () {
+                setTimeout(function () {
+                    $.ajax({
+                        url: "api/standard_api.php",
+                        type: "POST",
+                        data: picture,
+                        contentType: false,
+                        processData: false,
+                        success: function (result) {
+                            if (result.data.isUploaded === "true")
+                                swal({
+                                    title: "上传成功",
+                                    type: "success",
+                                }, function () {
+                                   var link= $("#pic-link");
+                                   link.val(result.data.location);
+                                   link.attr("disabled","disabled");
+                                });
+                            else
+                                swal("上传失败", result.data.error, "error");
+                        },
+                        error: function () {
+                            swal("抱歉！", "服务器异常", "error");
+                        }
+                    });
+                });
+            });
     }
 
 
@@ -177,10 +210,57 @@ while ($row = $result->fetch_assoc()) {
         var contact_details = $("#contact-details").val();
         var pic_link = $("#pic-link").val();
 
+
         if (title === "" || content === "") {
             swal("警告", "您有带星的必填项未填写", "warning");
             return false;
         }
+
+        swal({
+                title: "确认信息",
+                text: "标题：" + title + "\n内容：" + content.substring(0, 10) + "...",
+                type: "info",
+                confirmButtonText: "发布",
+                cancelButtonText: "取消",
+                showCancelButton: true,
+                closeOnConfirm: false,
+                showLoaderOnConfirm: true,
+            },
+            function () {
+                setTimeout(function () {
+                    $.ajax({
+                        url: "api/standard_api.php",
+                        dataType: "json",
+                        type: "POST",
+                        data: {
+                            "function":"release_new",
+                            "title":title,
+                            "content":content,
+                            "anonymous":anonymous,
+                            "type":type,
+                            "contact":contact,
+                            "contact_details":contact_details,
+                            "picture":pic_link
+                        },
+                        success: function (result) {
+                            if (result.data.isSucceed==="成功"){
+                                swal({
+                                    title: "成功",
+                                    text:"内容发布成功",
+                                    type: "success",
+                                },function (){window.location=result.data.location});
+                            }else{
+                                swal("抱歉！", "表单错误", "error");
+                            }
+                        },
+                        error: function () {
+                            swal("抱歉！", "服务器异常", "error");
+                        }
+                    });
+                });
+            });
+
+
     }
 
 

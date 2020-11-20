@@ -145,8 +145,16 @@ while ($row = $result->fetch_assoc()) {
                 document.getElementById("confession_user").innerHTML = result.data.confession.UserName;
             document.getElementById("confession_content").innerText = result.data.confession.Content;
             document.getElementById("confession_likes").innerText = result.data.confession.Likes;
+            if (result.data.confession.Picture!=="") {
+                var picLink = result.data.confession.Picture;
+                $("#confession_content").after("<br><br><img src='"+picLink+"' title='点击查看大图' alt='' style='max-width: 750px;max-height: 100%' '>")
+                console.log(picLink);
+            }
             document.getElementById("confession_comments_count").innerText = result.data.comments.comments_count;
-            document.getElementById("confession_time").innerText = result.data.confession.SubmitTime;
+            if (result.data.confession.ContactType!=="不添加")
+                document.getElementById("confession_time").innerText = result.data.confession.SubmitTime+"\n"+"联系方式："+result.data.confession.ContactType+" "+result.data.confession.Contact;
+            else
+                document.getElementById("confession_time").innerText = result.data.confession.SubmitTime+"\n"+"未添加联系方式";
             document.getElementById("confession_user_avatar").setAttribute("src", result.data.confession.Avatar)
             for (i = 0; i < result.data.confessions.confession_count; i++) {
                 addConfession(

@@ -38,7 +38,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vcp_inf cr">
                         <h4>表白墙 <span class="verify_ic"></i></span></h4>
-                        <span>1 条留言</span>
+                        <span id="confessions_count">1 条留言</span>
                 </div><!--vcp_inf end-->
                 <ul class="chan_cantrz">
                     <li>
@@ -93,6 +93,7 @@ while ($row = $result->fetch_assoc()) {
             "page":page++
         },
         success:function (result){
+            $("#confessions_count").text(result.data.confessions_count+" 条留言");
             for (i=0;i<result.data.confessions_count;i++){
                 addConfessions(result.data[i].Title,
                     result.data[i].LID,
