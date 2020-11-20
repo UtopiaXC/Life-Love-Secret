@@ -381,7 +381,7 @@ if ($_POST['function'] == "confession_page") {
             if ($row['isHidden'] == "是") {
                 $row['UserName'] = "匿名";
                 $row['UID'] = null;
-                $row['Avatat'] = null;
+                $row['Avatar'] = null;
             }
             array_push($rows, $row);
         }
