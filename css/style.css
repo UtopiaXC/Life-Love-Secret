@@ -449,7 +449,9 @@ header .container {
     height: 38px;
     line-height: 38px;
     padding: 0 30px;
-    border-radius: 30px;
+    margin-top: 28px;
+    margin-left: 10px;
+    border-radius: 20px;
 }
 
 .controls-lv li a.btn-default {
@@ -1951,10 +1953,42 @@ svg:hover path {
     background-color: #e2ebef;
     padding-left: 10px;
     border-radius: 6px;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     text-indent: 1px;
     text-overflow: '';
+}
+
+.a-upload {
+    padding: 10px 10px;
+    height: 38px;
+    line-height: 100px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #e2ebef;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    margin-top: 28px;
+    margin-left: 20px;
+}
+
+.a-upload input {
+    position: absolute;
+    font-size: 100px;
+    cursor: pointer;
+    color: #444;
+    background: #e2ebef;
+    border-color: #ccc;
+}
+
+.a-upload:hover {
+    color: #ffffff;
+    background: #4a90e2;
+    border-color: #4a90e2;
+    text-decoration: none
 }
 
 .abt-tags {
@@ -2020,8 +2054,6 @@ svg:hover path {
     padding: 0 32px;
     border: none;
 }
-
-
 
 
 /* ========================= ABOUT CHANNELS ========================= */
@@ -2957,9 +2989,9 @@ strong {
 }
 
 .user-account-pr .form-div input[type="text"],
-.user-account-pr .form-div  input[type="password"],
-.user-account-pr .form-div  input[type="email"],
-.user-account-pr .form-div  button {
+.user-account-pr .form-div input[type="password"],
+.user-account-pr .form-div input[type="email"],
+.user-account-pr .form-div button {
     color: #383838;
     height: 38px;
     padding-left: 10px;
@@ -2970,17 +3002,17 @@ strong {
     width: 100%;
 }
 
-.user-account-pr .form-div  + h4 {
+.user-account-pr .form-div + h4 {
     font-size: 14px;
     line-height: 22px;
 }
 
-.user-account-pr .form-div  + h4 a {
+.user-account-pr .form-div + h4 a {
     display: inline-block;
     color: #feb32d;
 }
 
-.user-account-pr .form-div  button {
+.user-account-pr .form-div button {
     background: #DC6721;
     margin-bottom: 18px;
     padding: 0;

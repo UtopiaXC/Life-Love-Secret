@@ -97,29 +97,8 @@ while ($row = $result->fetch_assoc()) {
                             <div class="vcp_inf pc">
                                 <div class="clearfix"></div>
                             </div><!--cmt-bx end-->
-                            <ul class="cmn-lst">
-                                <li>
-                                    <div class="vcp_inf">
-                                        <div class="vc_hd">
-                                            <img src="/sources/avatar/user-img.png" alt="">
-                                        </div>
-                                        <div class="coments">
-                                            <div class="pinned-comment">
-                                                <span><i class="icon-pinned"></i>置顶</span>
-                                            </div>
-                                            <h2>UtopiaXC <small class="posted_dt">2020-10-2 15:23:54</small></h2>
-                                            <p>这是一条测试评论</p>
-                                            <ul class="cmn-i">
-                                                <li>
-                                                    <a href="#" title="">
-                                                        <i class="icon-thumbs_up"></i>
-                                                    </a>
-                                                    <span>3</span>
-                                                </li>
-                                            </ul>
-                                        </div><!--coments end-->
-                                    </div><!--vcp_inf end-->
-                                </li>
+                            <ul class="cmn-lst" id="comments">
+
                             </ul><!--comment list end-->
                         </div>
                     </div><!--mn-vid-sc end--->
@@ -168,7 +147,7 @@ while ($row = $result->fetch_assoc()) {
             document.getElementById("confession_likes").innerText = result.data.confession.Likes;
             document.getElementById("confession_comments_count").innerText = result.data.comments.comments_count;
             document.getElementById("confession_time").innerText = result.data.confession.SubmitTime;
-            document.getElementById("confession_user_avatar").setAttribute("src",result.data.confession.Avatar)
+            document.getElementById("confession_user_avatar").setAttribute("src", result.data.confession.Avatar)
             for (i = 0; i < result.data.confessions.confession_count; i++) {
                 addConfession(
                     result.data.confessions[i].LID,
@@ -178,7 +157,16 @@ while ($row = $result->fetch_assoc()) {
                     result.data.confessions[i].Likes,
                     result.data.confessions[i].SubmitTime);
             }
-
+            for (i = 0;i<result.data.comments.comments_count;i++){
+                addComments(
+                    result.data.comments[i].Avatar,
+                    result.data.comments[i].UID,
+                    result.data.comments[i].UserName,
+                    result.data.comments[i].SubmitTime,
+                    result.data.comments[i].Content,
+                    result.data.comments[i].Likes
+                );
+            }
         }
     })
 
@@ -191,12 +179,33 @@ while ($row = $result->fetch_assoc()) {
                 <h4><a href="center.php?UID=${userlink}" title="">${username}</a></h4>
                 <span>${likes}赞<small class="posted_dt">${time}</small></span>
             </div>
-        </div><!--videoo end-->`
-    ;}
-
-    function addComments(){
-
-
+        </div>`
     }
+
+    function addComments(avatar,UID,username,time,content,likes) {
+        var div = document.getElementById("comments");
+        div.innerHTML += `
+<li>
+    <div class="vcp_inf">
+        <div class="vc_hd">
+            <img src="${avatar}" alt="">
+        </div>
+        <div class="coments">
+            <h2><a href="center.php?UID=${UID}">${username} </a><small class="posted_dt">${time}</small></h2>
+            <p>${content}</p>
+            <ul class="cmn-i">
+                <li>
+                    <a onclick="" title="">
+                        <i class="icon-thumbs_up"></i>
+                    </a>
+                    <span>${likes}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</li>
+        `}
+
+
 </script>
 </html>

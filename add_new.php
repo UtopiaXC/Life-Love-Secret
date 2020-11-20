@@ -56,14 +56,6 @@ while ($row = $result->fetch_assoc()) {
                                         <option value="false">不采用匿名</option>
                                         <option value="true">采用匿名</option>
                                     </select>
-                                    <a href="#" title="" class="arw_vz">
-                                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M19.9394 7.51447L22.0607 9.63579L12 19.6964L1.93936 9.63579L4.06068 7.51447L12 15.4538L19.9394 7.51447Z"
-                                                  fill="#9494A0"></path>
-                                        </svg>
-                                    </a>
                                 </div>
                             </div><!--option end-->
                         </div>
@@ -84,15 +76,6 @@ while ($row = $result->fetch_assoc()) {
                                             校内交易
                                         </option>
                                     </select>
-
-                                    <a href="#" title="" class="arw_vz">
-                                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M19.9394 7.51447L22.0607 9.63579L12 19.6964L1.93936 9.63579L4.06068 7.51447L12 15.4538L19.9394 7.51447Z"
-                                                  fill="#9494A0"></path>
-                                        </svg>
-                                    </a>
                                 </div>
                             </div><!--option end-->
                         </div>
@@ -113,14 +96,6 @@ while ($row = $result->fetch_assoc()) {
                                         <option value="telegram">Telegram</option>
                                         <option value="instagram">Instagram</option>
                                     </select>
-                                    <a href="#" title="" class="arw_vz">
-                                        <svg width="24" height="26" viewBox="0 0 24 26" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M19.9394 7.51447L22.0607 9.63579L12 19.6964L1.93936 9.63579L4.06068 7.51447L12 15.4538L19.9394 7.51447Z"
-                                                  fill="#9494A0"></path>
-                                        </svg>
-                                    </a>
                                 </div>
                             </div><!--option end-->
                         </div>
@@ -144,15 +119,11 @@ while ($row = $result->fetch_assoc()) {
                                 <input type="text" id="pic-link" placeholder="请输入一个图片链接">
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-12">
-                            <div class="option">
-                                <h2 class="title-hd">上传图片</h2>
-                                <div class="form_field">
-                                    <input type="file" id="img_uploader">
-                                    <button class="btn-default" type="button" onclick="uploadPic();">上传</button>
-                                </div>
-                            </div><!--option end-->
-                        </div>
+
+                                <a href="javascript:uploadPic();" class="a-upload">
+                                    <input type="file" name="" id="">
+                                </a>
+                                <button class="btn-default" type="button" onclick="uploadPic();">上传</button>
                     </div>
                 </div><!--abt-tags--->
                 <div class="category">
