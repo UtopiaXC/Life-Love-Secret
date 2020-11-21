@@ -61,7 +61,7 @@ while ($row = $result->fetch_assoc()) {
                         <button onclick="submitRegister()">注册</button>
                     </div><!--input-sec end-->
                     <div class="form-text">
-                        <p>当您注册帐号时，我们默认您已同意 <a href="#" title="">社区规则</a> 与 <a href="#" title="">隐私协议</a></p>
+                        <p>当您注册帐号时，我们默认您已同意 <a href="rules.php" target="_blank">社区规则</a> 与 <a href="privacy.php" target="_blank">隐私协议</a></p>
                     </div>
                 </div>
             </div><!--user-account end--->

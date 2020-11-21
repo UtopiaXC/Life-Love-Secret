@@ -163,7 +163,7 @@ while ($row = $result->fetch_assoc()) {
 
         swal({
                 title: "确认您要上传的图片",
-                text: "图片名：" + filePic.name + "\n大小：" + (filePic.size / 1024 / 1024).toFixed(2) + "KB\n提醒：您的图片上传后将被重命名",
+                text: "图片名：" + filePic.name + "\n大小：" + (filePic.size / 1024 / 1024).toFixed(2) + "MB\n提醒：您的图片上传后将被重命名",
                 type: "info",
                 confirmButtonText: "上传",
                 cancelButtonText: "取消",

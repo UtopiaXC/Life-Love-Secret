@@ -18,7 +18,7 @@ while ($row = $result->fetch_assoc()) {
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title><?php echo $Title?> - 失物招领</title>
+    <title><?php echo $Title ?> - 失物招领</title>
     <?php showDefaultHead(); ?>
     <style>
         body {
@@ -46,9 +46,11 @@ while ($row = $result->fetch_assoc()) {
                     </li>
                 </ul><!--chan_cantrz end-->
                 <div class="search_form">
-                    <form>
+                    <form method="get" action="search.php">
                         <label for="page-search" style="display: none"></label>
-                        <input id="page-search" type="text" name="search" placeholder="搜索树洞">
+                        <input id="page-search" type="text" name="search" placeholder="搜索失物招领">
+                        <label for="search-type" style="display: none"></label>
+                        <input id="search-type" type="text" name="type" value="found" style="display: none">
                         <button type="submit">
                             <i class="icon-search"></i>
                         </button>
@@ -83,18 +85,18 @@ while ($row = $result->fetch_assoc()) {
 <?php showDefaultScript(); ?>
 </body>
 <script>
-    var page=1;
+    var page = 1;
     $.ajax({
-        url:"api/standard_api.php",
-        method:"post",
-        dataType:"json",
-        data:{
-            "function":"founds_page",
-            "page":page++
+        url: "api/standard_api.php",
+        method: "post",
+        dataType: "json",
+        data: {
+            "function": "founds_page",
+            "page": page++
         },
-        success:function (result){
-            $("#founds_count").text(result.data.founds_count+" 条留言");
-            for (i=0;i<result.data.founds_count;i++){
+        success: function (result) {
+            $("#founds_count").text(result.data.founds_count + " 条留言");
+            for (i = 0; i < result.data.founds_count; i++) {
                 addfounds(result.data[i].Title,
                     result.data[i].FID,
                     result.data[i].UserName,
@@ -104,14 +106,15 @@ while ($row = $result->fetch_assoc()) {
             }
         }
     })
-    function addfounds(Title,FID,username,UID,likes,time){
-        var div=document.getElementById("confessions");
-        div.innerHTML+='<div class="col-lg-3 col-md-3 col-sm-6 col-6 full_wdth">' +
+
+    function addfounds(Title, FID, username, UID, likes, time) {
+        var div = document.getElementById("confessions");
+        div.innerHTML += '<div class="col-lg-3 col-md-3 col-sm-6 col-6 full_wdth">' +
             '               <div class="videoo">' +
             '                   <div class="video_info">' +
-            '                       <h3><a href="found.php?FID='+FID+'" title="">'+Title+'</a></h3>' +
-            '                       <h4><a href="center.php?UID='+UID+'" title="">'+username+'</a> </i></span></h4>' +
-            '                       <span>'+likes+' 点赞<small class="posted_dt">'+time+'</small></span>' +
+            '                       <h3><a href="found.php?FID=' + FID + '" title="">' + Title + '</a></h3>' +
+            '                       <h4><a href="center.php?UID=' + UID + '" title="">' + username + '</a> </i></span></h4>' +
+            '                       <span>' + likes + ' 点赞<small class="posted_dt">' + time + '</small></span>' +
             '                   </div>\n' +
             '               </div><!--videoo end-->' +
             '           </div>';

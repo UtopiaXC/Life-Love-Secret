@@ -85,4 +85,14 @@ function logout(){
         });
 }
 
+function hide(){
+    $.ajax({
+        type: "POST",
+        url: "api/standard_api.php",
+        dataType: "json",
+        data: {
+            "function": "change_hide"
+        }
+    });
+}
 

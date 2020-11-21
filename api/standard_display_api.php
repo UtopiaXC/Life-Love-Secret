@@ -104,7 +104,7 @@ function showHeader($conn)
                                 <div class='restricted-mode'>
                                     <h4>隐匿模式</h4>
                                     <label class='switch'>
-                                        <input type='checkbox' "; if ($isHidden) echo "checked"; echo ">
+                                        <input type='checkbox' onchange='hide()' "; if ($isHidden) echo "checked"; echo ">
                                         <span class='slider round'></span>
                                     </label>
                                     <div class='clearfix'></div>

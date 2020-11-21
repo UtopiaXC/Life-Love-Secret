@@ -13,6 +13,11 @@ while ($row = $result->fetch_assoc()) {
         $Title = $row['Content'];
     }
 }
+$result=$conn->query("SELECT UID,isBanned,isHidden FROM user WHERE Token='".$_COOKIE['Token']."' AND TokenID='".$_COOKIE['TokenID']."'");
+$isLogin=false;
+if ($result->num_rows==1){
+    $isLogin=true;
+}
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +59,7 @@ while ($row = $result->fetch_assoc()) {
         <div class='container'>
             <div class='banner-text'>
                 <h2>$Welcome</h2>
-                <a href='#' title=''>查看置顶公告</a>
+                <a href='announcements.php' >查看公告</a>
             </div><!--banner-text end-->
         </div>
     </section><!--banner-section end-->";
@@ -67,7 +72,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3><a href="confessions.php" id="text_confessions">表白墙</a></h3>
-                    <span class="view-btn"><a href="add_new.php?type=confession" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="confessions.php" title="">查看全部</a></span>
+                    <span class="view-btn"><a href="<?php if ($isLogin) echo "add_new.php?type=confession"; else echo "login.php"?>" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="confessions.php" title="">查看全部</a></span>
                     <div class="vidz_list">
                         <div class="row" id="confession">
                         </div>
@@ -79,7 +84,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3><a href="secrets.php" id="text_secret">树洞</a></h3>
-                    <span class="view-btn"><a href="add_new.php?type=secret" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="secrets.php" title="">查看全部</a></span>
+                    <span class="view-btn"><a href="<?php if ($isLogin) echo "add_new.php?type=secret"; else echo "login.php"?>" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="secrets.php" title="">查看全部</a></span>
                     <div class="vidz_list">
                         <div class="row" id="secret">
                         </div>
@@ -91,7 +96,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3><a href="founds.php" id="text_found">失物招领</a></h3>
-                    <span class="view-btn"><a href="add_new.php?type=found" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="founds.php" title="">查看全部</a></span>
+                    <span class="view-btn"><a href="<?php if ($isLogin) echo "add_new.php?type=found"; else echo "login.php"?>" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="founds.php" title="">查看全部</a></span>
                     <div class="vidz_list">
                         <div class="row" id="found">
                         </div>
@@ -103,7 +108,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3><a href="transactions.php" id="text_transaction">校内交易</a></h3>
-                    <span class="view-btn"><a href="add_new.php?type=transaction" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="transactions.php" title="">查看全部</a></span>
+                    <span class="view-btn"><a href="<?php if ($isLogin) echo "add_new.php?type=transaction"; else echo "login.php"?>" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="transactions.php" title="">查看全部</a></span>
 
                     <div class="vidz_list">
                         <div class="row" id="transaction">

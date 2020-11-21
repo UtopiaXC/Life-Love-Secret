@@ -735,4 +735,28 @@ if (@$_POST['function']=="release_new"){
     }
 }
 
+if (@$_POST['function']=="change_hide"){
+    if (!$_COOKIE['TokenID']&&!$_COOKIE['Token']){
+        $arr = ["isSucceed" => "false","error"=>"未登录"];
+        Response::json(200, "API successfully called", $arr);
+        exit(0);
+    }
+    $result=$conn->query("SELECT UID,isBanned,isHidden FROM user WHERE Token='".$_COOKIE['Token']."' AND TokenID='".$_COOKIE['TokenID']."'");
+    if ($result->num_rows!=1){
+        $arr = ["isSucceed" => "false","error"=>"未登录"];
+        Response::json(200, "API successfully called", $arr);
+        exit(0);
+    }
+    $row=$result->fetch_assoc();
+    $isHide=$row['isHidden'];
+    if ($isHide=="是")
+        $isHide="否";
+    else
+        $isHide="是";
+    $conn->query("UPDATE user SET isHidden='$isHide' WHERE Token='".$_COOKIE['Token']."' AND TokenID='".$_COOKIE['TokenID']."'");
+    $arr = ["isChanged" => "true"];
+    Response::json(200, "API successfully called", $arr);
+    exit(0);
+}
+
 Response::json(403, "Unavailable Parameters", null);

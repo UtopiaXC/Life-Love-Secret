@@ -46,9 +46,11 @@ while ($row = $result->fetch_assoc()) {
                     </li>
                 </ul><!--chan_cantrz end-->
                 <div class="search_form">
-                    <form>
+                    <form method="get" action="search.php">
                         <label for="page-search" style="display: none"></label>
-                        <input id="page-search" type="text" name="search" placeholder="搜索树洞">
+                        <input id="page-search" type="text" name="search" placeholder="搜索校内交易">
+                        <label for="search-type" style="display: none"></label>
+                        <input id="search-type" type="text" name="type" value="transaction" style="display: none">
                         <button type="submit">
                             <i class="icon-search"></i>
                         </button>
