@@ -68,7 +68,7 @@ while ($row = $result->fetch_assoc()) {
                                         <option value="confession" <?php if ($_GET['type'] == "confession") echo "selected=selected" ?>>
                                             表白
                                         </option>
-                                        <option value=secret"" <?php if ($_GET['type'] == "secret") echo "selected=selected" ?>>
+                                        <option value="secret" <?php if ($_GET['type'] == "secret") echo "selected=selected" ?>>
                                             树洞
                                         </option>
                                         <option value="found" <?php if ($_GET['type'] == "found") echo "selected=selected" ?>>
@@ -215,6 +215,20 @@ while ($row = $result->fetch_assoc()) {
             swal("警告", "您有带星的必填项未填写", "warning");
             return false;
         }
+
+        if (!/\.(jpg|jpeg|png|JPG|PNG)$/.test(pic_link)&&pic_link!=="") {
+            swal("警告", "您选择的图片格式错误！必须是JPG或PNG图片", "warning");
+            return false;
+        }
+        if (title.length<5||title.length>30){
+            swal("警告", "标题长度要求为5~30个字符，您的标题不符合要求", "warning");
+            return false;
+        }
+        if (content.length<10||content.length>2000){
+            swal("警告", "内容长度要求为10~2000个字符，您的内容不符合要求", "warning");
+            return false;
+        }
+
 
         swal({
                 title: "确认信息",

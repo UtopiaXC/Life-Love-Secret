@@ -18,7 +18,7 @@ while ($row = $result->fetch_assoc()) {
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <title><?php echo $Title?> - 树洞</title>
+    <title><?php echo $Title ?> - 树洞</title>
     <?php showDefaultHead(); ?>
     <style>
         body {
@@ -40,14 +40,14 @@ while ($row = $result->fetch_assoc()) {
                     <div class="mn-vid-sc single_video">
                         <div class="vid-1">
                             <div class="vid-info">
-                                <h3>测试标题</h3>
+                                <h3 id="secret_title"></h3>
                                 <div class="info-pr">
                                     <ul class="pr_links">
                                         <li>
                                             <button data-toggle="tooltip" data-placement="top" title="I like this">
                                                 <i class="icon-thumbs_up_fill"></i>
                                             </button>
-                                            <span> 1</span>
+                                            <span id="secret_likes"></span>
                                         </li>
                                     </ul>
                                     <div class="clearfix"></div>
@@ -57,9 +57,12 @@ while ($row = $result->fetch_assoc()) {
                         <div class="abt-mk">
                             <div class="info-pr-sec">
                                 <div class="vcp_inf cr">
+                                    <div class="vc_hd">
+                                        <img src="sources/avatar/user-img.png" alt="" id="secret_user_avatar">
+                                    </div>
                                     <div class="vc_info pr">
-                                        <h4><a href="#" title="">UtopiaXC</a></h4>
-                                        <span>2020.10.2</span>
+                                        <h4 id="secret_user"></h4>
+                                        <span id="secret_time"></span>
                                     </div>
                                 </div><!--vcp_inf end-->
                                 <ul class="chan_cantrz">
@@ -77,14 +80,14 @@ while ($row = $result->fetch_assoc()) {
                         <div class="amazon">
                             <div class="abt-amz">
                                 <div class="amz-hd">
-                                    <h2>这是一条测试内容</h2>
+                                    <h2 id="secret_content"></h2>
                                 </div><!--amz-hd end-->
                                 <div class="clearfix"></div>
                             </div><!--abt-amz end-->
                         </div><!--amazon end-->
                         <div class="cmt-bx">
                             <ul class="cmt-pr">
-                                <li><span>3</span> 评论</li>
+                                <li><span id="secret_comments_count"></span> 评论</li>
                                 <li>
                                     <span><i class="icon-sort_by"></i><a href="#" title="">排序</a></span>
                                 </li>
@@ -94,29 +97,8 @@ while ($row = $result->fetch_assoc()) {
                             <div class="vcp_inf pc">
                                 <div class="clearfix"></div>
                             </div><!--cmt-bx end-->
-                            <ul class="cmn-lst">
-                                <li>
-                                    <div class="vcp_inf">
-                                        <div class="vc_hd">
-                                            <img src="/sources/avatar/user-img.png" alt="">
-                                        </div>
-                                        <div class="coments">
-                                            <div class="pinned-comment">
-                                                <span><i class="icon-pinned"></i>置顶</span>
-                                            </div>
-                                            <h2>UtopiaXC <small class="posted_dt">2020-10-2 15:23:54</small></h2>
-                                            <p>这是一条测试评论</p>
-                                            <ul class="cmn-i">
-                                                <li>
-                                                    <a href="#" title="">
-                                                        <i class="icon-thumbs_up"></i>
-                                                    </a>
-                                                    <span>3</span>
-                                                </li>
-                                            </ul>
-                                        </div><!--coments end-->
-                                    </div><!--vcp_inf end-->
-                                </li>
+                            <ul class="cmn-lst" id="comments">
+
                             </ul><!--comment list end-->
                         </div>
                     </div><!--mn-vid-sc end--->
@@ -127,42 +109,8 @@ while ($row = $result->fetch_assoc()) {
                             <h2 class="sm-vidz">其他内容</h2>
                             <div class="clearfix"></div>
                         </div><!--vidz-prt end-->
-                        <div class="videoo-list-ab">
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
-                            <div class="videoo">
-                                <div class="video_info">
-                                    <h3><a href="#" title="">测试标题</a></h3>
-                                    <h4><a href="#" title="">UtopiaXC</a></h4>
-                                    <span>1 推荐<small class="posted_dt">2020-10-2</small></span>
-                                </div>
-                            </div><!--videoo end-->
+                        <div class="videoo-list-ab" id="side_secrets">
+
                         </div><!--videoo-list-ab end-->
                     </div><!--side-bar end-->
                 </div>
@@ -177,4 +125,95 @@ while ($row = $result->fetch_assoc()) {
 
 <?php showDefaultScript(); ?>
 </body>
+<script>
+    $.ajax({
+        url: "api/standard_api.php",
+        method: "post",
+        dataType: "json",
+        data: {
+            "function": "secret_page",
+            "SID":<?php echo $_GET['SID'] ?>
+        },
+        success: function (result) {
+            if (result.data.secret.isHas === "否") {
+                window.location = "error_pages/404ErrorPage.html"
+            }
+            document.getElementById("secret_title").innerText = result.data.secret.Title;
+            if (result.data.secret.UID !== null)
+                document.getElementById("secret_user").innerHTML = '<a href="center.php?UID=' + result.data.secret.UID + '">' + result.data.secret.UserName + '</a>';
+            else
+                document.getElementById("secret_user").innerHTML = result.data.secret.UserName;
+            document.getElementById("secret_content").innerText = result.data.secret.Content;
+            document.getElementById("secret_likes").innerText = result.data.secret.Likes;
+            if (result.data.secret.Picture!=="") {
+                var picLink = result.data.secret.Picture;
+                $("#secret_content").after("<br><br><img src='"+picLink+"' title='点击查看大图' alt='' style='max-width: 750px;max-height: 100%' '>")
+                console.log(picLink);
+            }
+            document.getElementById("secret_comments_count").innerText = result.data.comments.comments_count;
+            if (result.data.secret.ContactType!=="不添加")
+                document.getElementById("secret_time").innerText = result.data.secret.SubmitTime+"\n"+"联系方式："+result.data.secret.ContactType+" "+result.data.secret.Contact;
+            else
+                document.getElementById("secret_time").innerText = result.data.secret.SubmitTime+"\n"+"未添加联系方式";
+            document.getElementById("secret_user_avatar").setAttribute("src", result.data.secret.Avatar)
+            for (i = 0; i < result.data.secrets.secret_count; i++) {
+                addsecret(
+                    result.data.secrets[i].SID,
+                    result.data.secrets[i].Title,
+                    result.data.secrets[i].UserName,
+                    result.data.secrets[i].UID,
+                    result.data.secrets[i].Likes,
+                    result.data.secrets[i].SubmitTime);
+            }
+            for (i = 0;i<result.data.comments.comments_count;i++){
+                addComments(
+                    result.data.comments[i].Avatar,
+                    result.data.comments[i].UID,
+                    result.data.comments[i].UserName,
+                    result.data.comments[i].SubmitTime,
+                    result.data.comments[i].Content,
+                    result.data.comments[i].Likes
+                );
+            }
+        }
+    })
+
+    function addsecret(link, title, username, userlink, likes, time) {
+        var div = document.getElementById("side_secrets");
+        div.innerHTML += `
+        <div class="videoo">
+            <div class="video_info">
+                <h3><a href="secret.php?SID=${link}" title="">${title}</a></h3>
+                <h4><a href="center.php?UID=${userlink}" title="">${username}</a></h4>
+                <span>${likes}赞<small class="posted_dt">${time}</small></span>
+            </div>
+        </div>`
+    }
+
+    function addComments(avatar,UID,username,time,content,likes) {
+        var div = document.getElementById("comments");
+        div.innerHTML += `
+<li>
+    <div class="vcp_inf">
+        <div class="vc_hd">
+            <img src="${avatar}" alt="">
+        </div>
+        <div class="coments">
+            <h2><a href="center.php?UID=${UID}">${username} </a><small class="posted_dt">${time}</small></h2>
+            <p>${content}</p>
+            <ul class="cmn-i">
+                <li>
+                    <a onclick="" title="">
+                        <i class="icon-thumbs_up"></i>
+                    </a>
+                    <span>${likes}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</li>
+        `}
+
+
+</script>
 </html>

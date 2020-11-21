@@ -67,7 +67,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3><a href="confessions.php" id="text_confessions">表白墙</a></h3>
-                    <a href="confessions.php" title="" class="view-btn">查看全部</a>
+                    <span class="view-btn"><a href="add_new.php?type=confession" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="confessions.php" title="">查看全部</a></span>
                     <div class="vidz_list">
                         <div class="row" id="confession">
                         </div>
@@ -79,7 +79,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3><a href="secrets.php" id="text_secret">树洞</a></h3>
-                    <a href="secrets.php" title="" class="view-btn">查看全部</a>
+                    <span class="view-btn"><a href="add_new.php?type=secret" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="secrets.php" title="">查看全部</a></span>
                     <div class="vidz_list">
                         <div class="row" id="secret">
                         </div>
@@ -91,7 +91,7 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3><a href="founds.php" id="text_found">失物招领</a></h3>
-                    <a href="founds.php" title="" class="view-btn">查看全部</a>
+                    <span class="view-btn"><a href="add_new.php?type=found" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="founds.php" title="">查看全部</a></span>
                     <div class="vidz_list">
                         <div class="row" id="found">
                         </div>
@@ -103,7 +103,8 @@ while ($row = $result->fetch_assoc()) {
             <div class="container">
                 <div class="vidz_sec">
                     <h3><a href="transactions.php" id="text_transaction">校内交易</a></h3>
-                    <a href="transactions.php" title="" class="view-btn">查看全部</a>
+                    <span class="view-btn"><a href="add_new.php?type=transaction" title="">添加留言</a>&nbsp&nbsp&nbsp&nbsp<a href="transactions.php" title="">查看全部</a></span>
+
                     <div class="vidz_list">
                         <div class="row" id="transaction">
                         </div>
@@ -149,7 +150,7 @@ while ($row = $result->fetch_assoc()) {
                 showNone("confession");
             }
             for (i=0;i<result.data.secret.secret_count;i++){
-                addConfession("secret",result.data.secret[i].LID,
+                addConfession("secret",result.data.secret[i].SID,
                     result.data.secret[i].Title,
                     result.data.secret[i].UserName,
                     result.data.secret[i].UID,
@@ -171,7 +172,7 @@ while ($row = $result->fetch_assoc()) {
                 showNone("found");
             }
             for (i=0;i<result.data.transaction.transaction_count;i++){
-                addConfession("transaction",result.data.transaction[i].LID,
+                addConfession("transaction",result.data.transaction[i].TID,
                     result.data.transaction[i].Title,
                     result.data.transaction[i].UserName,
                     result.data.transaction[i].UID,
@@ -190,10 +191,19 @@ while ($row = $result->fetch_assoc()) {
     });
     function addConfession(element,link,title,username,userlink,likes,time){
         var div=document.getElementById(element);
+        var id="";
+        if (element==="confession")
+            id="LID";
+        else if(element==="secret")
+            id="SID";
+        else if (element==="found")
+            id="FID";
+        else if (element==="transaction")
+            id="TID";
         div.innerHTML+=`    <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth">
         <div class="videoo">
             <div class="video_info">
-                <h3><a href="${element}.php?LID=${link}" title="">${title}</a></h3>
+                <h3><a href="${element}.php?${id}=${link}" title="">${title}</a></h3>
                 <h4><a href="center.php?UID=${userlink}" title="">${username}</a></h4>
                 <span>${likes}赞<small class="posted_dt">${time}</small></span>
             </div>

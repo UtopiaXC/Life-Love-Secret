@@ -37,12 +37,12 @@ while ($row = $result->fetch_assoc()) {
         <div class="info-pr-sec">
             <div class="container">
                 <div class="vcp_inf cr">
-                    <h4>树洞 <span class="verify_ic"></i></span></h4>
-                    <span>1 条留言</span>
+                    <h4>表白墙 <span class="verify_ic"></i></span></h4>
+                    <span id="secrets_count">1 条留言</span>
                 </div><!--vcp_inf end-->
                 <ul class="chan_cantrz">
                     <li>
-                        <a href="#" title="" class="subscribe">添加新秘密</a>
+                        <a href="add_new.php?type=secret" title="" class="subscribe">添加新留言</a>
                     </li>
                 </ul><!--chan_cantrz end-->
                 <div class="search_form">
@@ -66,24 +66,7 @@ while ($row = $result->fetch_assoc()) {
                             <br><br>
                             <div class="clearfix"></div>
                             <div class="vidz_list">
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-3 col-sm-6 col-6 full_wdth">
-                                        <div class="videoo">
-                                            <div class="vid_thumbainl">
-                                                <a href="#" title="">
-                                                    <span class="vid-time">10:21</span>
-                                                    <span class="watch_later">
-														<i class="icon-watch_later_fill"></i>
-													</span>
-                                                </a>
-                                            </div><!--vid_thumbnail end-->
-                                            <div class="video_info">
-                                                <h3><a href="#" title="">测试留言</a></h3>
-                                                <h4><a href="#" title="">UtopiaXC</a> </i></span></h4>
-                                                <span>1 点赞<small class="posted_dt">2020-10-1</small></span>
-                                            </div>
-                                        </div><!--videoo end-->
-                                    </div>
+                                <div class="row" id="confessions">
                                 </div>
                             </div><!--vidz_list end-->
                         </div><!--vidz_videos end-->
@@ -99,4 +82,39 @@ while ($row = $result->fetch_assoc()) {
 
 <?php showDefaultScript(); ?>
 </body>
+<script>
+    var page=1;
+    $.ajax({
+        url:"api/standard_api.php",
+        method:"post",
+        dataType:"json",
+        data:{
+            "function":"secrets_page",
+            "page":page++
+        },
+        success:function (result){
+            $("#secrets_count").text(result.data.secrets_count+" 条留言");
+            for (i=0;i<result.data.secrets_count;i++){
+                addSecrets(result.data[i].Title,
+                    result.data[i].SID,
+                    result.data[i].UserName,
+                    result.data[i].UID,
+                    result.data[i].Likes,
+                    result.data[i].SubmitTime)
+            }
+        }
+    })
+    function addSecrets(Title,SID,username,UID,likes,time){
+        var div=document.getElementById("confessions");
+        div.innerHTML+='<div class="col-lg-3 col-md-3 col-sm-6 col-6 full_wdth">' +
+            '               <div class="videoo">' +
+            '                   <div class="video_info">' +
+            '                       <h3><a href="secret.php?SID='+SID+'" title="">'+Title+'</a></h3>' +
+            '                       <h4><a href="center.php?UID='+UID+'" title="">'+username+'</a> </i></span></h4>' +
+            '                       <span>'+likes+' 点赞<small class="posted_dt">'+time+'</small></span>' +
+            '                   </div>\n' +
+            '               </div><!--videoo end-->' +
+            '           </div>';
+    }
+</script>
 </html>

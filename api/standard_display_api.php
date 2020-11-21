@@ -1,6 +1,16 @@
 <?php
+require_once "api/sql_api.php";
 function showHeader($conn)
 {
+    $row = [];
+    $isLogin = false;
+    if (@$_COOKIE['Token'] && $_COOKIE['TokenID']) {
+        $result = $conn->query("SELECT * FROM user WHERE Token='" . $_COOKIE['Token'] . "' AND TokenID='" . $_COOKIE['TokenID'] . "'");
+        if ($result->num_rows == 1) {
+            $row = $result->fetch_assoc();
+            $isLogin = true;
+        }
+    }
     echo "<header>
         <div class='top_bar'>
             <div class='container'>
@@ -26,13 +36,22 @@ function showHeader($conn)
                         </li>
                         <li class='user-log'>";
 
-                        if (@$_COOKIE['TokenID']) {
-                            echo "
+    if ($isLogin) {
+        $isAdmin = false;
+        if ($row['UserGroup'] == "admin")
+            $isAdmin = true;
+        $isHidden=false;
+        if ($row['isHidden'] == "是")
+            $isHidden = true;
+        echo "
                             <div class='user-ac-img'>
                                 <img class='avatar' src='../sources/avatar/user-img.png' alt=''>
                             </div>
                             <div class='account-menu'>
-                                <h4>UtopiaXC <span class='usr-status'>管理员</span></h4>
+                                <h4>UtopiaXC <span class='usr-status'>";
+        if ($isAdmin)echo "管理员";
+        else echo "注册用户";
+        echo "</span></h4>
                                 <div class='sd_menu'>
                                     <ul class='mm_menu'>
                                         <li>
@@ -52,7 +71,14 @@ function showHeader($conn)
 													<i class='icon-logout'></i>
 												</span>
                                             <a onclick='logout();' title=''>退出登录</a>
+                                        </li>"; if ($isAdmin) echo "
+                                         <li>
+												<span>
+													<i class='icon-settings'></i>
+												</span>
+                                            <a href='../admin.php' target='_blank' title=''>后台管理</a>
                                         </li>
+                                        ";echo "
                                     </ul>
                                 </div><!--sd_menu end-->
                                 <div class='sd_menu scnd'>
@@ -78,15 +104,14 @@ function showHeader($conn)
                                 <div class='restricted-mode'>
                                     <h4>隐匿模式</h4>
                                     <label class='switch'>
-                                        <input type='checkbox' checked>
+                                        <input type='checkbox' "; if ($isHidden) echo "checked"; echo ">
                                         <span class='slider round'></span>
                                     </label>
                                     <div class='clearfix'></div>
                                 </div><!--restricted-more end-->
                             </div>";
-                        }
-                        else{
-                            echo "
+    } else {
+        echo "
                             <div class='user-ac-img'>
                                 <img class='avatar' src='../sources/avatar/user-unlogin.png' alt='User Avatar'>
                             </div>
@@ -115,8 +140,8 @@ function showHeader($conn)
                                     </ul>
                                 </div><!--sd_menu end-->
                             </div>";
-                        }
-                        echo "
+    }
+    echo "
                         </li>
                     </ul><!--controls-lv end-->
                     <div class='clearfix'></div>
@@ -215,7 +240,7 @@ function showMenu($conn)
     </div><!--side_menu end-->
         ";
     else
-    echo "
+        echo "
         <div class='side_menu'>
         <div class='sd_menu'>
         <h3>账户</h3>
