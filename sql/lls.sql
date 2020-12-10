@@ -11,7 +11,7 @@
  Target Server Version : 80016
  File Encoding         : 65001
 
- Date: 20/11/2020 22:55:17
+ Date: 10/12/2020 12:29:58
 */
 
 SET NAMES utf8mb4;
@@ -29,7 +29,7 @@ CREATE TABLE `announcement`  (
   `Admin` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `isUper` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`AID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of announcement
@@ -52,12 +52,12 @@ CREATE TABLE `confession`  (
   `ContactType` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `Contact` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`LID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of confession
 -- ----------------------------
-INSERT INTO `confession` VALUES (11, 13, '是', '这是一个测试用的标题', '这是一个测试用的内容', '2020-11-20 22:27:57', 0, 'images/uploaded/88e7b5c182ce1f89565283b983ed2974.jpg', '否', 'QQ', '123456789');
+INSERT INTO `confession` VALUES (18, 13, '是', '表白墙测试', '这是一个表白墙测试内容', '2020-11-21 15:02:22', 0, 'images/uploaded/451182dd6ca45600ec7a76458f2c0150.jpg', '否', 'QQ', '123456789');
 
 -- ----------------------------
 -- Table structure for confession_comment
@@ -72,7 +72,7 @@ CREATE TABLE `confession_comment`  (
   `SubmitTime` datetime(0) NULL DEFAULT NULL,
   `Likes` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`LCID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of confession_comment
@@ -96,7 +96,7 @@ CREATE TABLE `found`  (
   `ContactType` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `Contact` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`FID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of found
@@ -113,8 +113,9 @@ CREATE TABLE `found_comment`  (
   `FatherFCID` int(11) NULL DEFAULT NULL,
   `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `SubmitTime` datetime(0) NULL DEFAULT NULL,
+  `Likes` int(10) NULL DEFAULT NULL,
   PRIMARY KEY (`FCID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of found_comment
@@ -144,7 +145,7 @@ CREATE TABLE `post_report`  (
 -- ----------------------------
 DROP TABLE IF EXISTS `secret`;
 CREATE TABLE `secret`  (
-  `LID` int(11) NOT NULL AUTO_INCREMENT,
+  `SID` int(11) NOT NULL AUTO_INCREMENT,
   `UID` int(11) NULL DEFAULT NULL,
   `Hidden` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
@@ -155,8 +156,8 @@ CREATE TABLE `secret`  (
   `isClosed` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `ContactType` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `Contact` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`LID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+  PRIMARY KEY (`SID`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of secret
@@ -173,8 +174,9 @@ CREATE TABLE `secret_comment`  (
   `FatherSCID` int(11) NULL DEFAULT NULL,
   `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `SubmitTime` datetime(0) NULL DEFAULT NULL,
+  `Likes` int(10) NULL DEFAULT NULL,
   PRIMARY KEY (`SCID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of secret_comment
@@ -214,8 +216,9 @@ CREATE TABLE `transaction_comment`  (
   `FatherTCID` int(11) NULL DEFAULT NULL,
   `Content` varchar(2550) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `SubmitTime` datetime(0) NULL DEFAULT NULL,
+  `Likes` int(10) NULL DEFAULT NULL,
   PRIMARY KEY (`TCID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of transaction_comment
@@ -240,12 +243,12 @@ CREATE TABLE `user`  (
   `UserGroup` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `isBanned` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`UID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 15 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (13, 'UtopiaXC', 'dys1025@sina.com', '59178ff1a38fa82b3e0825a75208c567', '5465fc650276b852095141f622813b72', '1603007988', '是', 'db7e156bff80773a061c98a0991b0d03', '8cfcbbee173045483dd1549b926ebae9', '否', '默认', 'admin', NULL);
+INSERT INTO `user` VALUES (13, 'UtopiaXC', 'dys1025@sina.com', '59178ff1a38fa82b3e0825a75208c567', '5465fc650276b852095141f622813b72', '1603007988', '是', '017eef208d5d16ec1d72a0b0864ee97c', '85c00d31dc97652fc6c295f8a20c1c90', '是', '默认', 'admin', NULL);
 
 -- ----------------------------
 -- Table structure for user_messages
@@ -264,7 +267,7 @@ CREATE TABLE `user_messages`  (
   `QQ` int(11) NULL DEFAULT NULL,
   `Wechat` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`UID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user_messages
@@ -283,7 +286,7 @@ CREATE TABLE `user_report`  (
   `isOver` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `Result` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`URID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of user_report
@@ -298,7 +301,7 @@ CREATE TABLE `web_message`  (
   `Title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   `Content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
   PRIMARY KEY (`ID`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of web_message
