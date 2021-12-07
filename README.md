@@ -3,4 +3,4 @@
 
 正在开发，请不要fork或clone
 
-本项目由于初始架构设计与技术选型导致后期开发困难，现已全部迁移至(Life-Love-Secret-2)[https://github.com/UtopiaXC/Life-Love-Story-2]
+本项目由于初始架构设计与技术选型导致后期开发困难，现已全部迁移至[Life-Love-Secret-2](https://github.com/UtopiaXC/Life-Love-Story-2)
